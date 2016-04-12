@@ -9,6 +9,7 @@ from collections import defaultdict, Counter
 import math
 
 counties = defaultdict(list)
+countyFIPS = {}
 
 bagOfWords = Counter()
 
@@ -16,6 +17,7 @@ with open("county-names/processed-county-names.csv", 'r') as f:
     reader = csv.DictReader(f)
     for row in reader:
         counties[row['State']].append(row['County'])
+        countyFIPS[(row['County'], row['State'])] = row['ID']
         bagOfWords.update(row['County'].split(" "))
 
 totalWords = sum(bagOfWords.values())
@@ -24,7 +26,7 @@ for word in bagOfWords:
     #use log term frequencies to emphasize matching names over common terms
     tf[word] = math.log(bagOfWords[word] / totalWords)
 
-#Returns the reference name of the county, returns None if no match is found
+#Returns a tuple of the reference name of the county and its 5-digit FIPS code, returns (None, None) if no match is found
 def match(countyName, stateCode = 'CA'):
     referenceList = counties[stateCode]
     scored = []
@@ -34,9 +36,9 @@ def match(countyName, stateCode = 'CA'):
         scored.append((possibleMatch, score))
     scored.sort(key = lambda x : x[1])
     if scored[0][1] < -5:
-        return scored[0][0]
+        return (scored[0][0], countyFIPS[(scored[0][0], stateCode)])
     else:
-        return None
+        return (None, None)
 
 #tests
 if __name__ == "__main__":

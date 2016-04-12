@@ -7,12 +7,11 @@ counties = []
 with open("county-names/county-names.csv", 'r') as f:
     reader = csv.DictReader(f)
     for row in reader:
-        counties.append({'State' : row['State Postal Code'], 'County' : row['FIPS Class Code']})
+        counties.append({'State' : row['State Postal Code'], 'County' : row['FIPS Class Code'], 'ID' : row['State FIPS Code'] + row['County FIPS Code']})
 
 with open("county-names/processed-county-names.csv", "w", newline = '') as f:
-    writer = csv.DictWriter(f, fieldnames = ['State', 'County', 'ID'])
+    writer = csv.DictWriter(f, fieldnames = ['ID', 'State', 'County'])
     writer.writeheader()
-    for index, dic in enumerate(counties):
-        dic['ID'] = index
+    for dic in counties:
         writer.writerow(dic)
 
