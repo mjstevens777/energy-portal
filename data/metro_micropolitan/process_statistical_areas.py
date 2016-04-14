@@ -15,7 +15,18 @@ countyStatus = {}
 with open("metro_micropolitan/List1.csv", "r", encoding='latin-1') as f:
     reader = csv.DictReader(f)
     for row in reader:
-        countyStatus[row["FIPS State Code"]+row["FIPS County Code"]] = {"MetroMicro" : "METRO" if 'metro' in row["Metropolitan/Micropolitan Statistical Area"] else "MICRO"}
+        metroMicro = row["Metropolitan/Micropolitan Statistical Area"]
+        fips = row["FIPS State Code"] + row["FIPS County Code"]
+        if fips == "":
+            continue
+        if 'Metro' in metroMicro:
+            status = "METRO"
+        elif 'Micro' in metroMicro:
+            status = "MICRO"
+        else:
+            print(row)
+            raise Exception("Unknown area type: %s" % metroMicro)
+        countyStatus[fips] = {"MetroMicro" : status}
 
 for id in countyFIPS.keys():
     if len(id) > 0:

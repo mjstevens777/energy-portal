@@ -25,6 +25,10 @@ discardPhrases = [
 
 def normalize(county):
     county = county.lower()
+    return county
+
+def normalizeFull(county):
+    county = county.lower()
     for discardPhrase in discardPhrases:
         county = county.replace(discardPhrase, "").strip()
     return county
@@ -61,9 +65,11 @@ def distance(county, ref):
     refWords = set(ref.split())
     intersectionWords = countyWords.intersection(refWords)
     if len(intersectionWords) > 0:
-        tfScore = sum(tf[word] for word in intersectionWords) + 3.0
+        tfScore = sum(tf[word] for word in intersectionWords) + 5.0
     else:
         tfScore = 0
+    county = normalizeFull(county)
+    ref = normalizeFull(ref)
     editDistance = 1 - SequenceMatcher(None, county, ref).quick_ratio()
     editDistance *= (len(county) + len(ref)) / 2.0
     editDistance = min(editDistance, 5)  # Clip to [0, 5]
@@ -95,3 +101,5 @@ if __name__ == "__main__":
     print(match("Accomack", "VA"))
     #something a little harder
     print(match("Prince of Wales Ketchikan", "AK"))
+    print(match("Roanoke County", "VA"))
+    print(match("Roanoke City", "VA"))
