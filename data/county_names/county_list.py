@@ -13,11 +13,11 @@ with open("county_names/county-names.csv", 'r') as f:
         counties.append({
             'State': row['State Postal Code'],
             'County': row['FIPS Class Code'],
-            'ID': row['State FIPS Code'] + row['County FIPS Code']
+            'FIPS': row['State FIPS Code'] + row['County FIPS Code']
         })
 
 with open("county_names/processed-county-names.csv", "w", newline = '') as f:
-    writer = csv.DictWriter(f, fieldnames = ['ID', 'State', 'County'])
+    writer = csv.DictWriter(f, fieldnames = ['FIPS', 'State', 'County'])
     writer.writeheader()
     for dic in counties:
         writer.writerow(dic)

@@ -20,7 +20,7 @@ discardPhrases = [
         "municipality",
         "city and borough",
         "municipio",
-		"district"
+        "district"
 ]
 
 def normalize(county):
@@ -34,7 +34,7 @@ def loadData():
     with open("county_names/processed-county-names.csv", 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
-            counties[row['State']].append(row['County'])
+            counties[row['State']].append((row['County'], row['FIPS']))
     return counties
 
 
@@ -42,7 +42,7 @@ def calculateTf(counties):
     tf = {}
     bagOfWords = Counter()
     for state, countyList in counties.items():
-        for county in countyList:
+        for county, fips in countyList:
             bagOfWords.update(normalize(county).split())
 
     totalWords = sum(bagOfWords.values())
@@ -75,14 +75,14 @@ def match(countyName, stateCode=None):
 
     referenceList = counties[stateCode]
     scored = []
-    for possibleMatch in referenceList:
-        scored.append((possibleMatch, distance(countyName, possibleMatch)))
+    for refCounty, fips in referenceList:
+        scored.append(((refCounty, fips), distance(countyName, refCounty)))
     scored.sort(key = lambda x : x[1])
     if scored[0][1] < 0:
         return scored[0][0]
     else:
         print("Could not find %s, %s" % (countyName, stateCode))
-        return None
+        return (None, None)
 
 #tests
 if __name__ == "__main__":
