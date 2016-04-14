@@ -1,3 +1,12 @@
+# Schema
+
+The table utility_service_territory describes in which counties various
+utilities operate. It has the columns:
+ * `utility` Utility Name
+ * `utility_number` Identifier for that utility, unique in a given year
+ * `fips` County FIPS Code
+ * `data_year` The year the data was generated, currently 2014
+
 # Download
 
 Download the data from <https://dl.dropboxusercontent.com/u/17926321/county-elecricity-usage.zip> and unzip in this directory.

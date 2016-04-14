@@ -12,3 +12,5 @@ create table utility_service_territory(
 \copy utility_service_territory from 'Service_Territory_2014_County_Normalized.csv'	WITH CSV HEADER;
 
 alter table utility_service_territory add column data_year integer default 2014;
+alter table utility_service_territory drop column state;
+alter table utility_service_territory drop column county_name;
