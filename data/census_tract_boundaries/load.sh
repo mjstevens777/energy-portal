@@ -11,3 +11,5 @@ do
 	echo $f
 	shp2pgsql -s 4269 -W LATIN1 -a $f census_tracts_poly | bash ../psql.sh | uniq
 done
+
+bash ../psql.sh < fix_schema.sql
