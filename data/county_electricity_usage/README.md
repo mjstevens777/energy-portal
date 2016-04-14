@@ -20,3 +20,6 @@ Then run `python county-electricity-usage/process_Service_Territory_2014.py`
 to generate the normalized service territories.
 
 ## Consumption Data
+
+Combine the consumption data from all of the utilities to get consumption
+and sales for every county, split up by sector.
