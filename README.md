@@ -13,8 +13,10 @@ To log, install psql and run
 psql -d energy_portal -U energy_portal -h stantron2.stanford.edu
 ```
 
-Add the following line to the file `$HOME/.pgpass`, where `*****` is the
-password.
+There is a script `data/psql.sh` as a shortcut for this command.
+
+To avoid the password prompt, add the following line to the file
+`$HOME/.pgpass`, where `*****` is the password.
 
 ```
 stantron2.stanford.edu:5432:energy_portal:energy_portal:*********
