@@ -20,4 +20,7 @@ column names, descriptions of columns).
 
 After cleaning the data, create a file `load.sh` that will load it
 into the database. Run `load.sh` from the data directory, just like
-python commands
+python commands.
+
+For deeper interactions with the database, use psycopg2. Use the `db.py`
+file to connect to the server.
