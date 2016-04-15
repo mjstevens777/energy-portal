@@ -176,4 +176,4 @@ data = {
 }
 
 with open("acs_summary/variables.json", "w") as f:
-    json.dump(data, f, indent=2)
+    json.dump(data, f, indent=2, sort_keys=True)

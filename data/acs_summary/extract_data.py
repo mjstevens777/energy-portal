@@ -1,22 +1,9 @@
-import tarfile
+import os
 import json
 import csv
-import sys
-import codecs
 from collections import defaultdict
 
-data_dir = "acs_summary/data/"
-
-open_mode = "r:gz"
-all_path = data_dir + "All_Geographies_Not_Tracts_Block_Groups.tar.gz"
-all_tf = tarfile.open(all_path, open_mode)
-all_datadir = "tab4/sumfile/prod/2010thru2014/group1/"
-
-tract_path = data_dir + "Tracts_Block_Groups_Only.tar.gz"
-trac_tf = tarfile.open(tract_path, open_mode)
-tract_datadir = "tab4/sumfile/prod/2010thru2014/group2/"
-
-def get_variables():
+def getVariables():
     with open("acs_summary/selected-variables.csv") as f:
         variableIds = list(
             filter(lambda l: len(l) > 0,
@@ -36,95 +23,154 @@ def get_variables():
         varList.sort()
     return sequences
 
-variables = get_variables()
-
-def extract_data(tf, datadir, geo_file, variables, out_file):
-    recordIdsByState = defaultdict(set)
+def processGeography(geoFile):
     geoIdByStateAndRecord = defaultdict(dict)
+
     print("Processing Geography...")
-    with open(geo_file) as f:
+    with open(geoFile) as f:
         reader = csv.DictReader(f)
         for row in reader:
             state = row["State"].lower()
             rec = str(row["Record Number"])
             geoId = row["Full FIPS"]
-            recordIdsByState[state].add(rec)
             geoIdByStateAndRecord[state][rec] = geoId
 
+    return geoIdByStateAndRecord
+
+def openWriters(estimateFile, marginFile, variables):
     outHeader = ["Full FIPS"]
     for seq in sorted(variables.keys()):
         for pos, id in variables[seq]:
             outHeader.append(id)
-    outFp = open(out_file, "w")
-    outWriter = csv.DictWriter(outFp, outHeader)
-    outWriter.writeheader()
+
+    def openWriter(file):
+        fp = open(file, "w")
+        writer = csv.writer(fp)
+        writer.writerow(outHeader)
+        return {
+            'writer': writer,
+            'fp': fp
+        }
+
+    writers = {'estimate': openWriter(estimateFile)}
+    if marginFile is not None:
+        writers['margin'] = openWriter(marginFile)
+
+    return writers
+
+def listFiles(dataDir):
+    members = os.listdir(dataDir)
+    membersDict = {
+        'estimate': defaultdict(dict),
+        'margin': defaultdict(dict)
+    }
+    for member in members:
+        # e.g. e20145al0102000.txt
+        memberSeq = member[-11:-7]
+        memberState = member[-13:-11].lower()
+        estimateOrMargin = member[-19]
+        path = os.path.join(dataDir, member)
+        if estimateOrMargin == 'e':
+            membersDict['estimate'][memberState][memberSeq] = path
+        else:
+            membersDict['margin'][memberState][memberSeq] = path
+    return membersDict
+
+def extractData(dataDir, geoFile, variables,
+                estimateFile, marginFile=None):
+    geoIdByStateAndRecord = processGeography(geoFile)
+
+    writers = openWriters(estimateFile, marginFile, variables)
 
     print("Listing Files...")
-
-
-    members = tf.getmembers()
-    membersByStateAndSeq = defaultdict(dict)
-    for member in members:
-        memberSeq = member.name[-11:-7]
-        memberState = member.name[-13:-11].lower()
-        membersByStateAndSeq[memberState][memberSeq] = member
+    filesDict = listFiles(dataDir)
 
     print("Extracting Data...")
-    for state in sorted(membersByStateAndSeq.keys()):
-        print(state)
-        membersBySeq = membersByStateAndSeq[state]
-        stateData = []
-        for seq in sorted(variables.keys()):
-            print(".", end="",flush=True)
-            member = membersBySeq[seq]
-            memberfile = tf.extractfile(member)
-            memberVars = variables[seq]
-            decodedfile = codecs.iterdecode(memberfile, "latin-1")
-            rowCount = 0
-            for row in csv.reader(decodedfile):
-                recordNum = row[5]
-                if recordNum not in recordIdsByState[state]:
-                    continue
-                rowCount += 1
-                geoId = geoIdByStateAndRecord[state][recordNum]
-                outData = {"Full FIPS": geoId}
-                for pos, id in memberVars:
-                    outData[id] = row[pos]
-                if rowCount < len(stateData):
-                    stateData[rowCount].update(outData)
-                else:
-                    stateData.append(outData)
-            memberfile.close()
-        print("+", end="",flush=True)
-        print()
-        for d in stateData:
-            outWriter.writerow(d)
+    for state in sorted(filesDict['estimate'].keys()):
+        for estimateOrMargin in writers:
+            print(state + " - " + estimateOrMargin)
+            writeStateData(
+                variables,
+                filesDict[estimateOrMargin][state],
+                geoIdByStateAndRecord[state],
+                writers[estimateOrMargin]['writer']
+            )
 
-    outFp.close()
+    for d in writers.values():
+        d['fp'].close()
 
-print("Extracting Tracts...")
-extract_data(
-    trac_tf,
-    tract_datadir,
-    "acs_summary/data/tract_geo.csv",
-    variables,
-    "acs_summary/data/tract.csv"
-)
+def writeStateData(variables, filesBySeq, geoIdByRecord, writer):
+    data = []
+    firstSeq = True
+    for seq in sorted(variables.keys()):
+        print(".", end="", flush=True)
+        fileName = filesBySeq[seq]
+        file = open(fileName, encoding="latin-1")
+        subsetVars = variables[seq]
+        rowCount = 0
+        for row in csv.reader(file):
+            recordNum = row[5]
+            NOT_FOUND = -1
+            geoId = geoIdByRecord.get(recordNum, NOT_FOUND)
+            if geoId == NOT_FOUND:
+                continue
+            outData = [row[pos] for pos, id in subsetVars]
+            if firstSeq:
+                data.append([geoId] + outData)
+            else:
+                data[rowCount] += outData
+            rowCount += 1
+        firstSeq = False
+        file.close()
+    print()
+    print("writing")
+    for i, row in enumerate(data):
+        if i % (int(len(data) / 20) + 1) == 0:
+            print(".", end="", flush=True)
+        writer.writerow(row)
+    print()
 
-print("Extracting Counties...")
-extract_data(
-    all_tf,
-    all_datadir,
-    "acs_summary/data/county_geo.csv",
-    variables,
-    "acs_summary/data/county.csv"
-)
+def extractTracts(dataDir, variables):
+    print("Extracting Tracts...")
+    extractData(
+        dataDir,
+        "acs_summary/data/tract_geo.csv",
+        variables,
+        "acs_summary/data/tract.csv",
+        "acs_summary/data/tract_margin.csv"
+    )
 
-print("Extracting Blocks...")
-extract_data(
-    trac_tf,
-    tract_datadir,
-    "acs_summary/data/block_geo.csv",
-    variables,
-    "acs_summary/data/block.csv"
-)
+def extractCounties(dataDir, variables):
+    print("Extracting Counties...")
+    extractData(
+        dataDir,
+        "acs_summary/data/county_geo.csv",
+        variables,
+        "acs_summary/data/county.csv",
+        "acs_summary/data/county_margin.csv"
+    )
+
+def extractBlocks(dataDir, variables):
+    print("Extracting Blocks...")
+    extractData(
+        dataDir,
+        "acs_summary/data/block_geo.csv",
+        variables,
+        "acs_summary/data/block.csv",
+        "acs_summary/data/block_margin.csv"
+    )
+
+def main():
+    variables = getVariables()
+
+    dataDir = "acs_summary/data/all/"
+
+    allDatadir = os.path.join(dataDir, "group1")
+    tractDatadir = os.path.join(dataDir, "group2")
+
+    extractCounties(allDatadir, variables)
+    extractTracts(tractDatadir, variables)
+    extractBlocks(tractDatadir, variables)
+
+if __name__ == '__main__':
+    main()

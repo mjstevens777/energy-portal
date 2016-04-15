@@ -38,6 +38,11 @@ tables.csv was generated from the the five year appendices
 that are part of the technical documentation
 <https://www.census.gov/programs-surveys/acs/technical-documentation/summary-file-documentation.html>
 
+### Unzip
+
+Run `acs_summary/unzip-data.sh` to extract the summary files into the
+`data/all` folder. This
+
 ## Variable Selection
 
 Run `python acs_summary/generate_variable_descriptions.py` to generate the file `variables.json`. This file has the following structure:
@@ -88,3 +93,15 @@ to the top and hit 'Get selections'. Paste the contents of this into
 go back and hit 'Set selections' to open up a text box where you can paste
 the contents of `selected-variables.csv`. Hit go to apply the selections.
 This may take a while.
+
+
+## Extraction
+
+Run `python acs_summary/extract_data.py` to generate the files
+`data/county.csv`, `data/tract.csv`, and `data.block.csv`,
+as well as their margin of error files, e.g. `data/county_margin.csv`
+
+At this point, you can also run `analyze_variable_coverage.py`, which will
+generate files `data/hist_county.json`, `data/hist_tract.json`, and
+`data/hist_block.json`. You can use these files to inspect whether any
+fields are systematically missing
