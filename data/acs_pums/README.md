@@ -17,3 +17,8 @@ for population/people.
 
 Run `acs_pums/unzip.sh` to extract these files to
 `data/csv/ss2014[h/p][state].csv`
+
+## Metadata
+
+Download the data dictionary from:
+<http://www2.census.gov/programs-surveys/acs/tech_docs/pums/data_dict/PUMS_Data_Dictionary_2010-2014.txt>
