@@ -23,3 +23,12 @@ Optionally, put the raw data in a table called weather_datapoints.
 You can either use a primary key of `(station id, hour)` to reference the data,
 or use a primary key of `station id` and store the data in arrays.
 Again, this is a lot of data, so only store the useful stuff.
+
+## Processing Methods (Seokho)
+
+process_tmy.py contains methods to process metadata (straightforward) and to extract
+columns from the tmy data. The current method hashes each set of data points to a key
+(station #, date, hour). There is no load script yet because the data is so enormous
+I would rather not load useless data just for the sake of testing.
+
+TODO: Load scripts after figuring out what we need.
