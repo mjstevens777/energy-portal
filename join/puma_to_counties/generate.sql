@@ -10,6 +10,7 @@ create table puma_to_counties(
 create index puma_to_counties_puma_id on puma_to_counties(puma_id);
 create index puma_to_counties_county_id on puma_to_counties(county_id);
 
+-- TODO: Use sum of census tract population instead of count of census tracts
 insert into puma_to_counties(puma_id, county_id, weight1)
 select puma_id, county_id, count(*) from
 census_tracts_to_puma_2010 join

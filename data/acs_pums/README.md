@@ -11,9 +11,9 @@ Documentation: <https://www.census.gov/programs-surveys/acs/technical-documentat
 
 ## Processing
 
-Run `acs_pums/download.sh` to download the csv_hus.zip and
-csv_pus.zip files. `h` stands for housing and `p` stands
-for population/people.
+Run `acs_pums/download.sh` to download the csv_h**.zip and
+csv_p**.zip files. `h` stands for housing and `p` stands
+for population/people and the ** will be the state.
 
 Run `acs_pums/unzip.sh` to extract these files to
 `data/csv/ss2014[h/p][state].csv`
@@ -22,3 +22,6 @@ Run `acs_pums/unzip.sh` to extract these files to
 
 Download the data dictionary from:
 <http://www2.census.gov/programs-surveys/acs/tech_docs/pums/data_dict/PUMS_Data_Dictionary_2010-2014.txt>
+
+Run `python acs_pums/parse_data_dictionary.py` to generate the file
+data-dictionary.json.
