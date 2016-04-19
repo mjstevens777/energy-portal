@@ -6,13 +6,13 @@ to mappings from one dataset to another.
 
 The end goal is a table like the following:
 
- dataset_a_id | dataset_b_id | weight_a_to_b | weight_b_to_a
--------------------------------------------------------------
-      1       |       2      |     0.75       |       0.6
-      1       |       3      |     0.25       |       0.33
-      2       |       2      |     0.5        |       0.4
-      2       |       3      |     0.5        |       0.66
-      3       |       1      |     1.0        |       1.0
+| `a_id` | `b_id` | `weight_a_to_b` | `weight_b_to_a` |
+|--------|--------|-----------------|-----------------|
+|   1    |    2   |      0.75       |        0.6      |
+|   1    |    3   |      0.25       |        0.33     |
+|   2    |    2   |      0.5        |        0.4      |
+|   2    |    3   |      0.5        |        0.66     |
+|   3    |    1   |      1.0        |        1.0      |
 
 The goal is that the weights from a to b, grouped by the a key,
 sum to 1 (similarly, weights from b to a, grouped by b, should
