@@ -1,7 +1,7 @@
 drop table if exists counties_metro_micro;
 
 create table counties_metro_micro(
-	fips text primary key,
+	county_id text primary key,
 	state text,
 	county text,
 	metro_micro text

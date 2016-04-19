@@ -1,7 +1,7 @@
 drop table if exists counties;
 
 create table counties(
-	fips text primary key,
+	county_id text primary key,
 	state text,
 	county_name text
 );

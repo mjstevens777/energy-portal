@@ -3,10 +3,10 @@ drop table if exists utility_service_territory;
 create table utility_service_territory(
 	utility text,
 	utility_number text,
-	fips text,
+	county_id text,
 	state text,
 	county_name text,
-	primary key(utility, fips)
+	primary key(utility, county_id)
 );
 
 \copy utility_service_territory from 'Service_Territory_2014_County_Normalized.csv'	WITH CSV HEADER;

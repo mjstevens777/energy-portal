@@ -18,10 +18,10 @@ create table puma_poly(
 \copy puma_poly from '2010_PUMA_Names.txt' WITH CSV HEADER ENCODING 'LATIN1';
 
 alter table census_tracts_to_puma_2010 add column puma_id text;
-alter table census_tracts_to_puma_2010 add column full_fips text;
+alter table census_tracts_to_puma_2010 add column tract_id text;
 update census_tracts_to_puma_2010 set puma_id=state_fips||puma_code;
-update census_tracts_to_puma_2010 set full_fips='1400000US'||state_fips||county_fips||tract_fips;
-alter table census_tracts_to_puma_2010 add constraint census_tracts_to_puma_2010_unique_tract primary key(full_fips);
+update census_tracts_to_puma_2010 set tract_id=state_fips||county_fips||tract_fips;
+alter table census_tracts_to_puma_2010 add constraint census_tracts_to_puma_2010_unique_tract primary key(tract_id);
 
 alter table puma_poly add column puma_id text;
 update puma_poly set puma_id=state_fips||puma_code;
@@ -34,6 +34,6 @@ update puma_poly set geom=u.geom from (
 	select puma_id, ST_Multi(ST_Union(geom)) geom
 	from census_tracts_to_puma_2010
 	join census_tracts_poly
-	using(full_fips)
+	using(tract_id)
 	group by puma_id
 ) u where u.puma_id=puma_poly.puma_id;
