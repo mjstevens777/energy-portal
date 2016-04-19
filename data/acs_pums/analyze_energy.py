@@ -23,7 +23,7 @@ with open('acs_pums/data/energy_usage_individual.csv') as f:
                 data[var][puma_id] += float(value) * weight
                 data[var + '_weight'][puma_id] += weight
 
-with open('acs_pums/data/energy_by_puma.csv', 'w') as f:
+with open('acs_pums/energy_by_puma.csv', 'w') as f:
     writer = csv.DictWriter(f, ['puma_id'] + vars)
     writer.writeheader()
     for puma_id in puma_ids:
