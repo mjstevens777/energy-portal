@@ -3,12 +3,12 @@
 The table `census_tracts_poly` contains a map of census tracts with some
 additional identifiers.
 
- * `full_fips` Census GeoId
+ * `geo_id` Census GeoId
  * `geom` Census Tract boundaries as a multipolygon
  * `state_fips` 3-digit state FIPS code
  * `county_fips` 2-digit county FIPS code
  * `tract_fips` 6-digit tract code
- * `fips` 5-digit County FIPS code
+ * `county_id` 5-digit County FIPS code
  * `sq_mi` Square Miles
 
 ## Downloading

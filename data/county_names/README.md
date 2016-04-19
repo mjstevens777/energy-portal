@@ -2,7 +2,7 @@
 
 The table `counties` maps from FIPS code to county and state name.
 It has the columns:
- * `fips` County FIPS Code
+ * `county_id` County FIPS Code
  * `state` e.g. NY
  * `county_name` e.g. Chambers County
 

@@ -27,7 +27,7 @@ alter table puma_poly add column puma_id text;
 update puma_poly set puma_id=state_fips||puma_code;
 alter table puma_poly add constraint puma_poly_pkey primary key(puma_id);
 
- select AddGeometryColumn('puma_poly', 'geom', 4269, 'MULTIPOLYGON', 2);
+select AddGeometryColumn('puma_poly', 'geom', 4269, 'MULTIPOLYGON', 2);
 
 
 update puma_poly set geom=u.geom from (

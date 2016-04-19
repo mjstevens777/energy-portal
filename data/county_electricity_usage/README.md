@@ -4,7 +4,7 @@ The table utility_service_territory describes in which counties various
 utilities operate. It has the columns:
  * `utility` Utility Name
  * `utility_number` Identifier for that utility, unique in a given year
- * `fips` County FIPS Code
+ * `county_id` County FIPS Code
  * `data_year` The year the data was generated, currently 2014
 
 # Download

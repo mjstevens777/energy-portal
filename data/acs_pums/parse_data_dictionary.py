@@ -34,7 +34,7 @@ class Footnote(Block):
 class Note(Block):
     pass
 
-variablePattern = re.compile("^[A-Z0-9]+( +[0-9]+)?$")
+variablePattern = re.compile("^[A-Z0-9]+( +[0-9]+)?( \(.*\))?$")
 codePattern = re.compile("^[A-z0-9\\-\\.\\/]+ \\.")
 footnoteReferencePattern = re.compile("\\*+$")
 
@@ -45,7 +45,7 @@ class Variable(Block):
         spl = lines[0].split()
         self.name = spl[0]
         if len(spl) > 1:
-            self.size = spl[-1]
+            self.size = spl[1]
         else:
             self.size = None
         self.codebook = []
@@ -170,9 +170,9 @@ def linkElements(elements):
     }
 
 def main():
-    fileName = "acs_pums/PUMS_Data_Dictionary_2010-2014.txt"
+    fileName = "acs_pums/PUMSDataDict14.txt"
     with open(fileName, encoding='latin-1') as f:
-        blocks = f.read().replace('\r','').split('\n\n')
+        blocks = re.sub('\n\n+','\n\n', f.read().replace('\r','')).split('\n\n')
 
     elements = generateElements(blocks)
     tree = linkElements(elements)

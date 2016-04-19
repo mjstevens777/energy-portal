@@ -3,7 +3,7 @@
 The table `counties_metro_micro` describes for each county whether it is
 part of a metropolitan or micropolitan statistical area as used in the
 census. There are two columns:
- * `fips` The FIPS code of the county
+ * `county_id` The FIPS code of the county
  * `metro_micro` Text taking on the values:
    - "METRO" for metropolitan statistical area
    - "MICRO" for micropolitan statistical area

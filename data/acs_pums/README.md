@@ -1,5 +1,17 @@
 # PUMS (Public Use Microdata Sample)
 
+## Schema
+
+This dataset is the source of the table `energy_by_puma` which has the
+following columns:
+
+ * `puma_id` - The puma region ID
+ * `electricity_cost` - Monthly average electricity cost per household
+ * `gas_cost` - Same for natural gas
+ * `fuel_cost` - Same for fuel oil
+
+## Description
+
 This data represents public use microdata sample data from the american
 community survey
 

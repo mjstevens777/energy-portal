@@ -2,41 +2,51 @@ Category,Name,Description
 h,RT,Record Type
 h,SERIALNO,Housing unit/GQ person serial number
 h,DIVISION,Division code
-h,PUMA00,Public use microdata area code (PUMA) based on Census 2000 definition for data collected prior to 2012. Use in combination with PUMA10.
-h,PUMA10,Public use microdata area code (PUMA) based on 2010 Census definition for data collected in 2012 or later. Use in combination with PUMA00.
+h,PUMA,Public use microdata area code (PUMA) based on 2010 Census definition
 h,REGION,Region code
 h,ST,State Code
 h,ADJHSG,Adjustment factor for housing dollar amounts (6 implied decimal places)
-h,ADJINC,Adjustment factor for income and earnings dollar amounts (6 implied decimal places)
+h,ADJINC,Adjustment factor for income and earnings dollar amounts(6 implied decimal places)
 h,WGTP,Housing Weight
 h,NP,Number of person records following this housing record
 h,TYPE,Type of unit
+h,ACCESS,Access to the Internet
 h,ACR,Lot size
 h,AGS,Sales of Agriculture Products (Yearly sales)
 h,BATH,Bathtub or shower
 h,BDSP,Number of bedrooms
 h,BLD,Units in structure
+h,BROADBND,Mobile broadband plan
 h,BUS,Business or medical office on property
+h,COMPOTHX,Other computer equipment
 h,CONP,Condo fee (monthly amount)
+h,DIALUP,Dial-up service
+h,DSL,DSL service
 h,ELEP,Electricity (monthly cost)
+h,FIBEROP,Fiber-optic Internet service
 h,FS,Yearly food stamp/Supplemental Nutrition Assistance Program recipiency
-h,FULP,Fuel cost(yearly cost for fuels other than gas and electricity) 
-h,GASP3,Gas (monthly cost)
+h,FULP,Fuel cost(yearly cost for fuels other than gas and electricity)
+h,GASP,Gas (monthly cost)
+h,HANDHELD,Handheld computer
 h,HFL,House heating fuel
 h,INSP,Fire/hazard/flood insurance (yearly amount)
+h,LAPTOP,"Laptop, desktop, or notebook computer"
 h,MHP,Mobile home costs (yearly amount)
+h,MODEM,Cable Internet service
 h,MRGI,First mortgage payment includes fire/hazard/flood insurance
 h,MRGP,First mortgage payment (monthly amount)
 h,MRGT,First mortgage payment includes real estate taxes
 h,MRGX,First mortgage status
+h,OTHSVCEX,Other Internet service
 h,REFR,Refrigerator
 h,RMSP,Number of Rooms
 h,RNTM,Meals included in rent
 h,RNTP,Monthly rent
 h,RWAT,Hot and cold running water
 h,RWATPR,Running water
+h,SATELLITE,Satellite Internet service
 h,SINK,Sink with a faucet
-h,SMP,Total payment on all second and junior mortgages and home equity loans (monthly amount)
+h,SMP,Total payment on all second and junior mortgages and home equity loans
 h,STOV,Stove or range
 h,TEL,Telephone
 h,TEN,Tenure
@@ -54,6 +64,7 @@ h,GRPIP,Gross rent as a percentage of household income past 12 months
 h,HHL,Household language
 h,HHT,Household/family type
 h,HINCP,Household income (past 12 months)
+h,HOTWAT,Water heater (Puerto Rico only)
 h,HUGCL,Household with grandparent living with grandchildren
 h,HUPAC,HH presence and age of children
 h,HUPAOC,HH presence and age of own children
@@ -67,9 +78,10 @@ h,NPF,Number of persons in family (unweighted)
 h,NPP,Grandparent headed household with no parent present
 h,NR,Presence of nonrelative in household
 h,NRC,Number of related children in household (unweighted)
-h,OCPIP,Selected monthly owner costs as a percentage of household 
+h,OCPIP,Selected monthly owner costs as a percentage of household
 h,PARTNER,Unmarried partner household
 h,PLM,Complete plumbing facilities
+h,PLMPRP,Complete plumbing facilities for Puerto Rico
 h,PSF,Presence of subfamilies in Household
 h,R18,Presence of persons under 18 years in household (unweighted)
 h,R60,Presence of persons 60 years and over in household (unweighted)
@@ -78,40 +90,58 @@ h,RESMODE,Response mode
 h,SMOCP,Selected monthly owner costs
 h,SMX,Second or junior mortgage or home equity loan status
 h,SRNT,Specified rent unit
+h,SSMC,Same-sex married couple households
 h,SVAL,Specified value owner unit
 h,TAXP,Property taxes (yearly amount)
 h,WIF,Workers in family during the past 12 months
 h,WKEXREL,Work experience of householder and spouse
-h,WORKSTAT2,Work status of householder or spouse in family households
+h,WORKSTAT,Work status of householder or spouse in family households
+h,FACCESSP,Access to the Internet allocation flag
 h,FACRP,Lot size allocation flag
 h,FAGSP,Sales of Agricultural Products allocation flag
 h,FBATHP,Bathtub or shower allocation flag
 h,FBDSP,Number of bedrooms allocation flag
 h,FBLDP,Units in structure allocation flag
+h,FBROADBNDP,Mobile broadband plan allocation flag
 h,FBUSP,Business or medical office on property allocation flag
+h,FCOMPOTHXP,Other computer equipment allocation flag
 h,FCONP,Condominium fee allocation flag
+h,FDIALUPP,Dial-up service allocation flag
+h,FDSLP,DSL service allocation flag
 h,FELEP,Electricity (monthly cost) allocation flag
-h,FFSP,Yearly food stamp/Supplemental Nutrition Assistance Program recipiency 
-h,FFULP,Fuel cost (yearly cost for fuels other than gas and electricity)allocation 
+h,FFIBEROPP,Fiber-optic Internet service allocation flag
+h,FFINCP,Family income (past 12 months) allocation flag
+h,FFSP,Yearly food stamp/Supplemental Nutrition Assistance Program
+h,FFULP,Fuel cost (yearly cost for fuels other than gas and electricity)
 h,FGASP,Gas (monthly cost) allocation flag
+h,FGRNTP,Gross rent (monthly amount) allocation flag
+h,FHANDHELDP,Handheld computer allocation flag
 h,FHFLP,House heating fuel allocation flag
+h,FHINCP,Household income (past 12 months) allocation flag
+h,FHOTWATP,Water heater allocation flag (Puerto Rico only)
 h,FINSP,"Fire, hazard, flood insurance (yearly amount) allocation flag"
 h,FKITP,Complete kitchen facilities allocation flag
+h,FLAPTOPP,"Laptop, desktop, or notebook computer allocation flag"
 h,FMHP,Mobile home costs (yearly amount) allocation flag
+h,FMODEMP,Cable Internet service allocation flag
 h,FMRGIP,"First mortgage payment includes fire, hazard, flood insurance"
 h,FMRGP,First mortgage payment (monthly amount) allocation flag
 h,FMRGTP,First mortgage payment includes real estate taxes allocation flag
 h,FMRGXP,First mortgage status allocation flag
 h,FMVP,When moved into this house or apartment allocation flag
+h,FOTHSVCEXP,Other Internet service allocation flag
 h,FPLMP,Complete plumbing facilities allocation flag
+h,FPLMPRP,Complete plumbing facilities allocation flag for Puerto Rico
 h,FREFRP,Refrigerator allocation flag
 h,FRMSP,Number of rooms allocation flag
 h,FRNTMP,Meals included in rent allocation flag
 h,FRNTP,Monthly rent allocation flag
 h,FRWATP,Hot and cold running water allocation flag
 h,FRWATPRP,Running water allocation flag
+h,FSATELLITEP,Satellite Internet service allocation flag
 h,FSINKP,Sink with a faucet allocation flag
-h,FSMP,Total payment on second and junior mortgages and home equity loans (monthly amount) allocation flag
+h,FSMOCP,Selected monthly owner cost allocation flag
+h,FSMP,Total payment on second and junior mortgages and home equity loans
 h,FSMXHP,Home equity loan status allocation flag
 h,FSMXSP,Second mortgage status allocation flag
 h,FSTOVP,Stove or range allocation flag
@@ -207,15 +237,13 @@ h,WGTP80,Housing Weight replicate 80
 p,RT,Record Type
 p,SERIALNO,Housing unit/GQ person serial number
 p,SPORDER,Person number
-p,PUMA00,Public use microdata area code (PUMA) based on Census 2000 definition for data collected prior to 2012. Use in combination with PUMA10.
-p,PUMA10,Public use microdata area code (PUMA) based on 2010 Census definition for data collected in 2012 or later. Use in combination with PUMA00.
+p,PUMA,Public use microdata area code (PUMA) based on 2010 Census definition
 p,ST,State Code
 p,ADJINC,Adjustment factor for income and earnings dollar amounts (6 implied decimal places)
 p,PWGTP,Person's weight
 p,AGEP,Age
 p,CIT,Citizenship status
-p,CITWP05,Year of naturalization write-in for data collected prior to 2012
-p,CITWP12,Year of naturalization write-in for data collected in 2012 or later
+p,CITWP,Year of naturalization write-in
 p,COW,Class of worker
 p,DDRS,Self-care difficulty
 p,DEAR,Hearing difficulty
@@ -224,7 +252,7 @@ p,DOUT,Independent living difficulty
 p,DPHY,Ambulatory difficulty
 p,DRAT,Veteran service connected disability rating (percentage)
 p,DRATX,Veteran service connected disability rating (checkbox)
-p,DREM,Cognitive difficulty 
+p,DREM,Cognitive difficulty
 p,ENG,Ability to speak English
 p,FER,Gave birth to child within the past 12 months
 p,GCL,Grandparents living with grandchildren
@@ -233,7 +261,7 @@ p,GCR,Grandparents responsible for grandchildren
 p,HINS1,Insurance through a current or former employer or union
 p,HINS2,Insurance purchased directly from an insurance company
 p,HINS3,"Medicare, for people 65 and older, or people with certain disabilities"
-p,HINS4,"Medicaid, Medical Assistance, or any kind of government-assistance plan for those with low incomes or a disability"
+p,HINS4,"Medicaid, Medical Assistance, or any kind of government-assistance plan"
 p,HINS5,TRICARE or other military health care
 p,HINS6,VA (including those who have ever used or enrolled for VA health care)
 p,HINS7,Indian Health Service
@@ -247,24 +275,23 @@ p,MARHD,Divorced in the past 12 months
 p,MARHM,Married in the past 12 months
 p,MARHT,Number of times married
 p,MARHW,Widowed in the past 12 months
-p,MARHYP05,Year last married for data collected prior to 2012
-p,MARHYP12,Year last married for data collected in 2012 or later
+p,MARHYP,Year last married
 p,MIG,Mobility status (lived here 1 year ago)
 p,MIL,Military service
 p,MLPA,Served September 2001 or later
 p,MLPB,Served August 1990 - August 2001 (including Persian Gulf War)
-p,MLPCD,Served May 1975 - July 1990 
+p,MLPCD,Served May 1975 - July 1990
 p,MLPE,Served Vietnam era (August 1964 - April 1975)
-p,MLPFG,Served February 1955 - July 1964 
+p,MLPFG,Served February 1955 - July 1964
 p,MLPH,Served Korean War (July 1950 - January 1955)
 p,MLPI,Served January 1947 - June 1950
 p,MLPJ,Served World War II (December 1941 - December 1946)
 p,MLPK,Served November 1941 or earlier
-p,NWAB,"Temporary absence from work (UNEDITED-See ""Employment Status Recode"" (ESR))"
-p,NWAV,"Available for work (UNEDITED-See ""Employment Status Recode"" (ESR))"
-p,NWLA,"On layoff from work (UNEDITED-See ""Employment Status Recode"" (ESR))"
-p,NWLK,"Looking for work (UNEDITED-See ""Employment Status Recode"" (ESR))"
-p,NWRE,"Informed of recall (UNEDITED-See ""Employment Status Recode"" (ESR))"
+p,NWAB,Temporary absence from work
+p,NWAV,Available for work
+p,NWLA,On layoff from work
+p,NWLK,Looking for work
+p,NWRE,Informed of recall
 p,OIP,All other income past 12 months
 p,PAP,Public assistance income past 12 months
 p,RELP,Relationship
@@ -281,70 +308,58 @@ p,WKHP,Usual hours worked per week past 12 months
 p,WKL,When last worked
 p,WKW,Weeks worked during past 12 months
 p,WRK,Worked last week
-p,YOEP05,Year of entry for data collected prior to 2012
-p,YOEP12,Year of entry for data collected in 2012 or later
+p,YOEP,Year of entry
 p,ANC,Ancestry recode
-p,ANC1P05,Recoded Detailed Ancestry for data collected prior to 2012 - first entry
-p,ANC1P12,Recoded Detailed Ancestry for data collected in 2012 or later - first entry
-p,ANC2P05,Recoded Detailed Ancestry for data collected prior to 2012 - second entry
-p,ANC2P12,Recoded Detailed Ancestry for data collected in 2012 or later - second entry
+p,ANC1P,Recoded Detailed Ancestry - first entry
+p,ANC2P,Recoded Detailed Ancestry - second entry
 p,DECADE,Decade of entry
 p,DIS,Disability recode
 p,DRIVESP,Number of vehicles calculated from JWRI
-p,ESP1,Employment status of parents
+p,ESP,Employment status of parents
 p,ESR,Employment status recode
 p,FOD1P,Recoded field of degree - first entry
 p,FOD2P,Recoded field of degree - second entry
 p,HICOV,Health insurance coverage recode
-p,HISP,Recoded detailed Hispanic origin 
-p,INDP,Industry recode based on 2012 IND codes
+p,HISP,Recoded detailed Hispanic origin
+p,INDP,Industry recode for 2013 and later based on 2012 IND codes
 p,JWAP,Time of arrival at work - hour and minute
 p,JWDP,Time of departure for work - hour and minute
-p,LANP05,Language spoken at home for data collected prior to 2012
-p,LANP12,Language spoken at home for data collected in 2012 or later
-p,MIGPUMA00,Migration PUMA based on Census 2000 definition for data collected prior to 2012
-p,MIGPUMA10,Migration PUMA based on 2010 Census definition for data collected in 2012 or later
-p,MIGSP05,Migration recode for data collected prior to 2012 - State or foreign country code
-p,MIGSP12,Migration recode for data collected in 2012 or later - State or foreign country code
+p,LANP,Language spoken at home
+p,MIGPUMA,Migration PUMA based on 2010 Census definition
+p,MIGSP,Migration recode - State or foreign country code
 p,MSP,"Married, spouse present/spouse absent"
-p,NAICSP,NAICS Industry code based on 2012 NAICS codes 
+p,NAICSP,NAICS Industry recode for 2013 and later based on 2012 NAICS codes
 p,NATIVITY,Nativity
 p,NOP,Nativity of parent
 p,OC,Own child
-p,OCCP10,Occupation recode for data collected in 2010 and 2011 based on 2010 OCC codes
-p,OCCP12,Occupation recode for data collected in 2012 or later based on 2010 OCC codes
+p,OCCP4,Occupation recode for 2012 and later based on 2010 OCC codes
 p,PAOC,Presence and age of own children
 p,PERNP,Total person's earnings
 p,PINCP,Total person's income (signed)
-p,POBP05,Place of birth (Recode) for data collected prior to 2012
-p,POBP12,Place of birth (Recode) for data collected in 2012 or later
+p,POBP,Place of birth (Recode)
 p,POVPIP,Income-to-poverty ratio recode
-p,POWPUMA00,Place of work PUMA based on Census 2000 definition for data collected prior to 2012
-p,POWPUMA10,Place of work PUMA based on 2010 Census definition for data collected in 2012 or later
-p,POWSP05,Place of work for data collected prior to 2012 - State or foreign country recode
-p,POWSP12,Place of work for data collected in 2012 or later - State or foreign country recode
+p,POWPUMA,Place of work PUMA based on 2010 Census definition
+p,POWSP,Place of work - State or foreign country recode
 p,PRIVCOV,Private health insurance coverage recode
 p,PUBCOV,Public health coverage recode
 p,QTRBIR,Quarter of birth
 p,RAC1P,Recoded detailed race code
-p,RAC2P05,Recoded detailed race code for data collected prior to 2012
-p,RAC2P12,Recoded detailed race code for data collected in 2012 or later
-p,RAC3P05,Recoded detailed race code for data collected prior to 2012
-p,RAC3P12,Recoded detailed race code for data collected in 2012 or later
+p,RAC2P,Recoded detailed race code
+p,RAC3P,Recoded detailed race code
 p,RACAIAN,American Indian and Alaska Native recode (American Indian and Alaska Native alone or in combination with one or more other races)
 p,RACAS,Asian recode (Asian alone or in combination with one or more other races)
 p,RACBLK,Black or African American recode (Black alone or in combination with one or more other races)
-p,RACNHPI,Native Hawaiian and Other Pacific Islander recode (Native Hawaiian and Other Pacific Islander alone or in combination with one or more other races)
+p,RACNH,Native Hawaiian recode (Native Hawaiian alone or in combination with one or more other races)
 p,RACNUM,Number of major race groups represented
+p,RACPI,Other Pacific Islander recode (Other Pacific Islander alone or in combination with one or more other races)
 p,RACSOR,Some other race recode (Some other race alone or in combination with one or more other races)
 p,RACWHT,White recode (White alone or in combination with one or more other races)
 p,RC,Related child
-p,SCIENGP,Field of degree science and engineering flag  NSF definition
-p,SCIENGRLP,Field of degree science and engineering related flag  NSF definition
+p,SCIENGP,Field of Degree Science and Engineering Flag  NSF Definition
+p,SCIENGRLP,Field of Degree Science and Engineering Related Flag  NSF Definition
 p,SFN,Subfamily number
 p,SFR,Subfamily relationship
-p,SOCP10,SOC Occupation code for data collected in 2010 and 2011 based on 2010 SOC codes
-p,SOCP12,SOC Occupation recode for data collected in 2012 or later based on 2010 SOCcodes
+p,SOCP,SOC Occupation code for 2012 and later based on 2010 SOC codes
 p,VPS,Veteran period of service
 p,WAOB,World area of birth<FN4>
 p,FAGEP,Age allocation flag
@@ -355,6 +370,7 @@ p,FCOWP,Class of worker allocation flag
 p,FDDRSP,Self-care difficulty allocation flag
 p,FDEARP,Hearing difficulty allocation flag
 p,FDEYEP,Vision difficulty allocation flag
+p,FDISP,Disability recode allocation flag
 p,FDOUTP,Independent living difficulty allocation flag
 p,FDPHYP,Ambulatory difficulty allocation flag
 p,FDRATP,Disability rating percentage allocation flag
@@ -363,19 +379,20 @@ p,FDREMP,Cognitive difficulty allocation flag
 p,FENGP,Ability to speak English allocation flag
 p,FESRP,Employment status recode allocation flag
 p,FFERP,Gave birth to child within the past 12 months allocation flag
-p,FFODP,Field of Degree allocation flag 
+p,FFODP,Field of Degree allocation flag
 p,FGCLP,Grandparents living with grandchildren allocation flag
 p,FGCMP,Length of time responsible for grandchildren allocation flag
 p,FGCRP,Grandparents responsible for grandchildren allocation flag
+p,FHICOVP,Health insurance coverage recode allocation flag
 p,FHINS1P,Insurance through a current or former employer or union allocation flag
 p,FHINS2P,Insurance purchased directly from an insurance company allocation flag
 p,FHINS3C,Medicare coverage given through the eligibility coverage edit
-p,FHINS3P,"Medicare, for people 65 or older, or people with certain disabilities allocation flag"
+p,FHINS3P,"Medicare, for people 65 or older, or people with certain disabilities"
 p,FHINS4C,Medicaid coverage given through the eligibility coverage edit
-p,FHINS4P,"Medicaid, medical assistance, or any kind of government-assistance plan for people with low incomes or a disability allocation flag"
+p,FHINS4P,"Medicaid, medical assistance, or any kind of government-assistance plan"
 p,FHINS5C,TRICARE coverage given through the eligibility coverage edit
 p,FHINS5P,TRICARE or other military health care allocation flag
-p,FHINS6P,VA (including those who have ever used or enrolled for VA health care) allocation flag
+p,FHINS6P,VA (including those who have ever used or enrolled for VA health care)
 p,FHINS7P,Indian health service allocation flag
 p,FHISP,Detailed Hispanic origin allocation flag
 p,FINDP,Industry allocation flag
@@ -399,8 +416,12 @@ p,FMILSP,Military service allocation flag
 p,FOCCP,Occupation allocation flag
 p,FOIP,All other income allocation flag
 p,FPAP,Public assistance income allocation flag
+p,FPERNP,Total persons earnings allocation flag
+p,FPINCP,Total persons income (signed) allocation flag
 p,FPOBP,Place of birth allocation flag
 p,FPOWSP,Place of work state allocation flag
+p,FPRIVCOVP,Private health insurance coverage recode allocation flag
+p,FPUBCOVP,Public health coverage recode allocation flag
 p,FRACP,Detailed race allocation flag
 p,FRELP,Relationship allocation flag
 p,FRETP,Retirement income allocation flag
@@ -493,6 +514,7 @@ p,PWGTP73,Person's Weight replicate 73
 p,PWGTP74,Person's Weight replicate 74
 p,PWGTP75,Person's Weight replicate 75
 p,PWGTP76,Person's Weight replicate 76
+p,PWGTP77,Person's Weight replicate 77
 p,PWGTP78,Person's Weight replicate 78
 p,PWGTP79,Person's Weight replicate 79
 p,PWGTP80,Person's Weight replicate 80
