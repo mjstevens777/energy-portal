@@ -3,9 +3,9 @@ cd acs_summary
 
 mkdir -p data
 cd data
-wget -c http://www2.census.gov/programs-surveys/acs/summary_file/2014/data/5_year_entire_sf/2014_ACS_Geography_Files.zip
-wget -c http://www2.census.gov/programs-surveys/acs/summary_file/2014/data/5_year_entire_sf/All_Geographies_Not_Tracts_Block_Groups.tar.gz
-wget -c http://www2.census.gov/programs-surveys/acs/summary_file/2014/data/5_year_entire_sf/Tracts_Block_Groups_Only.tar.gz
+wget -c http://www2.census.gov/programs-surveys/acs/summary_file/2014/data/5_year_entire_sf/2014_ACS_Geography_Files.zip --header "Referer: wwww2.census.gov"
+wget -c http://www2.census.gov/programs-surveys/acs/summary_file/2014/data/5_year_entire_sf/All_Geographies_Not_Tracts_Block_Groups.tar.gz --header "Referer: wwww2.census.gov"
+wget -c http://www2.census.gov/programs-surveys/acs/summary_file/2014/data/5_year_entire_sf/Tracts_Block_Groups_Only.tar.gz --header "Referer: wwww2.census.gov"
 
 
 
