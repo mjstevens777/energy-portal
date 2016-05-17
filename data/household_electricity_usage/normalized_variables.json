@@ -46,10 +46,10 @@
     "description": "Census Region",
     "field": "REGIONC",
     "labels": [
-      "Northeast Census Region",
-      "Midwest Census Region",
-      "South Census Region",
-      "West Census Region"
+      "northeast census region",
+      "midwest census region",
+      "south census region",
+      "west census region"
     ],
     "na_values": [
       ""
@@ -67,16 +67,16 @@
     "description": "Census Division",
     "field": "DIVISION",
     "labels": [
-      "New England Census Division (CT, MA, ME, NH, RI, VT)",
-      "Middle Atlantic Census Division (NJ, NY, PA)",
-      "East North Central Census Division (IL, IN, MI, OH, WI)",
-      "West North Central Census Division (IA, KS, MN, MO, ND, NE, SD)",
-      "South Atlantic  Census Division (DC, DE, FL, GA, MD, NC, SC, VA, WV)",
-      "East South Central Census Division (AL, KY, MS, TN)",
-      "West South Central Census Division (AR, LA, OK, TX)",
-      "Mountain North Sub-Division (CO, ID, MT, UT, WY)",
-      "Mountain South Sub-Division (AZ, NM, NV)",
-      "Pacific Census Division (AK, CA, HI, OR, WA)"
+      "new england census division (ct, ma, me, nh, ri, vt)",
+      "middle atlantic census division (nj, ny, pa)",
+      "east north central census division (il, in, mi, oh, wi)",
+      "west north central census division (ia, ks, mn, mo, nd, ne, sd)",
+      "south atlantic  census division (dc, de, fl, ga, md, nc, sc, va, wv)",
+      "east south central census division (al, ky, ms, tn)",
+      "west south central census division (ar, la, ok, tx)",
+      "mountain north sub-division (co, id, mt, ut, wy)",
+      "mountain south sub-division (az, nm, nv)",
+      "pacific census division (ak, ca, hi, or, wa)"
     ],
     "na_values": [
       ""
@@ -100,33 +100,33 @@
     "description": "Reportable states and groups of states",
     "field": "REPORTABLE_DOMAIN",
     "labels": [
-      "Connecticut, Maine, New Hampshire, Rhode Island, Vermont",
-      "Massachusetts",
-      "New York",
-      "New Jersey",
-      "Pennsylvania",
-      "Illinois",
-      "Indiana, Ohio",
-      "Michigan",
-      "Wisconsin",
-      "Iowa, Minnesota, North Dakota, South Dakota",
-      "Kansas, Nebraska",
-      "Missouri",
-      "Virginia",
-      "Delaware, District of Columbia, Maryland, West Virginia",
-      "Georgia",
-      "North Carolina, South Carolina",
-      "Florida",
-      "Alabama, Kentucky, Mississippi",
-      "Tennessee",
-      "Arkansas, Louisiana, Oklahoma",
-      "Texas",
-      "Colorado",
-      "Idaho, Montana, Utah, Wyoming",
-      "Arizona",
-      "Nevada, New Mexico",
-      "California",
-      "Alaska, Hawaii, Oregon, Washington"
+      "connecticut, maine, new hampshire, rhode island, vermont",
+      "massachusetts",
+      "new york",
+      "new jersey",
+      "pennsylvania",
+      "illinois",
+      "indiana, ohio",
+      "michigan",
+      "wisconsin",
+      "iowa, minnesota, north dakota, south dakota",
+      "kansas, nebraska",
+      "missouri",
+      "virginia",
+      "delaware, district of columbia, maryland, west virginia",
+      "georgia",
+      "north carolina, south carolina",
+      "florida",
+      "alabama, kentucky, mississippi",
+      "tennessee",
+      "arkansas, louisiana, oklahoma",
+      "texas",
+      "colorado",
+      "idaho, montana, utah, wyoming",
+      "arizona",
+      "nevada, new mexico",
+      "california",
+      "alaska, hawaii, oregon, washington"
     ],
     "na_values": [
       ""
@@ -203,11 +203,11 @@
     "description": "Building America Climate Region (collapsed for public file)",
     "field": "Climate_Region_Pub",
     "labels": [
-      "Very Cold/Cold",
-      "Hot-Dry/Mixed-Dry",
-      "Hot-Humid",
-      "Mixed-Humid",
-      "Marine"
+      "very cold/cold",
+      "hot-dry/mixed-dry",
+      "hot-humid",
+      "mixed-humid",
+      "marine"
     ],
     "na_values": [
       ""
@@ -226,11 +226,11 @@
     "description": "AIA Climate Zone, based on average temperatures from 1981 - 2010",
     "field": "AIA_Zone",
     "labels": [
-      "Less than 2,000 CDD and greater than 7,000 HDD",
-      "Less than 2,000 CDD and 5,500 - 7,000 HDD",
-      "Less than 2,000 CDD and 4,000 - 5,499 HDD",
-      "Less than 2,000 CDD and less than 4,000 HDD",
-      "2,000 CDD or more and less than 4,000 HDD"
+      "less than 2,000 cdd and greater than 7,000 hdd",
+      "less than 2,000 cdd and 5,500 - 7,000 hdd",
+      "less than 2,000 cdd and 4,000 - 5,499 hdd",
+      "less than 2,000 cdd and less than 4,000 hdd",
+      "2,000 cdd or more and less than 4,000 hdd"
     ],
     "na_values": [
       ""
@@ -285,9 +285,9 @@
     "description": "Housing unit is owned, rented, or occupied without payment of rent",
     "field": "KOWNRENT",
     "labels": [
-      "Owned by someone in the household",
-      "Rented",
-      "Occupied without payment of rent"
+      "owned by someone in the household",
+      "rented",
+      "occupied without payment of rent"
     ],
     "na_values": [
       ""
@@ -304,8 +304,8 @@
     "description": "Housing unit part of condominium or cooperative",
     "field": "CONDCOOP",
     "labels": [
-      "Condominium",
-      "Cooperative"
+      "condominium",
+      "cooperative"
     ],
     "na_values": [
       "",
@@ -393,8 +393,8 @@
     "description": "Converted 2-4 unit apartment building",
     "field": "CONVERSION",
     "labels": [
-      "Built as an apartment building",
-      "Converted into an apartment building"
+      "built as an apartment building",
+      "converted into an apartment building"
     ],
     "na_values": [
       "",
@@ -411,8 +411,8 @@
     "description": "Converted 2-4 unit apartment building was originally a single-family house",
     "field": "ORIG1FAM",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -429,8 +429,8 @@
     "description": "Converted 2-4 unit apartment building more like single family house or apartment building",
     "field": "LOOKLIKE",
     "labels": [
-      "More like a single-family house",
-      "More like an apartment building"
+      "more like a single-family house",
+      "more like an apartment building"
     ],
     "na_values": [
       "",
@@ -471,15 +471,15 @@
     "description": "Major outside wall material",
     "field": "WALLTYPE",
     "labels": [
-      "Brick",
-      "Wood",
-      "Siding (Aluminum, Vinyl, Steel)",
-      "Stucco",
-      "Composition (Shingle)",
-      "Stone",
-      "Concrete/Concrete Block",
-      "Glass",
-      "Other"
+      "brick",
+      "wood",
+      "siding (aluminum, vinyl, steel)",
+      "stucco",
+      "composition (shingle)",
+      "stone",
+      "concrete/concrete block",
+      "glass",
+      "other"
     ],
     "na_values": [
       ""
@@ -502,14 +502,14 @@
     "description": "Major roofing material",
     "field": "ROOFTYPE",
     "labels": [
-      "Ceramic or Clay Tiles",
-      "Wood Shingles/Shakes",
-      "Metal",
-      "Slate or Synthetic Slate",
-      "Composition Shingles",
-      "Asphalt",
-      "Concrete Tiles",
-      "Other"
+      "ceramic or clay tiles",
+      "wood shingles/shakes",
+      "metal",
+      "slate or synthetic slate",
+      "composition shingles",
+      "asphalt",
+      "concrete tiles",
+      "other"
     ],
     "na_values": [
       "",
@@ -532,8 +532,8 @@
     "description": "Studio apartment",
     "field": "STUDIO",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -562,12 +562,12 @@
     "description": "Number of stories in a single-family home",
     "field": "STORIES",
     "labels": [
-      "One story",
-      "Two stories",
-      "Three stories",
-      "Four or more stories",
-      "Split-level",
-      "Other type"
+      "one story",
+      "two stories",
+      "three stories",
+      "four or more stories",
+      "split-level",
+      "other type"
     ],
     "na_values": [
       "",
@@ -588,8 +588,8 @@
     "description": "Addition to a mobile home",
     "field": "TYPEHUQ4",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -662,8 +662,8 @@
     "description": "Basement in housing unit",
     "field": "CELLAR",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -680,8 +680,8 @@
     "description": "Housing unit over a crawl space",
     "field": "CRAWL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -698,8 +698,8 @@
     "description": "Housing unit over a concrete slab",
     "field": "CONCRETE",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -716,8 +716,8 @@
     "description": "Finished basement",
     "field": "BASEFIN",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -746,8 +746,8 @@
     "description": "Heating used in basement",
     "field": "BASEHEAT",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -764,8 +764,8 @@
     "description": "All or partial basement heating",
     "field": "BASEHT2",
     "labels": [
-      "All",
-      "Partial"
+      "all",
+      "partial"
     ],
     "na_values": [
       "",
@@ -807,8 +807,8 @@
     "description": "Cooling used in basement",
     "field": "BASECOOL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -825,8 +825,8 @@
     "description": "All or partial basement cooling",
     "field": "BASECL2",
     "labels": [
-      "All",
-      "Partial"
+      "all",
+      "partial"
     ],
     "na_values": [
       "",
@@ -868,9 +868,9 @@
     "description": "Portion of basement exclusively used by housing unit in apartment building with 2-4 units",
     "field": "BASEUSE",
     "labels": [
-      "None",
-      "All",
-      "Part"
+      "none",
+      "all",
+      "part"
     ],
     "na_values": [
       "",
@@ -888,8 +888,8 @@
     "description": "Attic in housing unit",
     "field": "ATTIC",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -906,8 +906,8 @@
     "description": "Finished attic",
     "field": "ATTICFIN",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -936,8 +936,8 @@
     "description": "Heating used in attic",
     "field": "ATTCHEAT",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -954,8 +954,8 @@
     "description": "All or partial attic heating",
     "field": "ATTCHT2 ",
     "labels": [
-      "All",
-      "Partial"
+      "all",
+      "partial"
     ],
     "na_values": [
       "",
@@ -997,8 +997,8 @@
     "description": "Cooling used in attic",
     "field": "ATTCCOOL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -1015,8 +1015,8 @@
     "description": "All or partial attic cooling",
     "field": "ATTCCL2 ",
     "labels": [
-      "All",
-      "Partial"
+      "all",
+      "partial"
     ],
     "na_values": [
       "",
@@ -1058,9 +1058,9 @@
     "description": "Portion of attic exclusively used by housing unit in apartment building with 2-4 units",
     "field": "ATTICUSE",
     "labels": [
-      "None",
-      "All",
-      "Part"
+      "none",
+      "all",
+      "part"
     ],
     "na_values": [
       "",
@@ -1078,8 +1078,8 @@
     "description": "Attached garage",
     "field": "PRKGPLC1",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -1096,9 +1096,9 @@
     "description": "Size of attached garage",
     "field": "SIZEOFGARAGE",
     "labels": [
-      "One-car garage",
-      "Two-car garage",
-      "Three-or-more-car garage"
+      "one-car garage",
+      "two-car garage",
+      "three-or-more-car garage"
     ],
     "na_values": [
       "",
@@ -1116,9 +1116,9 @@
     "description": "Location of attached garage",
     "field": "GARGLOC",
     "labels": [
-      "Attached to the basement",
-      "Attached to the first floor",
-      "Attached to some other floor"
+      "attached to the basement",
+      "attached to the first floor",
+      "attached to some other floor"
     ],
     "na_values": [
       "",
@@ -1136,8 +1136,8 @@
     "description": "Heating used in attached garage",
     "field": "GARGHEAT",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -1154,8 +1154,8 @@
     "description": "Cooling used in attached garage",
     "field": "GARGCOOL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -1172,8 +1172,8 @@
     "description": "Detached garage or carport",
     "field": "PRKGPLC2",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -1190,10 +1190,10 @@
     "description": "Size of detached garage or carport",
     "field": "SIZEOFDETACH",
     "labels": [
-      "One-car garage",
-      "Two-car garage",
-      "Three-or-more-car garage",
-      "Carport"
+      "one-car garage",
+      "two-car garage",
+      "three-or-more-car garage",
+      "carport"
     ],
     "na_values": [
       "",
@@ -1212,8 +1212,8 @@
     "description": "Outlet within 20 feet of vehicle parking",
     "field": "OUTLET",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -1243,10 +1243,10 @@
     "description": "Fuel used by most-used stove",
     "field": "STOVENFUEL",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Electricity",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "electricity",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -1276,10 +1276,10 @@
     "description": "Fuel used by most-used separate cooktop",
     "field": "STOVEFUEL",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Electricity",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "electricity",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -1309,10 +1309,10 @@
     "description": "Fuel used by separate oven",
     "field": "OVENFUEL",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Electricity",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "electricity",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -1331,13 +1331,13 @@
     "description": "Frequency of oven use",
     "field": "OVENUSE",
     "labels": [
-      "Not used (if volunteered)",
-      "Three or more times a day",
-      "Two times a day",
-      "Once a day",
-      "A few times a week",
-      "About once a week",
-      "Less than once a week"
+      "not used (if volunteered)",
+      "three or more times a day",
+      "two times a day",
+      "once a day",
+      "a few times a week",
+      "about once a week",
+      "less than once a week"
     ],
     "na_values": [
       "",
@@ -1359,8 +1359,8 @@
     "description": "Self-cleaning oven",
     "field": "OVENCLN",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -1377,8 +1377,8 @@
     "description": "Continuous or manual cleaning cycle for most-used oven",
     "field": "TYPECLN",
     "labels": [
-      "Cleans continuously",
-      "Manually start the cleaning cycle"
+      "cleans continuously",
+      "manually start the cleaning cycle"
     ],
     "na_values": [
       "",
@@ -1395,8 +1395,8 @@
     "description": "Microwave oven used",
     "field": "MICRO",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -1412,10 +1412,10 @@
     "description": "Microwave usage",
     "field": "AMTMICRO",
     "labels": [
-      "Used to cook or reheat most meals and snacks",
-      "Used to cook or reheat about half of meals and snacks",
-      "Used to cook or reheat a few meals and snacks",
-      "Used very little"
+      "used to cook or reheat most meals and snacks",
+      "used to cook or reheat about half of meals and snacks",
+      "used to cook or reheat a few meals and snacks",
+      "used very little"
     ],
     "na_values": [
       "",
@@ -1434,8 +1434,8 @@
     "description": "Microwave used for defrosting",
     "field": "DEFROST",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -1452,8 +1452,8 @@
     "description": "Outdoor grill used",
     "field": "OUTGRILL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -1469,9 +1469,9 @@
     "description": "Fuel used by outdoor grill",
     "field": "OUTGRILLFUEL",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -1489,8 +1489,8 @@
     "description": "Built-in indoor grill used",
     "field": "TOPGRILL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -1506,10 +1506,10 @@
     "description": "Fuel used by built-in indoor grill",
     "field": "STGRILA",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Electricity",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "electricity",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -1528,8 +1528,8 @@
     "description": "Toaster used",
     "field": "TOASTER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -1545,13 +1545,13 @@
     "description": "Frequency hot meals are cooked",
     "field": "NUMMEAL",
     "labels": [
-      "Ne ver cooks (if volunteered)",
-      "Three or more times a day",
-      "Two times a day",
-      "Once a day",
-      "A few times a week",
-      "About once a week",
-      "Less than once a week"
+      "ne ver cooks (if volunteered)",
+      "three or more times a day",
+      "two times a day",
+      "once a day",
+      "a few times a week",
+      "about once a week",
+      "less than once a week"
     ],
     "na_values": [
       ""
@@ -1572,10 +1572,10 @@
     "description": "Most-used cooking fuel",
     "field": "FUELFOOD",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Electricity",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "electricity",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -1594,8 +1594,8 @@
     "description": "Coffee maker used",
     "field": "COFFEE",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -1622,13 +1622,13 @@
     "description": "Door arrangement of most-used refrigerator",
     "field": "TYPERFR1",
     "labels": [
-      "Full-size with one door",
-      "Half-size or compact",
-      "Other kind",
-      "Full-size with three or more doors",
-      "Full-size with two doors, freezer next to the refrigerator",
-      "Full-size with two doors, freezer above the refrigerator",
-      "Full-size with two doors, freezer below the refrigerator"
+      "full-size with one door",
+      "half-size or compact",
+      "other kind",
+      "full-size with three or more doors",
+      "full-size with two doors, freezer next to the refrigerator",
+      "full-size with two doors, freezer above the refrigerator",
+      "full-size with two doors, freezer below the refrigerator"
     ],
     "na_values": [
       "",
@@ -1650,11 +1650,11 @@
     "description": "Size of most-used refrigerator",
     "field": "SIZRFRI1",
     "labels": [
-      "Half-size or compact",
-      "Small (14 cubic feet or less)",
-      "Medium (15 to 18 cubic feet)",
-      "Large (19 to 22 cubic feet)",
-      "Very Large (more than 22 cubic feet)"
+      "half-size or compact",
+      "small (14 cubic feet or less)",
+      "medium (15 to 18 cubic feet)",
+      "large (19 to 22 cubic feet)",
+      "very large (more than 22 cubic feet)"
     ],
     "na_values": [
       "",
@@ -1674,9 +1674,9 @@
     "description": "Defrosting type of most-used refrigerator",
     "field": "REFRIGT1",
     "labels": [
-      "Manual",
-      "Frost-free",
-      "No working freezer section (if volunteered)"
+      "manual",
+      "frost-free",
+      "no working freezer section (if volunteered)"
     ],
     "na_values": [
       "",
@@ -1694,8 +1694,8 @@
     "description": "Through-the-door ice and water on most-used refrigerator",
     "field": "ICE",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -1739,8 +1739,8 @@
     "description": "Energy Star most-used refrigerator",
     "field": "ESFRIG",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -1759,8 +1759,8 @@
     "description": "Most-used refrigerator replaced by this household in the last 4 years",
     "field": "REPLCFRI",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -1779,12 +1779,12 @@
     "description": "Assistance for replacing most-used refrigerator",
     "field": "HELPFRI",
     "labels": [
-      "Did not receive any assistance",
-      "Manfacturer or retailer rebate",
-      "Utility or energy supplier rebate",
-      "Tax credit",
-      "Subsidized loan",
-      "Weatherization assistance"
+      "did not receive any assistance",
+      "manfacturer or retailer rebate",
+      "utility or energy supplier rebate",
+      "tax credit",
+      "subsidized loan",
+      "weatherization assistance"
     ],
     "na_values": [
       "",
@@ -1836,13 +1836,13 @@
     "description": "Door arrangement of second most-used refrigerator",
     "field": "TYPERFR2",
     "labels": [
-      "Full-size with one door",
-      "Half-size or compact",
-      "Other kind",
-      "Full-size with three or more doors",
-      "Full-size with two doors, freezer next to the refrigerator",
-      "Full-size with two doors, freezer above the refrigerator",
-      "Full-size with two doors, freezer below the refrigerator"
+      "full-size with one door",
+      "half-size or compact",
+      "other kind",
+      "full-size with three or more doors",
+      "full-size with two doors, freezer next to the refrigerator",
+      "full-size with two doors, freezer above the refrigerator",
+      "full-size with two doors, freezer below the refrigerator"
     ],
     "na_values": [
       "",
@@ -1864,11 +1864,11 @@
     "description": "Size of second most-used refrigerator",
     "field": "SIZRFRI2",
     "labels": [
-      "Half-size or compact",
-      "Small (14 cubic feet or less)",
-      "Medium (15 to 18 cubic feet)",
-      "Large (19 to 22 cubic feet)",
-      "Very Large (more than 22 cubic feet)"
+      "half-size or compact",
+      "small (14 cubic feet or less)",
+      "medium (15 to 18 cubic feet)",
+      "large (19 to 22 cubic feet)",
+      "very large (more than 22 cubic feet)"
     ],
     "na_values": [
       "",
@@ -1888,9 +1888,9 @@
     "description": "Defrosting type of second most-used refrigerator",
     "field": "REFRIGT2",
     "labels": [
-      "Manual",
-      "Frost-free",
-      "No working freezer section (if volunteered)"
+      "manual",
+      "frost-free",
+      "no working freezer section (if volunteered)"
     ],
     "na_values": [
       "",
@@ -1947,8 +1947,8 @@
     "description": "Energy Star second most-used refrigerator",
     "field": "ESFRIG2",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -1967,13 +1967,13 @@
     "description": "Door arrangements of third most-used refrigerator",
     "field": "TYPERFR3",
     "labels": [
-      "Full-size with one door",
-      "Half-size or compact",
-      "Other kind",
-      "Full-size with three or more doors",
-      "Full-size with two doors, freezer next to the refrigerator",
-      "Full-size with two doors, freezer above the refrigerator",
-      "Full-size with two doors, freezer below the refrigerator"
+      "full-size with one door",
+      "half-size or compact",
+      "other kind",
+      "full-size with three or more doors",
+      "full-size with two doors, freezer next to the refrigerator",
+      "full-size with two doors, freezer above the refrigerator",
+      "full-size with two doors, freezer below the refrigerator"
     ],
     "na_values": [
       "",
@@ -1995,11 +1995,11 @@
     "description": "Size of third most-used refrigerator",
     "field": "SIZRFRI3",
     "labels": [
-      "Half-size or compact",
-      "Small (14 cubic feet or less)",
-      "Medium (15 to 18 cubic feet)",
-      "Large (19 to 22 cubic feet)",
-      "Very Large (more than 22 cubic feet)"
+      "half-size or compact",
+      "small (14 cubic feet or less)",
+      "medium (15 to 18 cubic feet)",
+      "large (19 to 22 cubic feet)",
+      "very large (more than 22 cubic feet)"
     ],
     "na_values": [
       "",
@@ -2019,9 +2019,9 @@
     "description": "Defrosting type of third most-used refrigerator",
     "field": "REFRIGT3",
     "labels": [
-      "Manual",
-      "Frost-free",
-      "No working freezer section (if volunteered)"
+      "manual",
+      "frost-free",
+      "no working freezer section (if volunteered)"
     ],
     "na_values": [
       "",
@@ -2078,8 +2078,8 @@
     "description": "Energy Star third most-used refrigerator",
     "field": "ESFRIG3",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -2098,8 +2098,8 @@
     "description": "Separate freezer used",
     "field": "SEPFREEZ",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -2115,9 +2115,9 @@
     "description": "Number of separate freezers used",
     "field": "NUMFREEZ",
     "labels": [
-      "One",
-      "Two",
-      "Three"
+      "one",
+      "two",
+      "three"
     ],
     "na_values": [
       "",
@@ -2135,8 +2135,8 @@
     "description": "Type of most-used freezer",
     "field": "UPRTFRZR",
     "labels": [
-      "Upright",
-      "Chest"
+      "upright",
+      "chest"
     ],
     "na_values": [
       "",
@@ -2153,10 +2153,10 @@
     "description": "Size of most-used freezer",
     "field": "SIZFREEZ",
     "labels": [
-      "Small (14 cubic feet or less)",
-      "Medium (15 to 18 cubic feet)",
-      "Large (19 to 22 cubic feet)",
-      "Very Large (more than 22 cubic feet)"
+      "small (14 cubic feet or less)",
+      "medium (15 to 18 cubic feet)",
+      "large (19 to 22 cubic feet)",
+      "very large (more than 22 cubic feet)"
     ],
     "na_values": [
       "",
@@ -2175,8 +2175,8 @@
     "description": "Defrosting type for most-used freezer",
     "field": "FREEZER",
     "labels": [
-      "Manual",
-      "Frost-free"
+      "manual",
+      "frost-free"
     ],
     "na_values": [
       "",
@@ -2220,8 +2220,8 @@
     "description": "Most-used freezer replaced by this household in the last 4 years",
     "field": "REPLCFRZ",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -2240,11 +2240,11 @@
     "description": "Assistance for replacing most-used freezer",
     "field": "HELPFRZ",
     "labels": [
-      "Did not receive any assistance",
-      "Manfacturer or retailer rebate",
-      "Utility or energy supplier rebate",
-      "Tax credit",
-      "Subsidized loan"
+      "did not receive any assistance",
+      "manfacturer or retailer rebate",
+      "utility or energy supplier rebate",
+      "tax credit",
+      "subsidized loan"
     ],
     "na_values": [
       "",
@@ -2293,8 +2293,8 @@
     "description": "Type of second most-used freezer",
     "field": "UPRTFRZR2",
     "labels": [
-      "Upright",
-      "Chest"
+      "upright",
+      "chest"
     ],
     "na_values": [
       "",
@@ -2311,10 +2311,10 @@
     "description": "Size of second most-used freezer",
     "field": "SIZFREEZ2",
     "labels": [
-      "Small (14 cubic feet or less)",
-      "Medium (15 to 18 cubic feet)",
-      "Large (19 to 22 cubic feet)",
-      "Very Large (more than 22 cubic feet)"
+      "small (14 cubic feet or less)",
+      "medium (15 to 18 cubic feet)",
+      "large (19 to 22 cubic feet)",
+      "very large (more than 22 cubic feet)"
     ],
     "na_values": [
       "",
@@ -2333,8 +2333,8 @@
     "description": "Defrosting type for second most-used freezer",
     "field": "FREEZER2",
     "labels": [
-      "Manual",
-      "Frost-free"
+      "manual",
+      "frost-free"
     ],
     "na_values": [
       "",
@@ -2378,8 +2378,8 @@
     "description": "Dishwasher used",
     "field": "DISHWASH",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -2395,11 +2395,11 @@
     "description": "Frequency dishwasher used",
     "field": "DWASHUSE",
     "labels": [
-      "Less than once a week",
-      "Once each week",
+      "less than once a week",
+      "once each week",
       "2 or 3 times a week",
       "4 to 6 times a week",
-      "At least once each day"
+      "at least once each day"
     ],
     "na_values": [
       "",
@@ -2446,8 +2446,8 @@
     "description": "Energy Star dishwasher",
     "field": "ESDISHW",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -2466,8 +2466,8 @@
     "description": "Dishwasher replaced by this household in the last 4 years",
     "field": "REPLCDW",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -2486,11 +2486,11 @@
     "description": "Assistance for replacing dishwasher",
     "field": "HELPDW",
     "labels": [
-      "Did not receive any assistance",
-      "Manfacturer or retailer rebate",
-      "Utility or energy supplier rebate",
-      "Tax credit",
-      "Subsidized loan"
+      "did not receive any assistance",
+      "manfacturer or retailer rebate",
+      "utility or energy supplier rebate",
+      "tax credit",
+      "subsidized loan"
     ],
     "na_values": [
       "",
@@ -2541,8 +2541,8 @@
     "description": "Clothes washer used in home",
     "field": "CWASHER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -2558,8 +2558,8 @@
     "description": "Top or front loading clothes washer used in home",
     "field": "TOPFRONT",
     "labels": [
-      "Top loading",
-      "Front loading"
+      "top loading",
+      "front loading"
     ],
     "na_values": [
       "",
@@ -2601,9 +2601,9 @@
     "description": "Water temperature used for clothes washer wash cycle",
     "field": "WASHTEMP",
     "labels": [
-      "Hot",
-      "Warm",
-      "Cold"
+      "hot",
+      "warm",
+      "cold"
     ],
     "na_values": [
       "",
@@ -2621,9 +2621,9 @@
     "description": "Water temperature used for clothes washer rinse cycle",
     "field": "RNSETEMP",
     "labels": [
-      "Hot",
-      "Warm",
-      "Cold"
+      "hot",
+      "warm",
+      "cold"
     ],
     "na_values": [
       "",
@@ -2668,8 +2668,8 @@
     "description": "Energy Star clothes washer",
     "field": "ESCWASH",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -2688,8 +2688,8 @@
     "description": "Clothes washer replaced by this household in the last 4 years",
     "field": "REPLCCW",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -2708,11 +2708,11 @@
     "description": "Assistance for replacing clothes washer",
     "field": "HELPCW",
     "labels": [
-      "Did not receive any assistance",
-      "Manfacturer or retailer rebate",
-      "Utility or energy supplier rebate",
-      "Tax credit",
-      "Subsidized loan"
+      "did not receive any assistance",
+      "manfacturer or retailer rebate",
+      "utility or energy supplier rebate",
+      "tax credit",
+      "subsidized loan"
     ],
     "na_values": [
       "",
@@ -2763,8 +2763,8 @@
     "description": "Clothes dryer used in home",
     "field": "DRYER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -2780,9 +2780,9 @@
     "description": "Fuel used by clothes dryer",
     "field": "DRYRFUEL",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Electricity"
+      "natural gas",
+      "propane/lpg",
+      "electricity"
     ],
     "na_values": [
       "",
@@ -2800,9 +2800,9 @@
     "description": "Frequency clothes dryer used",
     "field": "DRYRUSE",
     "labels": [
-      "Use it every time you wash clothes",
-      "Use it for some, but not all, loads of wash",
-      "Use it infrequently"
+      "use it every time you wash clothes",
+      "use it for some, but not all, loads of wash",
+      "use it infrequently"
     ],
     "na_values": [
       "",
@@ -2879,11 +2879,11 @@
     "description": "Display type of most-used TV",
     "field": "TVTYPE1",
     "labels": [
-      "Standard Tube",
-      "LCD",
-      "Plasma",
-      "Projection",
-      "LED"
+      "standard tube",
+      "lcd",
+      "plasma",
+      "projection",
+      "led"
     ],
     "na_values": [
       "",
@@ -2903,9 +2903,9 @@
     "description": "Cable box or satellite box connected to the most-used TV",
     "field": "CABLESAT1",
     "labels": [
-      "Neither",
-      "Cable Box",
-      "Satellite Box"
+      "neither",
+      "cable box",
+      "satellite box"
     ],
     "na_values": [
       "",
@@ -2923,8 +2923,8 @@
     "description": "DVR built into the cable box or satellite box connected to the most-used TV",
     "field": "COMBODVR1",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -2941,8 +2941,8 @@
     "description": "Separate DVR connected to the most-used TV",
     "field": "DVR1",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -2959,8 +2959,8 @@
     "description": "Digital converter box connected to the most-used TV",
     "field": "DIGITSTB1",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -2977,8 +2977,8 @@
     "description": "Video game console connected to the most-used TV",
     "field": "PLAYSTA1",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -2995,8 +2995,8 @@
     "description": "Combo VCR/DVD connected to the most-used TV",
     "field": "COMBOVCRDVD1",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3013,8 +3013,8 @@
     "description": "VCR connected to the most-used TV",
     "field": "VCR1",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3031,8 +3031,8 @@
     "description": "DVD player connected to the most-used TV",
     "field": "DVD1",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3049,8 +3049,8 @@
     "description": "Home theater system connected to the most-used TV",
     "field": "TVAUDIOSYS1",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3067,8 +3067,8 @@
     "description": "Other set-top box connected to the most-used TV",
     "field": "OTHERSTB1",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3110,11 +3110,11 @@
     "description": "Most-used TV weekday usage spent playing video games",
     "field": "TVONWDWATCH1",
     "labels": [
-      "None",
-      "All",
-      "Most",
-      "Half",
-      "Little"
+      "none",
+      "all",
+      "most",
+      "half",
+      "little"
     ],
     "na_values": [
       "",
@@ -3159,11 +3159,11 @@
     "description": "Most-used TV weekend usage spent playing video games",
     "field": "TVONWEWATCH1",
     "labels": [
-      "None",
-      "All",
-      "Most",
-      "Half",
-      "Little"
+      "none",
+      "all",
+      "most",
+      "half",
+      "little"
     ],
     "na_values": [
       "",
@@ -3204,11 +3204,11 @@
     "description": "Display type of second most-used TV",
     "field": "TVTYPE2",
     "labels": [
-      "Standard Tube",
-      "LCD",
-      "Plasma",
-      "Projection",
-      "LED"
+      "standard tube",
+      "lcd",
+      "plasma",
+      "projection",
+      "led"
     ],
     "na_values": [
       "",
@@ -3228,9 +3228,9 @@
     "description": "Cable box or satellite box connected to the second most-used TV",
     "field": "CABLESAT2",
     "labels": [
-      "Neither",
-      "Cable Box",
-      "Satellite Box"
+      "neither",
+      "cable box",
+      "satellite box"
     ],
     "na_values": [
       "",
@@ -3248,8 +3248,8 @@
     "description": "DVR built into the cable box or satellite box connected to the second most-used TV",
     "field": "COMBODVR2",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3266,8 +3266,8 @@
     "description": "Separate DVR connected to the second most-used TV",
     "field": "DVR2",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3284,8 +3284,8 @@
     "description": "Digital converter box connected to the second most-used TV",
     "field": "DIGITSTB2",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3302,8 +3302,8 @@
     "description": "Video game console connected to the second most-used TV",
     "field": "PLAYSTA2",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3320,8 +3320,8 @@
     "description": "Combo VCR/DVD connected to the second most-used TV",
     "field": "COMBOVCRDVD2",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3338,8 +3338,8 @@
     "description": "VCR connected to the second most-used TV",
     "field": "VCR2",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3356,8 +3356,8 @@
     "description": "DVD player connected to the second most-used TV",
     "field": "DVD2",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3374,8 +3374,8 @@
     "description": "Home theater system connected to the second most-used TV",
     "field": "TVAUDIOSYS2",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3392,8 +3392,8 @@
     "description": "Other set-top box connected to the second most-used TV",
     "field": "OTHERSTB2",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3435,11 +3435,11 @@
     "description": "Second most-used TV weekday usage spent playing video games",
     "field": "TVONWDWATCH2",
     "labels": [
-      "None",
-      "All",
-      "Most",
-      "Half",
-      "Little"
+      "none",
+      "all",
+      "most",
+      "half",
+      "little"
     ],
     "na_values": [
       "",
@@ -3484,11 +3484,11 @@
     "description": "Second most-used TV weekend usage spent playing video games",
     "field": "TVONWEWATCH2",
     "labels": [
-      "None",
-      "All",
-      "Most",
-      "Half",
-      "Little"
+      "none",
+      "all",
+      "most",
+      "half",
+      "little"
     ],
     "na_values": [
       "",
@@ -3529,11 +3529,11 @@
     "description": "Display type of third most-used TV",
     "field": "TVTYPE3",
     "labels": [
-      "Standard Tube",
-      "LCD",
-      "Plasma",
-      "Projection",
-      "LED"
+      "standard tube",
+      "lcd",
+      "plasma",
+      "projection",
+      "led"
     ],
     "na_values": [
       "",
@@ -3553,9 +3553,9 @@
     "description": "Cable box or satellite box connected to the third most-used TV",
     "field": "CABLESAT3",
     "labels": [
-      "Neither",
-      "Cable Box",
-      "Satellite Box"
+      "neither",
+      "cable box",
+      "satellite box"
     ],
     "na_values": [
       "",
@@ -3573,8 +3573,8 @@
     "description": "DVR built into the cable box or satellite box connected to the third most-used TV",
     "field": "COMBODVR3",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3591,8 +3591,8 @@
     "description": "Separate DVR connected to the third most-used TV",
     "field": "DVR3",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3609,8 +3609,8 @@
     "description": "Digital converter box connected to the third most-used TV",
     "field": "DIGITSTB3",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3627,8 +3627,8 @@
     "description": "Video game console connected to the third most-used TV",
     "field": "PLAYSTA3",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3645,8 +3645,8 @@
     "description": "Combo VCR/DVD connected to the third most-used TV",
     "field": "COMBOVCRDVD3",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3663,8 +3663,8 @@
     "description": "VCR connected to the third most-used TV",
     "field": "VCR3",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3681,8 +3681,8 @@
     "description": "DVD player connected to the third most-used TV",
     "field": "DVD3",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3699,8 +3699,8 @@
     "description": "Home theater system connected to the third most-used TV",
     "field": "TVAUDIOSYS3",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3717,8 +3717,8 @@
     "description": "Other set-top box connected to the third most-used TV",
     "field": "OTHERSTB3",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3760,11 +3760,11 @@
     "description": "Third most-used TV weekday usage spent playing video games",
     "field": "TVONWDWATCH3",
     "labels": [
-      "None",
-      "All",
-      "Most",
-      "Half",
-      "Little"
+      "none",
+      "all",
+      "most",
+      "half",
+      "little"
     ],
     "na_values": [
       "",
@@ -3809,11 +3809,11 @@
     "description": "Third most-used TV weekend usage spent playing video games",
     "field": "TVONWEWATCH3",
     "labels": [
-      "None",
-      "All",
-      "Most",
-      "Half",
-      "Little"
+      "none",
+      "all",
+      "most",
+      "half",
+      "little"
     ],
     "na_values": [
       "",
@@ -3833,8 +3833,8 @@
     "description": "Computer used at home",
     "field": "COMPUTER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -3861,8 +3861,8 @@
     "description": "Most-used computer - desktop or laptop",
     "field": "PCTYPE1",
     "labels": [
-      "Desktop",
-      "Laptop"
+      "desktop",
+      "laptop"
     ],
     "na_values": [
       "",
@@ -3879,8 +3879,8 @@
     "description": "Monitor type of most-used computer",
     "field": "MONITOR1",
     "labels": [
-      "Standard Monitor",
-      "Flat-Panel LCD Monitor"
+      "standard monitor",
+      "flat-panel lcd monitor"
     ],
     "na_values": [
       "",
@@ -3922,8 +3922,8 @@
     "description": "Turn off most-used computer when not in use",
     "field": "PCONOFF1",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3940,8 +3940,8 @@
     "description": "Sleep or standby mode for most-used computer when not in use",
     "field": "PCSLEEP1",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -3958,8 +3958,8 @@
     "description": "Second most-used computer - desktop or laptop",
     "field": "PCTYPE2",
     "labels": [
-      "Desktop",
-      "Laptop"
+      "desktop",
+      "laptop"
     ],
     "na_values": [
       "",
@@ -3976,8 +3976,8 @@
     "description": "Monitor type of second most-used computer",
     "field": "MONITOR2",
     "labels": [
-      "Standard Monitor",
-      "Flat-Panel LCD Monitor"
+      "standard monitor",
+      "flat-panel lcd monitor"
     ],
     "na_values": [
       "",
@@ -4019,8 +4019,8 @@
     "description": "Turn off second most-used computer when not in use",
     "field": "PCONOFF2",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4037,8 +4037,8 @@
     "description": "Sleep or standby mode for second most-used computer when not in use",
     "field": "PCSLEEP2",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4055,8 +4055,8 @@
     "description": "Third most-used computer - desktop or laptop",
     "field": "PCTYPE3",
     "labels": [
-      "Desktop",
-      "Laptop"
+      "desktop",
+      "laptop"
     ],
     "na_values": [
       "",
@@ -4073,8 +4073,8 @@
     "description": "Monitor type of third most-used computer",
     "field": "MONITOR3",
     "labels": [
-      "Standard Monitor",
-      "Flat-Panel LCD Monitor"
+      "standard monitor",
+      "flat-panel lcd monitor"
     ],
     "na_values": [
       "",
@@ -4116,8 +4116,8 @@
     "description": "Turn off third most-used computer when not in use",
     "field": "PCONOFF3",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4134,8 +4134,8 @@
     "description": "Sleep or standby mode for third most-used computer when not in use",
     "field": "PCSLEEP3",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4152,8 +4152,8 @@
     "description": "Internet access at home",
     "field": "INTERNET",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4170,8 +4170,8 @@
     "description": "Dial-up internet access",
     "field": "INDIALUP",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4188,8 +4188,8 @@
     "description": "DSL or Fiber Optic internet access",
     "field": "INDSL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4206,8 +4206,8 @@
     "description": "Cable internet access",
     "field": "INCABLE",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4224,8 +4224,8 @@
     "description": "Satellite internet access",
     "field": "INSATEL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4242,8 +4242,8 @@
     "description": "Wireless internet in home",
     "field": "INWIRELESS",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4272,8 +4272,8 @@
     "description": "Separate fax machine used",
     "field": "FAX",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -4289,8 +4289,8 @@
     "description": "Separate copy machine used",
     "field": "COPIER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -4306,8 +4306,8 @@
     "description": "Well water pump used",
     "field": "WELLPUMP",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4324,8 +4324,8 @@
     "description": "Automotive block or engine heater or battery blanket used",
     "field": "DIPSTICK",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4342,8 +4342,8 @@
     "description": "Evaporative cooler used",
     "field": "SWAMPCOL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4360,8 +4360,8 @@
     "description": "Large heated aquarium used",
     "field": "AQUARIUM",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -4377,8 +4377,8 @@
     "description": "Stereo equipment used",
     "field": "STEREO",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -4394,8 +4394,8 @@
     "description": "Cordless telephone used",
     "field": "NOCORD",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -4411,8 +4411,8 @@
     "description": "Answering machine used",
     "field": "ANSMACH",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -4450,9 +4450,9 @@
     "description": "Charging patterns for rechargeable tools and appliances",
     "field": "BATCHRG",
     "labels": [
-      "Keep them plugged in all the time",
-      "Recharge them as needed",
-      "Both ways are used"
+      "keep them plugged in all the time",
+      "recharge them as needed",
+      "both ways are used"
     ],
     "na_values": [
       "",
@@ -4470,9 +4470,9 @@
     "description": "Chargers for rechargeable tools and appliances left plugged into wall",
     "field": "CHRGPLGT",
     "labels": [
-      "No",
-      "Yes",
-      "Some but not all"
+      "no",
+      "yes",
+      "some but not all"
     ],
     "na_values": [
       "",
@@ -4512,9 +4512,9 @@
     "description": "Charging patterns for rechargeable electronic devices",
     "field": "ELECCHRG",
     "labels": [
-      "Keep them plugged in all the time",
-      "Recharge them as needed",
-      "Both ways are used"
+      "keep them plugged in all the time",
+      "recharge them as needed",
+      "both ways are used"
     ],
     "na_values": [
       "",
@@ -4532,9 +4532,9 @@
     "description": "Chargers for rechargeable electronic devices left plugged into wall",
     "field": "CHRGPLGE",
     "labels": [
-      "No",
-      "Yes",
-      "Some but not all"
+      "no",
+      "yes",
+      "some but not all"
     ],
     "na_values": [
       "",
@@ -4552,8 +4552,8 @@
     "description": "Space heating equipment used",
     "field": "HEATHOME",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -4569,8 +4569,8 @@
     "description": "No space heating equipment, or unused space heating equipment",
     "field": "DNTHEAT",
     "labels": [
-      "Have equipment but don't use it",
-      "Don't have any heating equipment"
+      "have equipment but don't use it",
+      "don't have any heating equipment"
     ],
     "na_values": [
       "",
@@ -4587,18 +4587,18 @@
     "description": "Unused space heating equipment type",
     "field": "EQUIPNOHEAT",
     "labels": [
-      "Steam or Hot Water System",
-      "Central Warm-Air Furnace",
-      "Heat Pump",
-      "Built-In Electric Units",
-      "Floor or Wall Pipeless Furnace",
-      "Built-In Room Heater",
-      "Heating Stove",
-      "Fireplace",
-      "Portable Electric Heaters",
-      "Portable Kerosene Heaters",
-      "Cooking Stove",
-      "Other Equipment"
+      "steam or hot water system",
+      "central warm-air furnace",
+      "heat pump",
+      "built-in electric units",
+      "floor or wall pipeless furnace",
+      "built-in room heater",
+      "heating stove",
+      "fireplace",
+      "portable electric heaters",
+      "portable kerosene heaters",
+      "cooking stove",
+      "other equipment"
     ],
     "na_values": [
       "",
@@ -4625,15 +4625,15 @@
     "description": "Fuel for unused space heating equipment",
     "field": "FUELNOHEAT",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Fuel Oil",
-      "Kerosene",
-      "Electricity",
-      "Wood",
-      "Solar",
-      "District Steam",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "fuel oil",
+      "kerosene",
+      "electricity",
+      "wood",
+      "solar",
+      "district steam",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -4657,18 +4657,18 @@
     "description": "Type of main space heating equpiment used",
     "field": "EQUIPM",
     "labels": [
-      "Steam or Hot Water System",
-      "Central Warm-Air Furnace",
-      "Heat Pump",
-      "Built-In Electric Units",
-      "Floor or Wall Pipeless Furnace",
-      "Built-In Room Heater",
-      "Heating Stove",
-      "Fireplace",
-      "Portable Electric Heaters",
-      "Portable Kerosene Heaters",
-      "Cooking Stove",
-      "Other Equipment"
+      "steam or hot water system",
+      "central warm-air furnace",
+      "heat pump",
+      "built-in electric units",
+      "floor or wall pipeless furnace",
+      "built-in room heater",
+      "heating stove",
+      "fireplace",
+      "portable electric heaters",
+      "portable kerosene heaters",
+      "cooking stove",
+      "other equipment"
     ],
     "na_values": [
       "",
@@ -4695,15 +4695,15 @@
     "description": "Main space heating fuel",
     "field": "FUELHEAT",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Fuel Oil",
-      "Kerosene",
-      "Electricity",
-      "Wood",
-      "Solar",
-      "District Steam",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "fuel oil",
+      "kerosene",
+      "electricity",
+      "wood",
+      "solar",
+      "district steam",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -4727,8 +4727,8 @@
     "description": "Routine service or maintenance performed on main space heating equipment",
     "field": "MAINTHT",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4772,8 +4772,8 @@
     "description": "Main space heating equipment replaced by this household in the last 4 years",
     "field": "REPLCHT",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4792,12 +4792,12 @@
     "description": "Assistance for replacing or maintaining main space heating equipment",
     "field": "HELPHT",
     "labels": [
-      "Did not receive any assistance",
-      "Manfacturer or retailer rebate",
-      "Utility or energy supplier rebate",
-      "Tax credit",
-      "Subsidized loan",
-      "Weatherization assistance"
+      "did not receive any assistance",
+      "manfacturer or retailer rebate",
+      "utility or energy supplier rebate",
+      "tax credit",
+      "subsidized loan",
+      "weatherization assistance"
     ],
     "na_values": [
       "",
@@ -4849,8 +4849,8 @@
     "description": "Main space heating equipment heats other homes, business, or farm",
     "field": "HEATOTH",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4867,8 +4867,8 @@
     "description": "Secondary space heating equipment used",
     "field": "EQUIPAUX",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4885,8 +4885,8 @@
     "description": "Heat pump used for secondary space heating",
     "field": "REVERSE",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4903,8 +4903,8 @@
     "description": "Central warm-air furnace used for secondary space heating",
     "field": "WARMAIR",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4921,15 +4921,15 @@
     "description": "Fuel used by warm-air furnace for secondary space heating",
     "field": "FURNFUEL",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Fuel Oil",
-      "Kerosene",
-      "Electricity",
-      "Wood",
-      "Solar",
-      "District Steam",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "fuel oil",
+      "kerosene",
+      "electricity",
+      "wood",
+      "solar",
+      "district steam",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -4953,8 +4953,8 @@
     "description": "Hot water system used for secondary space heating",
     "field": "STEAMR",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -4971,15 +4971,15 @@
     "description": "Fuel used by hot water system for secondary space heating",
     "field": "RADFUEL",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Fuel Oil",
-      "Kerosene",
-      "Electricity",
-      "Wood",
-      "Solar",
-      "District Steam",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "fuel oil",
+      "kerosene",
+      "electricity",
+      "wood",
+      "solar",
+      "district steam",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -5003,8 +5003,8 @@
     "description": "Built-in electric units used for secondary space heating",
     "field": "PERMELEC",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5021,8 +5021,8 @@
     "description": "Pipeless furnace used for secondary space heating",
     "field": "PIPELESS",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5039,15 +5039,15 @@
     "description": "Fuel used by pipeless furnace for secondary space heating",
     "field": "PIPEFUEL",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Fuel Oil",
-      "Kerosene",
-      "Electricity",
-      "Wood",
-      "Solar",
-      "District Steam",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "fuel oil",
+      "kerosene",
+      "electricity",
+      "wood",
+      "solar",
+      "district steam",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -5071,8 +5071,8 @@
     "description": "Built-in room heaters used for secondary space hearing",
     "field": "ROOMHEAT",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5089,10 +5089,10 @@
     "description": "Fuel used by built-in electric units for secondary space heating",
     "field": "RMHTFUEL",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Fuel Oil",
-      "Kerosene"
+      "natural gas",
+      "propane/lpg",
+      "fuel oil",
+      "kerosene"
     ],
     "na_values": [
       "",
@@ -5111,8 +5111,8 @@
     "description": "Heating stove used for secondary space heating",
     "field": "WOODKILN",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5129,8 +5129,8 @@
     "description": "Fuel used by heating stove for secondary space heating",
     "field": "HSFUEL",
     "labels": [
-      "Wood",
-      "Other Fuel"
+      "wood",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -5147,8 +5147,8 @@
     "description": "Portable electric heaters used for secondary space heating",
     "field": "CARRYEL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5165,8 +5165,8 @@
     "description": "Portable kerosene heaters used for secondary space heating",
     "field": "CARRYKER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5183,8 +5183,8 @@
     "description": "Fireplace used for secondary space heating",
     "field": "CHIMNEY",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5201,10 +5201,10 @@
     "description": "Fuel used by fireplace for secondary space heating",
     "field": "FPFUEL",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Wood",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "wood",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -5223,8 +5223,8 @@
     "description": "Flue on gas fireplace",
     "field": "NGFPFLUE",
     "labels": [
-      "Flue to the outside",
-      "Flueless"
+      "flue to the outside",
+      "flueless"
     ],
     "na_values": [
       "",
@@ -5241,9 +5241,9 @@
     "description": "Frequency gas fireplace used",
     "field": "USENGFP",
     "labels": [
-      "Most days",
-      "About once a week",
-      "Fewer than 4 times each month"
+      "most days",
+      "about once a week",
+      "fewer than 4 times each month"
     ],
     "na_values": [
       "",
@@ -5261,8 +5261,8 @@
     "description": "Cooking stove used for secondary space heating",
     "field": "RANGE",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5279,13 +5279,13 @@
     "description": "Fuel used by cooking stove for secondary space heating",
     "field": "RNGFUEL",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Fuel Oil",
-      "Kerosene",
-      "Electricity",
-      "Wood",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "fuel oil",
+      "kerosene",
+      "electricity",
+      "wood",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -5307,8 +5307,8 @@
     "description": "Other equipment used for secondary space heating",
     "field": "DIFEQUIP",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5325,15 +5325,15 @@
     "description": "Fuel used by other secondary space heating equipment",
     "field": "DIFFUEL",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Fuel Oil",
-      "Kerosene",
-      "Electricity",
-      "Wood",
-      "Solar",
-      "District Steam",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "fuel oil",
+      "kerosene",
+      "electricity",
+      "wood",
+      "solar",
+      "district steam",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -5357,9 +5357,9 @@
     "description": "Portion of space heating provided by main space heating equipment (for homes with main and secondary heating only)",
     "field": "EQMAMT",
     "labels": [
-      "Almost all",
-      "About three-fourths",
-      "Closer to half"
+      "almost all",
+      "about three-fourths",
+      "closer to half"
     ],
     "na_values": [
       "",
@@ -5389,8 +5389,8 @@
     "description": "Thermostat(s) for heating equipment",
     "field": "THERMAIN",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5419,8 +5419,8 @@
     "description": "Programmable main thermostat",
     "field": "PROTHERM",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5437,8 +5437,8 @@
     "description": "Programmable thermostat lowers temperature at night",
     "field": "AUTOHEATNITE",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5455,8 +5455,8 @@
     "description": "Programmable thermostat lowers temperature during the day",
     "field": "AUTOHEATDAY",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5509,8 +5509,8 @@
     "description": "Humidifier used",
     "field": "MOISTURE",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -5530,7 +5530,7 @@
       "4 to 6 months",
       "7 to 9 months",
       "10 to 11 months",
-      "Turned on all year"
+      "turned on all year"
     ],
     "na_values": [
       "",
@@ -5572,8 +5572,8 @@
     "description": "Type of main water heater",
     "field": "H2OTYPE1",
     "labels": [
-      "Storage water heater",
-      "Tankless water heater"
+      "storage water heater",
+      "tankless water heater"
     ],
     "na_values": [
       "",
@@ -5590,14 +5590,14 @@
     "description": "Fuel used by main water heater",
     "field": "FUELH2O",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Fuel Oil",
-      "Kerosene",
-      "Electricity",
-      "Wood",
-      "Solar",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "fuel oil",
+      "kerosene",
+      "electricity",
+      "wood",
+      "solar",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -5620,8 +5620,8 @@
     "description": "Main water heater is used by more than one housing unit",
     "field": "WHEATOTH",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5686,8 +5686,8 @@
     "description": "Blanket around the main water heater (if storage tank)",
     "field": "WHEATBKT",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5704,12 +5704,12 @@
     "description": "Assistance for purchasing the water heater blanket",
     "field": "HELPWH",
     "labels": [
-      "Did not receive any assistance",
-      "Manfacturer or retailer rebate",
-      "Utility or energy supplier rebate",
-      "Tax credit",
-      "Subsidized loan",
-      "Weatherization assistance"
+      "did not receive any assistance",
+      "manfacturer or retailer rebate",
+      "utility or energy supplier rebate",
+      "tax credit",
+      "subsidized loan",
+      "weatherization assistance"
     ],
     "na_values": [
       "",
@@ -5761,8 +5761,8 @@
     "description": "Type of secondary water heater",
     "field": "H2OTYPE2",
     "labels": [
-      "Storage water heater",
-      "Tankless water heater"
+      "storage water heater",
+      "tankless water heater"
     ],
     "na_values": [
       "",
@@ -5779,14 +5779,14 @@
     "description": "Fuel used by secondary water heater",
     "field": "FUELH2O2",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Fuel Oil",
-      "Kerosene",
-      "Electricity",
-      "Wood",
-      "Solar",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "fuel oil",
+      "kerosene",
+      "electricity",
+      "wood",
+      "solar",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -5857,8 +5857,8 @@
     "description": "Air conditioning equipment used",
     "field": "AIRCOND",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -5874,8 +5874,8 @@
     "description": "No air conditioning equipment, or unused air conditioning equipment",
     "field": "DNTAC",
     "labels": [
-      "Have equipment but don't use it",
-      "Don't have any air conditioning equipment"
+      "have equipment but don't use it",
+      "don't have any air conditioning equipment"
     ],
     "na_values": [
       "",
@@ -5892,9 +5892,9 @@
     "description": "Type of unused air conditioning equipment",
     "field": "COOLTYPENOAC",
     "labels": [
-      "Central system",
-      "Window/wall units",
-      "Both a central system and window/wall units"
+      "central system",
+      "window/wall units",
+      "both a central system and window/wall units"
     ],
     "na_values": [
       "",
@@ -5912,9 +5912,9 @@
     "description": "Type of air conditioning equipment used",
     "field": "COOLTYPE",
     "labels": [
-      "Central system",
-      "Window/wall units",
-      "Both a central system and window/wall units"
+      "central system",
+      "window/wall units",
+      "both a central system and window/wall units"
     ],
     "na_values": [
       "",
@@ -5932,8 +5932,8 @@
     "description": "Ducts for space heating and air conditioning",
     "field": "DUCTS",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5950,8 +5950,8 @@
     "description": "Central air conditioner is a heat pump",
     "field": "CENACHP",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5968,8 +5968,8 @@
     "description": "Central air conditioner cools other homes, business, or farm",
     "field": "ACOTHERS",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -5986,8 +5986,8 @@
     "description": "Routine service or maintenance performed on central air conditioner",
     "field": "MAINTAC",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -6031,8 +6031,8 @@
     "description": "Central air conditioner replaced by this household in the last 4 years",
     "field": "REPLCCAC",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -6051,12 +6051,12 @@
     "description": "Assistance for maintaining or replacing central air conditioner",
     "field": "HELPCAC",
     "labels": [
-      "Did not receive any assistance",
-      "Manfacturer or retailer rebate",
-      "Utility or energy supplier rebate",
-      "Tax credit",
-      "Subsidized loan",
-      "Weatherization assistance"
+      "did not receive any assistance",
+      "manfacturer or retailer rebate",
+      "utility or energy supplier rebate",
+      "tax credit",
+      "subsidized loan",
+      "weatherization assistance"
     ],
     "na_values": [
       "",
@@ -6120,9 +6120,9 @@
     "description": "Frequency central air conditioner used in summer 2009",
     "field": "USECENAC",
     "labels": [
-      "Turned on only a few days or nights when really needed",
-      "Turned on quite a bit",
-      "Turned on just about all summer"
+      "turned on only a few days or nights when really needed",
+      "turned on quite a bit",
+      "turned on just about all summer"
     ],
     "na_values": [
       "",
@@ -6140,8 +6140,8 @@
     "description": "Thermostat for central air conditioner",
     "field": "THERMAINAC",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -6158,8 +6158,8 @@
     "description": "Programmable thermostat for central air conditioner",
     "field": "PROTHERMAC",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -6176,8 +6176,8 @@
     "description": "Programmable thermostat adjusts temperature at night",
     "field": "AUTOCOOLNITE",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -6194,8 +6194,8 @@
     "description": "Programmable thermostat adjusts temperature during the day",
     "field": "AUTOCOOLDAY",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -6287,8 +6287,8 @@
     "description": "Energy Star most-used window/wall air conditioning unit",
     "field": "ESWWAC",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -6307,8 +6307,8 @@
     "description": "Most-used window/wall air conditioning unit replaced by this household in the last 4 years",
     "field": "REPLCWWAC",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -6327,12 +6327,12 @@
     "description": "Assistance for most-used window/wall air conditioning unit",
     "field": "HELPWWAC",
     "labels": [
-      "Did not receive any assistance",
-      "Manfacturer or retailer rebate",
-      "Utility or energy supplier rebate",
-      "Tax credit",
-      "Subsidized loan",
-      "Weatherization assistance"
+      "did not receive any assistance",
+      "manfacturer or retailer rebate",
+      "utility or energy supplier rebate",
+      "tax credit",
+      "subsidized loan",
+      "weatherization assistance"
     ],
     "na_values": [
       "",
@@ -6384,9 +6384,9 @@
     "description": "Frequency most-used window/wall air conditioning unit used in summer 2009",
     "field": "USEWWAC",
     "labels": [
-      "Turned on only a few days or nights when really needed",
-      "Turned on quite a bit",
-      "Turned on just about all summer"
+      "turned on only a few days or nights when really needed",
+      "turned on quite a bit",
+      "turned on just about all summer"
     ],
     "na_values": [
       "",
@@ -6415,10 +6415,10 @@
     "description": "Frequency most-used ceiling fan used in summer 2009",
     "field": "USECFAN",
     "labels": [
-      "Turned on only a few days or nights when really needed",
-      "Turned on quite a bit",
-      "Turned on just about all summer",
-      "Not used at all"
+      "turned on only a few days or nights when really needed",
+      "turned on quite a bit",
+      "turned on just about all summer",
+      "not used at all"
     ],
     "na_values": [
       "",
@@ -6437,8 +6437,8 @@
     "description": "Housing unit shaded from sun by large trees",
     "field": "TREESHAD",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -6454,8 +6454,8 @@
     "description": "Dehumidifier used",
     "field": "NOTMOIST",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -6475,7 +6475,7 @@
       "4 to 6 months",
       "7 to 9 months",
       "10 to 11 months",
-      "Turned on all year"
+      "turned on all year"
     ],
     "na_values": [
       "",
@@ -6495,8 +6495,8 @@
     "description": "High ceilings ",
     "field": "HIGHCEIL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -6513,8 +6513,8 @@
     "description": "Cathedral ceilings",
     "field": "CATHCEIL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -6531,8 +6531,8 @@
     "description": "Swimming pool",
     "field": "SWIMPOOL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -6549,8 +6549,8 @@
     "description": "Heated swimming pool",
     "field": "POOL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -6567,13 +6567,13 @@
     "description": "Fuel used for heating swimming pool",
     "field": "FUELPOOL",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Fuel Oil",
-      "Kerosene",
-      "Electricity",
-      "Solar",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "fuel oil",
+      "kerosene",
+      "electricity",
+      "solar",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -6595,8 +6595,8 @@
     "description": "Hot tub used",
     "field": "RECBATH",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -6612,13 +6612,13 @@
     "description": "Fuel used for heating hot tub",
     "field": "FUELTUB",
     "labels": [
-      "Natural Gas",
-      "Propane/LPG",
-      "Fuel Oil",
-      "Kerosene",
-      "Electricity",
-      "Solar",
-      "Other Fuel"
+      "natural gas",
+      "propane/lpg",
+      "fuel oil",
+      "kerosene",
+      "electricity",
+      "solar",
+      "other fuel"
     ],
     "na_values": [
       "",
@@ -6753,8 +6753,8 @@
     "description": "Energy-efficient bulbs installed by this household",
     "field": "INSTLCFL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -6771,10 +6771,10 @@
     "description": "Assistance for energy-efficient light bulbs",
     "field": "HELPCFL",
     "labels": [
-      "Did not receive any assistance",
-      "Manfacturer or retailer rebate",
-      "Utility or energy supplier rebate",
-      "Weatherization assistance"
+      "did not receive any assistance",
+      "manfacturer or retailer rebate",
+      "utility or energy supplier rebate",
+      "weatherization assistance"
     ],
     "na_values": [
       "",
@@ -6824,8 +6824,8 @@
     "description": "Sliding glass doors in heated areas",
     "field": "SLDDRS",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -6882,9 +6882,9 @@
     "description": "Type of glass in most windows",
     "field": "TYPEGLASS",
     "labels": [
-      "Single-pane glass",
-      "Double-pane glass",
-      "Triple-pane glass"
+      "single-pane glass",
+      "double-pane glass",
+      "triple-pane glass"
     ],
     "na_values": [
       "",
@@ -6902,9 +6902,9 @@
     "description": "Windows replaced by this household",
     "field": "NEWGLASS",
     "labels": [
-      "All of the windows",
-      "Some of the windows",
-      "None of the windows"
+      "all of the windows",
+      "some of the windows",
+      "none of the windows"
     ],
     "na_values": [
       "",
@@ -6922,12 +6922,12 @@
     "description": "Assistance for window replacement",
     "field": "HELPWIN",
     "labels": [
-      "Did not receive any assistance",
-      "Manfacturer or retailer rebate",
-      "Utility or energy supplier rebate",
-      "Tax credit",
-      "Subsidized loan",
-      "Weatherization assistance"
+      "did not receive any assistance",
+      "manfacturer or retailer rebate",
+      "utility or energy supplier rebate",
+      "tax credit",
+      "subsidized loan",
+      "weatherization assistance"
     ],
     "na_values": [
       "",
@@ -6979,10 +6979,10 @@
     "description": "Level of insulation (respondent reported)",
     "field": "ADQINSUL",
     "labels": [
-      "Well Insulated",
-      "Adequately Insulated",
-      "Poorly Insulated",
-      "No Insulation"
+      "well insulated",
+      "adequately insulated",
+      "poorly insulated",
+      "no insulation"
     ],
     "na_values": [
       ""
@@ -7000,8 +7000,8 @@
     "description": "Insulation added by this household",
     "field": "INSTLINS",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7044,12 +7044,12 @@
     "description": "Assistance for added insulation",
     "field": "HELPINS",
     "labels": [
-      "Did not receive any assistance",
-      "Manfacturer or retailer rebate",
-      "Utility or energy supplier rebate",
-      "Tax credit",
-      "Subsidized loan",
-      "Weatherization assistance"
+      "did not receive any assistance",
+      "manfacturer or retailer rebate",
+      "utility or energy supplier rebate",
+      "tax credit",
+      "subsidized loan",
+      "weatherization assistance"
     ],
     "na_values": [
       "",
@@ -7101,10 +7101,10 @@
     "description": "Is home too drafty in the winter? (respondent reported)",
     "field": "DRAFTY",
     "labels": [
-      "All the time",
-      "Most of the time",
-      "Some of the time",
-      "Never"
+      "all the time",
+      "most of the time",
+      "some of the time",
+      "never"
     ],
     "na_values": [
       ""
@@ -7122,8 +7122,8 @@
     "description": "Caulking or weather stripping by this household",
     "field": "INSTLWS",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7166,12 +7166,12 @@
     "description": "Assistance for caulking or weather stripping",
     "field": "HELPWS",
     "labels": [
-      "Did not receive any assistance",
-      "Manfacturer or retailer rebate",
-      "Utility or energy supplier rebate",
-      "Tax credit",
-      "Subsidized loan",
-      "Weatherization assistance"
+      "did not receive any assistance",
+      "manfacturer or retailer rebate",
+      "utility or energy supplier rebate",
+      "tax credit",
+      "subsidized loan",
+      "weatherization assistance"
     ],
     "na_values": [
       "",
@@ -7223,8 +7223,8 @@
     "description": "Home energy audit",
     "field": "AUDIT",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7267,11 +7267,11 @@
     "description": "Assistance for home energy audit",
     "field": "HELPAUD",
     "labels": [
-      "Did not receive any assistance",
-      "Utility or energy supplier rebate",
-      "Tax credit",
-      "Subsidized loan",
-      "Weatherization assistance"
+      "did not receive any assistance",
+      "utility or energy supplier rebate",
+      "tax credit",
+      "subsidized loan",
+      "weatherization assistance"
     ],
     "na_values": [
       "",
@@ -7322,8 +7322,8 @@
     "description": "Electricity is used in home",
     "field": "USEEL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7339,8 +7339,8 @@
     "description": "Natural gas is used in home",
     "field": "USENG",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7356,8 +7356,8 @@
     "description": "Propane is used in home",
     "field": "USELP",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7373,8 +7373,8 @@
     "description": "Fuel oil is used in home",
     "field": "USEFO",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7390,8 +7390,8 @@
     "description": "Kerosene is used in home",
     "field": "USEKERO",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7407,8 +7407,8 @@
     "description": "Wood is used in home",
     "field": "USEWOOD",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7424,8 +7424,8 @@
     "description": "Solar is used in home",
     "field": "USESOLAR",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7441,8 +7441,8 @@
     "description": "Other fuel is used in home",
     "field": "USEOTH",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7458,8 +7458,8 @@
     "description": "Electricity used for space heating",
     "field": "ELWARM",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7475,8 +7475,8 @@
     "description": "Electricity used for secondary space heating",
     "field": "ELECAUX",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7492,8 +7492,8 @@
     "description": "Electricity used for air conditioning",
     "field": "ELCOOL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7509,8 +7509,8 @@
     "description": "Electricity used for water heating",
     "field": "ELWATER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7526,8 +7526,8 @@
     "description": "Electricity used for cooking",
     "field": "ELFOOD",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7543,8 +7543,8 @@
     "description": "Electricity used, other than for space heating, water heating, air conditioning, or cooking",
     "field": "ELOTHER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7560,8 +7560,8 @@
     "description": "Natural gas used for space heating",
     "field": "UGWARM",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7577,8 +7577,8 @@
     "description": "Natural gas used for secondary space heating",
     "field": "UGASAUX",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7594,8 +7594,8 @@
     "description": "Natural gas used for water heating",
     "field": "UGWATER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7611,8 +7611,8 @@
     "description": "Natural gas used for cooking",
     "field": "UGCOOK",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7628,8 +7628,8 @@
     "description": "Natural gas used, other than for space heating, water heating, or cooking",
     "field": "UGOTH",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7645,8 +7645,8 @@
     "description": "Propane used for space heating",
     "field": "LPWARM",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7662,8 +7662,8 @@
     "description": "Propane used for secondary space heating",
     "field": "LPGAUX",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7679,8 +7679,8 @@
     "description": "Propane used for water heating",
     "field": "LPWATER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7696,8 +7696,8 @@
     "description": "Propane used for cooking",
     "field": "LPCOOK",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7713,8 +7713,8 @@
     "description": "Propane used, other than for space heating, water heating, or cooking",
     "field": "LPOTHER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7730,8 +7730,8 @@
     "description": "Fuel oil used for space heating",
     "field": "FOWARM",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7747,8 +7747,8 @@
     "description": "Fuel oil used for secondary space heating",
     "field": "FOILAUX",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7764,8 +7764,8 @@
     "description": "Fuel oil used for water heating",
     "field": "FOWATER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7781,8 +7781,8 @@
     "description": "Fuel oil used, other than for space heating or water heating",
     "field": "FOOTHER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7798,8 +7798,8 @@
     "description": "Kerosene used for space heating",
     "field": "KRWARM",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7815,8 +7815,8 @@
     "description": "Kerosene used for secondary space heating",
     "field": "KEROAUX",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7832,8 +7832,8 @@
     "description": "Kerosene used for water heating",
     "field": "KRWATER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7849,8 +7849,8 @@
     "description": "Kerosene used, other than for space heating or water heating",
     "field": "KROTHER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7866,8 +7866,8 @@
     "description": "Wood used for space heating",
     "field": "WDWARM",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7883,8 +7883,8 @@
     "description": "Wood used for secondary space heating",
     "field": "WOODAUX",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7900,8 +7900,8 @@
     "description": "Wood used for water heating",
     "field": "WDWATER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7917,8 +7917,8 @@
     "description": "Wood used, other than for space heating or water heating",
     "field": "WDOTHUSE",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7934,8 +7934,8 @@
     "description": "Solar used for space heating",
     "field": "SOLWARM",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7951,8 +7951,8 @@
     "description": "Solar used for secondary space heating",
     "field": "SOLARAUX",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7968,8 +7968,8 @@
     "description": "Solar used for water heating",
     "field": "SOLWATER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -7985,8 +7985,8 @@
     "description": "Solar used, other than for space heating or water heating",
     "field": "SOLOTHER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -8002,8 +8002,8 @@
     "description": "Other fuel used for space heating",
     "field": "OTHWARM",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -8019,8 +8019,8 @@
     "description": "Other fuel used for secondary space heating",
     "field": "OTHERAUX",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -8036,8 +8036,8 @@
     "description": "Other fuel used for water heating",
     "field": "OTHWATER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -8053,8 +8053,8 @@
     "description": "Other fuel used for cooking",
     "field": "OTHCOOK",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -8070,8 +8070,8 @@
     "description": "Renewable on-site system used",
     "field": "ONSITE",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -8087,8 +8087,8 @@
     "description": "Renewable on-site system connected to the grid",
     "field": "ONSITEGRID",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -8105,9 +8105,9 @@
     "description": "Who pays for electricity used for space heating",
     "field": "PELHEAT",
     "labels": [
-      "Paid by the household",
-      "Included in the rent or condominium fee",
-      "Paid for some other way"
+      "paid by the household",
+      "included in the rent or condominium fee",
+      "paid for some other way"
     ],
     "na_values": [
       "",
@@ -8125,9 +8125,9 @@
     "description": "Who pays for electricity used for water heating",
     "field": "PELHOTWA",
     "labels": [
-      "Paid by the household",
-      "Included in the rent or condominium fee",
-      "Paid for some other way"
+      "paid by the household",
+      "included in the rent or condominium fee",
+      "paid for some other way"
     ],
     "na_values": [
       "",
@@ -8145,9 +8145,9 @@
     "description": "Who pays for electricity used for cooking",
     "field": "PELCOOK",
     "labels": [
-      "Paid by the household",
-      "Included in the rent or condominium fee",
-      "Paid for some other way"
+      "paid by the household",
+      "included in the rent or condominium fee",
+      "paid for some other way"
     ],
     "na_values": [
       "",
@@ -8165,9 +8165,9 @@
     "description": "Who pays for electricity used for air conditioning",
     "field": "PELAC",
     "labels": [
-      "Paid by the household",
-      "Included in the rent or condominium fee",
-      "Paid for some other way"
+      "paid by the household",
+      "included in the rent or condominium fee",
+      "paid for some other way"
     ],
     "na_values": [
       "",
@@ -8185,9 +8185,9 @@
     "description": "Who pays for electricity used for lighting and other appliances",
     "field": "PELLIGHT",
     "labels": [
-      "Paid by the household",
-      "Included in the rent or condominium fee",
-      "Paid for some other way"
+      "paid by the household",
+      "included in the rent or condominium fee",
+      "paid for some other way"
     ],
     "na_values": [
       "",
@@ -8205,9 +8205,9 @@
     "description": "Follow up for 'other' payment of electricity",
     "field": "OTHERWAYEL",
     "labels": [
-      "Relative",
-      "Rental or condominium agent",
-      "Paid by some other party"
+      "relative",
+      "rental or condominium agent",
+      "paid by some other party"
     ],
     "na_values": [
       "",
@@ -8225,9 +8225,9 @@
     "description": "Who pays for natural gas for space heating",
     "field": "PGASHEAT",
     "labels": [
-      "Paid by the household",
-      "Included in the rent or condominium fee",
-      "Paid for some other way"
+      "paid by the household",
+      "included in the rent or condominium fee",
+      "paid for some other way"
     ],
     "na_values": [
       "",
@@ -8245,9 +8245,9 @@
     "description": "Who pays for natural gas for water heating",
     "field": "PGASHTWA",
     "labels": [
-      "Paid by the household",
-      "Included in the rent or condominium fee",
-      "Paid for some other way"
+      "paid by the household",
+      "included in the rent or condominium fee",
+      "paid for some other way"
     ],
     "na_values": [
       "",
@@ -8265,9 +8265,9 @@
     "description": "Who pays for natural gas for cooking",
     "field": "PUGCOOK",
     "labels": [
-      "Paid by the household",
-      "Included in the rent or condominium fee",
-      "Paid for some other way"
+      "paid by the household",
+      "included in the rent or condominium fee",
+      "paid for some other way"
     ],
     "na_values": [
       "",
@@ -8285,9 +8285,9 @@
     "description": "Who pays for natural gas for other uses",
     "field": "PUGOTH",
     "labels": [
-      "Paid by the household",
-      "Included in the rent or condominium fee",
-      "Paid for some other way"
+      "paid by the household",
+      "included in the rent or condominium fee",
+      "paid for some other way"
     ],
     "na_values": [
       "",
@@ -8305,9 +8305,9 @@
     "description": "Follow up for 'other' payment of natural gas",
     "field": "OTHERWAYNG",
     "labels": [
-      "Relative",
-      "Rental or condominium agent",
-      "Paid by some other party"
+      "relative",
+      "rental or condominium agent",
+      "paid by some other party"
     ],
     "na_values": [
       "",
@@ -8325,9 +8325,9 @@
     "description": "Who pays for fuel oil",
     "field": "FOPAY",
     "labels": [
-      "Paid by the household",
-      "Included in the rent or condominium fee",
-      "Paid for some other way"
+      "paid by the household",
+      "included in the rent or condominium fee",
+      "paid for some other way"
     ],
     "na_values": [
       "",
@@ -8345,9 +8345,9 @@
     "description": "Follow up for 'other' payment of fuel oil",
     "field": "OTHERWAYFO",
     "labels": [
-      "Relative",
-      "Rental or condominium agent",
-      "Paid by some other party"
+      "relative",
+      "rental or condominium agent",
+      "paid by some other party"
     ],
     "na_values": [
       "",
@@ -8365,9 +8365,9 @@
     "description": "Who pays for propane",
     "field": "LPGPAY",
     "labels": [
-      "Paid by the household",
-      "Included in the rent or condominium fee",
-      "Paid for some other way"
+      "paid by the household",
+      "included in the rent or condominium fee",
+      "paid for some other way"
     ],
     "na_values": [
       "",
@@ -8385,9 +8385,9 @@
     "description": "Follow up for 'other' payment of propane",
     "field": "OTHERWAYLPG",
     "labels": [
-      "Relative",
-      "Rental or condominium agent",
-      "Paid by some other party"
+      "relative",
+      "rental or condominium agent",
+      "paid by some other party"
     ],
     "na_values": [
       "",
@@ -8405,8 +8405,8 @@
     "description": "Propane delivered",
     "field": "LPGDELV",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -8423,8 +8423,8 @@
     "description": "Kerosene delivered to home",
     "field": "KERODEL",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -8441,8 +8441,8 @@
     "description": "Kerosene purchased 'cash and carry'",
     "field": "KEROCASH",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -8484,8 +8484,8 @@
     "description": "Wood logs used",
     "field": "WOODLOGS",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -8502,8 +8502,8 @@
     "description": "Wood scraps used",
     "field": "WDSCRAP",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -8520,8 +8520,8 @@
     "description": "Wood pellets used",
     "field": "WDPELLET",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -8538,8 +8538,8 @@
     "description": "Type of wood used other than logs, pellets, or scraps",
     "field": "WDOTHER",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -8556,11 +8556,11 @@
     "description": "Cords of wood used in 2009",
     "field": "WOODAMT",
     "labels": [
-      "Half a cord or less",
-      "About one cord",
-      "About two cords",
-      "Three to five cords",
-      "More than five cords"
+      "half a cord or less",
+      "about one cord",
+      "about two cords",
+      "three to five cords",
+      "more than five cords"
     ],
     "na_values": [
       "",
@@ -8592,8 +8592,8 @@
     "description": "Household fuel bills include fuel used for non-household purposes",
     "field": "KFUELOT",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -8609,8 +8609,8 @@
     "description": "Sex of householder",
     "field": "HHSEX",
     "labels": [
-      "Female",
-      "Male"
+      "female",
+      "male"
     ],
     "na_values": [
       ""
@@ -8626,9 +8626,9 @@
     "description": "Employment status of householder",
     "field": "EMPLOYHH",
     "labels": [
-      "Not employed/retired",
-      "Employed full-time",
-      "Employed part-time"
+      "not employed/retired",
+      "employed full-time",
+      "employed part-time"
     ],
     "na_values": [
       ""
@@ -8645,8 +8645,8 @@
     "description": "Householder lives with spouse or partner",
     "field": "SPOUSE",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -8662,8 +8662,8 @@
     "description": "Householder is Hispanic or Latino",
     "field": "SDESCENT",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -8679,13 +8679,13 @@
     "description": "Householder's Race",
     "field": "Householder_Race",
     "labels": [
-      "White Alone",
-      "Black or African/American Alone",
-      "American Indian or Alaska Native Alone",
-      "Asian Alone",
-      "Native Hawaiian or Other Pacific Islander Alone",
-      "Some Other Race Alone",
-      "2 or More Races Selected"
+      "white alone",
+      "black or african/american alone",
+      "american indian or alaska native alone",
+      "asian alone",
+      "native hawaiian or other pacific islander alone",
+      "some other race alone",
+      "2 or more races selected"
     ],
     "na_values": [
       ""
@@ -8706,15 +8706,15 @@
     "description": "Highest education completed by householder",
     "field": "EDUCATION",
     "labels": [
-      "No schooling completed",
-      "Kindergarten to grade 12",
-      "High school diploma or GED",
-      "Some college, no degree",
-      "Associate's degree",
-      "Bachelor's degree",
-      "Master's degree",
-      "Professional degree",
-      "Doctorate degree"
+      "no schooling completed",
+      "kindergarten to grade 12",
+      "high school diploma or ged",
+      "some college, no degree",
+      "associate's degree",
+      "bachelor's degree",
+      "master's degree",
+      "professional degree",
+      "doctorate degree"
     ],
     "na_values": [
       ""
@@ -9422,8 +9422,8 @@
     "description": "Home-based business or service",
     "field": "HBUSNESS",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -9439,8 +9439,8 @@
     "description": "Household member at home on typical week days",
     "field": "ATHOME",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -9456,8 +9456,8 @@
     "description": "Household member(s) telecommutes or teleworks",
     "field": "TELLWORK",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -9485,8 +9485,8 @@
     "description": "Any activities that use an unusual amount of energy",
     "field": "OTHWORK",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -9502,8 +9502,8 @@
     "description": "Household members received employment income in 2009",
     "field": "WORKPAY",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -9519,8 +9519,8 @@
     "description": "Household members received retirement income in 2009",
     "field": "RETIREPY",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -9536,8 +9536,8 @@
     "description": "Household members received Supplemental Security income in 2009",
     "field": "SSINCOME",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -9553,8 +9553,8 @@
     "description": "Household members received welfare payments or cash assistance in 2009",
     "field": "CASHBEN",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -9570,8 +9570,8 @@
     "description": "Household members received investment income in 2009",
     "field": "INVESTMT",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -9587,8 +9587,8 @@
     "description": "Household members received other regular income in 2009",
     "field": "RGLRPAY",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -9666,8 +9666,8 @@
     "description": "Household income at or below 100% of poverty line",
     "field": "POVERTY100",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -9683,8 +9683,8 @@
     "description": "Household income at or below 150% of poverty line",
     "field": "POVERTY150",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -9700,8 +9700,8 @@
     "description": "Housing unit in public housing authority",
     "field": "HUPROJ",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -9718,8 +9718,8 @@
     "description": "Lower rent due to Federal, State, or Local housing program",
     "field": "RENTHELP",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       "",
@@ -9736,8 +9736,8 @@
     "description": "Household receives food stamps or WIC assistance",
     "field": "FOODASST",
     "labels": [
-      "No",
-      "Yes"
+      "no",
+      "yes"
     ],
     "na_values": [
       ""
@@ -10527,9 +10527,9 @@
     "description": "Electricity end uses included in Energy Supplier Survey billing data",
     "field": "KAVALEL",
     "labels": [
-      "All end uses applicable to housing unit included",
-      "Some, but not all, end uses applicable to housing unit included. Augmentation needed.",
-      "No billing data collected or billing data not used"
+      "all end uses applicable to housing unit included",
+      "some, but not all, end uses applicable to housing unit included. augmentation needed.",
+      "no billing data collected or billing data not used"
     ],
     "na_values": [
       ""
@@ -10547,10 +10547,10 @@
     "field": "PERIODEL",
     "labels": [
       "330 days or more",
-      "At least 146, but less than 330 days",
-      "At least 60, but less than 146 days",
-      "Less than 60 days",
-      "No billing data collected or billing data not used"
+      "at least 146, but less than 330 days",
+      "at least 60, but less than 146 days",
+      "less than 60 days",
+      "no billing data collected or billing data not used"
     ],
     "na_values": [
       ""
@@ -10569,10 +10569,10 @@
     "description": "Whether annualized electricity consumption from Energy Supplier Survey billing data was scaled down ",
     "field": "SCALEEL",
     "labels": [
-      "Not scaled down",
-      "Scaled down because billing data contains consumption for non-houeshold uses (discounting)",
-      "Scaled down because billing data includes consumption for other housing units (disaggregation)",
-      "No billing data collected or billing data not used"
+      "not scaled down",
+      "scaled down because billing data contains consumption for non-houeshold uses (discounting)",
+      "scaled down because billing data includes consumption for other housing units (disaggregation)",
+      "no billing data collected or billing data not used"
     ],
     "na_values": [
       ""
@@ -10590,9 +10590,9 @@
     "description": "Natural gas end uses included in Energy Supplier Survey billing data",
     "field": "KAVALNG",
     "labels": [
-      "All end uses applicable to housing unit included",
-      "Some, but not all, end uses applicable to housing unit included. Augmentation needed.",
-      "No billing data collected or billing data not used"
+      "all end uses applicable to housing unit included",
+      "some, but not all, end uses applicable to housing unit included. augmentation needed.",
+      "no billing data collected or billing data not used"
     ],
     "na_values": [
       "",
@@ -10611,10 +10611,10 @@
     "field": "PERIODNG",
     "labels": [
       "330 days or more",
-      "At least 146, but less than 330 days",
-      "At least 60, but less than 146 days",
-      "Less than 60 days",
-      "No billing data collected or billing data not used"
+      "at least 146, but less than 330 days",
+      "at least 60, but less than 146 days",
+      "less than 60 days",
+      "no billing data collected or billing data not used"
     ],
     "na_values": [
       "",
@@ -10634,10 +10634,10 @@
     "description": "Whether annualized natural gas consumption from Energy Supplier Survey billing data was scaled down ",
     "field": "SCALENG",
     "labels": [
-      "Not scaled down",
-      "Scaled down because billing data contains consumption for non-houeshold uses (discounting)",
-      "Scaled down because billing data includes consumption for other housing units (disaggregation)",
-      "No billing data collected or billingdata not used"
+      "not scaled down",
+      "scaled down because billing data contains consumption for non-houeshold uses (discounting)",
+      "scaled down because billing data includes consumption for other housing units (disaggregation)",
+      "no billing data collected or billingdata not used"
     ],
     "na_values": [
       "",
@@ -10657,8 +10657,8 @@
     "field": "PERIODLP",
     "labels": [
       "365 days (complete)",
-      "Less than 365 days (incomplete)",
-      "No delivery data collected"
+      "less than 365 days (incomplete)",
+      "no delivery data collected"
     ],
     "na_values": [
       "",
@@ -10676,10 +10676,10 @@
     "description": "Whether annualized LPG/propane consumption from Energy Supplier Survey billing data was scaled down ",
     "field": "SCALELP",
     "labels": [
-      "Not scaled down",
-      "Scaled down because billing data contains consumption for non-houeshold uses (discounting)",
-      "Scaled down because billing data includes consumption for other housing units (disaggregation)",
-      "No delivery data collected"
+      "not scaled down",
+      "scaled down because billing data contains consumption for non-houeshold uses (discounting)",
+      "scaled down because billing data includes consumption for other housing units (disaggregation)",
+      "no delivery data collected"
     ],
     "na_values": [
       "",
@@ -10699,8 +10699,8 @@
     "field": "PERIODFO",
     "labels": [
       "365 days (complete)",
-      "Less than 365 days (incomplete)",
-      "No delivery data collected"
+      "less than 365 days (incomplete)",
+      "no delivery data collected"
     ],
     "na_values": [
       "",
@@ -10718,10 +10718,10 @@
     "description": "Whether annualized fuel oil consumption from Energy Supplier Survey billing data was scaled down ",
     "field": "SCALEFO",
     "labels": [
-      "Not scaled down",
-      "Scaled down because billing data contains consumption for non-houeshold uses (discounting)",
-      "Scaled down because billing data includes consumption for other housing units (disaggregation)",
-      "No delivery data collected"
+      "not scaled down",
+      "scaled down because billing data contains consumption for non-houeshold uses (discounting)",
+      "scaled down because billing data includes consumption for other housing units (disaggregation)",
+      "no delivery data collected"
     ],
     "na_values": [
       "",
@@ -10741,8 +10741,8 @@
     "field": "PERIODKR",
     "labels": [
       "365 days (complete)",
-      "Less than 365 days (incomplete)",
-      "No delivery data collected"
+      "less than 365 days (incomplete)",
+      "no delivery data collected"
     ],
     "na_values": [
       "",
@@ -10760,10 +10760,10 @@
     "description": "Whether annualized kerosene consumption from Energy Supplier Survey billing data was scaled down ",
     "field": "SCALEKER",
     "labels": [
-      "Not scaled down",
-      "Scaled down because billing data contains consumption for non-houeshold uses (discounting)",
-      "Scaled down because billing data includes consumption for other housing units (disaggregation)",
-      "No delivery data collected"
+      "not scaled down",
+      "scaled down because billing data contains consumption for non-houeshold uses (discounting)",
+      "scaled down because billing data includes consumption for other housing units (disaggregation)",
+      "no delivery data collected"
     ],
     "na_values": [
       "",
