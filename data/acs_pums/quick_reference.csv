@@ -46,7 +46,7 @@ h,RWAT,Hot and cold running water
 h,RWATPR,Running water
 h,SATELLITE,Satellite Internet service
 h,SINK,Sink with a faucet
-h,SMP,Total payment on all second and junior mortgages and home equity loans
+h,SMP,Total payment on all second and junior mortgages and home equity loans (monthly amount)
 h,STOV,Stove or range
 h,TEL,Telephone
 h,TEN,Tenure
@@ -78,7 +78,7 @@ h,NPF,Number of persons in family (unweighted)
 h,NPP,Grandparent headed household with no parent present
 h,NR,Presence of nonrelative in household
 h,NRC,Number of related children in household (unweighted)
-h,OCPIP,Selected monthly owner costs as a percentage of household
+h,OCPIP,Selected monthly owner costs as a percentage of household income during the past 12 months
 h,PARTNER,Unmarried partner household
 h,PLM,Complete plumbing facilities
 h,PLMPRP,Complete plumbing facilities for Puerto Rico
@@ -111,8 +111,8 @@ h,FDSLP,DSL service allocation flag
 h,FELEP,Electricity (monthly cost) allocation flag
 h,FFIBEROPP,Fiber-optic Internet service allocation flag
 h,FFINCP,Family income (past 12 months) allocation flag
-h,FFSP,Yearly food stamp/Supplemental Nutrition Assistance Program
-h,FFULP,Fuel cost (yearly cost for fuels other than gas and electricity)
+h,FFSP,Yearly food stamp/Supplemental Nutrition Assistance Program recipiency allocation flag
+h,FFULP,Fuel cost (yearly cost for fuels other than gas and electricity) allocation flag
 h,FGASP,Gas (monthly cost) allocation flag
 h,FGRNTP,Gross rent (monthly amount) allocation flag
 h,FHANDHELDP,Handheld computer allocation flag
@@ -124,7 +124,7 @@ h,FKITP,Complete kitchen facilities allocation flag
 h,FLAPTOPP,"Laptop, desktop, or notebook computer allocation flag"
 h,FMHP,Mobile home costs (yearly amount) allocation flag
 h,FMODEMP,Cable Internet service allocation flag
-h,FMRGIP,"First mortgage payment includes fire, hazard, flood insurance"
+h,FMRGIP,"First mortgage payment includes fire, hazard, flood insurance allocation flag"
 h,FMRGP,First mortgage payment (monthly amount) allocation flag
 h,FMRGTP,First mortgage payment includes real estate taxes allocation flag
 h,FMRGXP,First mortgage status allocation flag
@@ -141,7 +141,7 @@ h,FRWATPRP,Running water allocation flag
 h,FSATELLITEP,Satellite Internet service allocation flag
 h,FSINKP,Sink with a faucet allocation flag
 h,FSMOCP,Selected monthly owner cost allocation flag
-h,FSMP,Total payment on second and junior mortgages and home equity loans
+h,FSMP,Total payment on second and junior mortgages and home equity loans (monthly amount) allocation flag
 h,FSMXHP,Home equity loan status allocation flag
 h,FSMXSP,Second mortgage status allocation flag
 h,FSTOVP,Stove or range allocation flag
@@ -261,7 +261,7 @@ p,GCR,Grandparents responsible for grandchildren
 p,HINS1,Insurance through a current or former employer or union
 p,HINS2,Insurance purchased directly from an insurance company
 p,HINS3,"Medicare, for people 65 and older, or people with certain disabilities"
-p,HINS4,"Medicaid, Medical Assistance, or any kind of government-assistance plan"
+p,HINS4,"Medicaid, Medical Assistance, or any kind of government-assistance plan for those with low incomes or a disability"
 p,HINS5,TRICARE or other military health care
 p,HINS6,VA (including those who have ever used or enrolled for VA health care)
 p,HINS7,Indian Health Service
@@ -387,12 +387,12 @@ p,FHICOVP,Health insurance coverage recode allocation flag
 p,FHINS1P,Insurance through a current or former employer or union allocation flag
 p,FHINS2P,Insurance purchased directly from an insurance company allocation flag
 p,FHINS3C,Medicare coverage given through the eligibility coverage edit
-p,FHINS3P,"Medicare, for people 65 or older, or people with certain disabilities"
+p,FHINS3P,"Medicare, for people 65 or older, or people with certain disabilities allocation flag"
 p,FHINS4C,Medicaid coverage given through the eligibility coverage edit
-p,FHINS4P,"Medicaid, medical assistance, or any kind of government-assistance plan"
+p,FHINS4P,"Medicaid, medical assistance, or any kind of government-assistance plan for people with low incomes or a disability allocation flag"
 p,FHINS5C,TRICARE coverage given through the eligibility coverage edit
 p,FHINS5P,TRICARE or other military health care allocation flag
-p,FHINS6P,VA (including those who have ever used or enrolled for VA health care)
+p,FHINS6P,VA (including those who have ever used or enrolled for VA health care) allocation flag
 p,FHINS7P,Indian health service allocation flag
 p,FHISP,Detailed Hispanic origin allocation flag
 p,FINDP,Industry allocation flag

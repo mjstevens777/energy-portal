@@ -51,9 +51,7 @@ class Variable(Block):
         self.codebook = []
         self.footnotes = set()
         descriptionLines = []
-        for line in lines[1:]:
-            if line.startswith("04.Gulf War:"):
-                line = line.replace("04.", "04 .")
+        for i, line in enumerate(lines[1:]):
             m = footnoteReferencePattern.search(line)
             if m is not None:
                 tag = m.group(0)
@@ -66,6 +64,8 @@ class Variable(Block):
             m = codePattern.search(line)
             if m is None:
                 descriptionLines.append(line)
+                if i > 0:
+                    print(line)
                 continue
             code = m.group(0)
             codeDescription = line[len(code):]

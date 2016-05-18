@@ -364,19 +364,36 @@
       {
         "codebook": [
           [
+            "00000",
+            "Group Quarters place holder record"
+          ],
+          [
             "00001..09999",
             "Integer weight of housing unit"
           ]
         ],
-        "description": "Housing Weight\n00000  Group Quarters place holder record",
+        "description": "Housing Weight",
         "footnotes": [],
         "name": "WGTP",
         "short_description": "Housing Weight",
         "size": "5"
       },
       {
-        "codebook": [],
-        "description": "Number of person records following this housing record\n00.Vacant unit\n01.One person record (one person in household or any person in group quarters)\n02..20  .Number of person records (number of persons in.household)",
+        "codebook": [
+          [
+            "00",
+            "Vacant unit"
+          ],
+          [
+            "01",
+            "One person record (one person in household or any person in group quarters)"
+          ],
+          [
+            "02..20",
+            "Number of person records (number of persons in.household)"
+          ]
+        ],
+        "description": "Number of person records following this housing record",
         "footnotes": [],
         "name": "NP",
         "short_description": "Number of person records following this housing record",
@@ -514,11 +531,15 @@
       {
         "codebook": [
           [
+            "bb",
+            "N/A (GQ)"
+          ],
+          [
             "00..99",
             "0 to 99 bedrooms (Top-coded)"
           ]
         ],
-        "description": "Number of bedrooms\nBb.N/A (GQ)",
+        "description": "Number of bedrooms",
         "footnotes": [],
         "name": "BDSP",
         "short_description": "Number of bedrooms",
@@ -897,11 +918,19 @@
       {
         "codebook": [
           [
+            "bbbbb",
+            "N/A (GQ/vacant/not owned or being bought)"
+          ],
+          [
+            "00000",
+            "None"
+          ],
+          [
             "00001..10000",
             "$1 to $10000 (Rounded and top-coded)"
           ]
         ],
-        "description": "Fire/hazard/flood insurance (yearly amount)\nbbbbb  .N/A (GQ/vacant/not owned or being bought)\n00000  .None\nNote: Use ADJHSG to adjust INSP to constant dollars.",
+        "description": "Fire/hazard/flood insurance (yearly amount)\nNote: Use ADJHSG to adjust INSP to constant dollars.",
         "footnotes": [],
         "name": "INSP",
         "short_description": "Fire/hazard/flood insurance (yearly amount)",
@@ -931,11 +960,19 @@
       {
         "codebook": [
           [
+            "bbbbb",
+            "N/A (GQ/vacant/not owned or being bought/not mobile home)"
+          ],
+          [
+            "00000",
+            "None"
+          ],
+          [
             "00001..99999",
             "$1 to $99999 (Rounded and top-coded)"
           ]
         ],
-        "description": "Mobile home costs (yearly amount)\nbbbbb  .N/A (GQ/vacant/not owned or being bought/not mobile home)\n00000  .None\nNote: Use ADJHSG to adjust MHP to constant dollars.",
+        "description": "Mobile home costs (yearly amount)\nNote: Use ADJHSG to adjust MHP to constant dollars.",
         "footnotes": [],
         "name": "MHP",
         "short_description": "Mobile home costs (yearly amount)",
@@ -986,11 +1023,15 @@
       {
         "codebook": [
           [
+            "bbbbb",
+            "N/A (GQ/vacant/not owned or being bought/not mortgaged)"
+          ],
+          [
             "00001..99999",
             "$1 to $99999 (Rounded and top-coded)"
           ]
         ],
-        "description": "First mortgage payment (monthly amount)\nbbbbb  .N/A (GQ/vacant/not owned or being bought/not mortgaged)\nNote: Use ADJHSG to adjust MRGP to constant dollars.",
+        "description": "First mortgage payment (monthly amount)\nNote: Use ADJHSG to adjust MRGP to constant dollars.",
         "footnotes": [],
         "name": "MRGP",
         "short_description": "First mortgage payment (monthly amount)",
@@ -1125,11 +1166,15 @@
       {
         "codebook": [
           [
+            "bbbbb",
+            "N/A (GQ/not a rental unit/occupied without rent payment)"
+          ],
+          [
             "00001..99999",
             "$1 to $99999 (Rounded and top-coded)"
           ]
         ],
-        "description": "Monthly rent\nbbbbbN/A (GQ/not a rental unit/occupied without rent payment)\nNote: Use ADJHSG to adjust RNTP to constant dollars.",
+        "description": "Monthly rent\nNote: Use ADJHSG to adjust RNTP to constant dollars.",
         "footnotes": [],
         "name": "RNTP",
         "short_description": "Monthly rent",
@@ -1230,14 +1275,18 @@
       {
         "codebook": [
           [
+            "bbbbb",
+            "N/A (GQ/vacant/not owned or being bought/no second or junior mortgages or home equity loans)"
+          ],
+          [
             "00001..99999",
             "$1 to $99999 (Rounded and top-coded)"
           ]
         ],
-        "description": "Total payment on all second and junior mortgages and home equity loans\n(monthly amount)\nbbbbb  .N/A (GQ/vacant/not owned or being bought/no second or junior mortgages or home equity loans)\nNote: Use ADJHSG to adjust SMP to constant dollars.",
+        "description": "Total payment on all second and junior mortgages and home equity loans (monthly amount)\nNote: Use ADJHSG to adjust SMP to constant dollars.",
         "footnotes": [],
         "name": "SMP",
-        "short_description": "Total payment on all second and junior mortgages and home equity loans",
+        "short_description": "Total payment on all second and junior mortgages and home equity loans (monthly amount)",
         "size": "5"
       },
       {
@@ -1376,11 +1425,15 @@
       {
         "codebook": [
           [
+            "bbbbbbb",
+            "N/A (GQ/vacant units, except \u0094for-sale-only\u0093 and \u0094sold, not occupied\u0094/not owned or being .bought)"
+          ],
+          [
             "0000001..9999999",
             "$1 to $9999999 (Rounded and top-coded)"
           ]
         ],
-        "description": "Property value\nbbbbbbb  N/A (GQ/vacant units, except \u0094for-sale-only\u0093 and \u0094sold, not occupied\u0094/not owned or being .bought)",
+        "description": "Property value",
         "footnotes": [],
         "name": "VALP",
         "short_description": "Property value",
@@ -1440,9 +1493,13 @@
           [
             "0002",
             "No charge"
+          ],
+          [
+            "0003..9999",
+            "$3 to $9999 (Rounded and top-coded)"
           ]
         ],
-        "description": "Water (yearly cost)\n0003..9999  .$3 to $9999 (Rounded and top-coded)\nNote: Use ADJHSG to adjust WATP values 3 and over to constant dollars.",
+        "description": "Water (yearly cost)\nNote: Use ADJHSG to adjust WATP values 3 and over to constant dollars.",
         "footnotes": [],
         "name": "WATP",
         "short_description": "Water (yearly cost)",
@@ -1643,11 +1700,15 @@
       {
         "codebook": [
           [
+            "bbbbb",
+            "N/A (GQ/vacant/not a rental unit/occupied without rent payment)"
+          ],
+          [
             "00001..99999",
             "$1 - $99999 (Components are rounded)"
           ]
         ],
-        "description": "Gross rent (monthly amount)\nbbbbb  .N/A (GQ/vacant/not a rental unit/occupied without rent payment)\nNote: Use ADJHSG to adjust GRNTP to constant dollars.",
+        "description": "Gross rent (monthly amount)\nNote: Use ADJHSG to adjust GRNTP to constant dollars.",
         "footnotes": [],
         "name": "GRNTP",
         "short_description": "Gross rent (monthly amount)",
@@ -2021,11 +2082,19 @@
       {
         "codebook": [
           [
+            "bb",
+            "N/A(GQ/vacant)"
+          ],
+          [
+            "00",
+            "No own children"
+          ],
+          [
             "01..19",
             "Number of own children in household"
           ]
         ],
-        "description": "Number of own children in household (unweighted)\nbb  .N/A(GQ/vacant)\n00  .No own children",
+        "description": "Number of own children in household (unweighted)",
         "footnotes": [],
         "name": "NOC",
         "short_description": "Number of own children in household (unweighted)",
@@ -2034,11 +2103,15 @@
       {
         "codebook": [
           [
+            "bb",
+            "N/A (GQ/vacant/non-family household)"
+          ],
+          [
             "02..20",
             "Number of persons in family"
           ]
         ],
-        "description": "Number of persons in family (unweighted)\nbb  .N/A (GQ/vacant/non-family household)",
+        "description": "Number of persons in family (unweighted)",
         "footnotes": [],
         "name": "NPF",
         "short_description": "Number of persons in family (unweighted)",
@@ -2089,11 +2162,19 @@
       {
         "codebook": [
           [
+            "bb",
+            "N/A (GQ/vacant)"
+          ],
+          [
+            "00",
+            "No related children"
+          ],
+          [
             "01..19",
             "Number of related children in household"
           ]
         ],
-        "description": "Number of related children in household (unweighted)\nbb  .N/A (GQ/vacant)\n00  .No related children",
+        "description": "Number of related children in household (unweighted)",
         "footnotes": [],
         "name": "NRC",
         "short_description": "Number of related children in household (unweighted)",
@@ -2102,14 +2183,22 @@
       {
         "codebook": [
           [
+            "bbb",
+            "N/A (GQ/vacant/not owned or being bought/no household income)"
+          ],
+          [
             "001..100",
             "1% to 100%"
+          ],
+          [
+            "101",
+            "101% or more"
           ]
         ],
-        "description": "Selected monthly owner costs as a percentage of household\nincome during the past 12 months\nbbb N/A (GQ/vacant/not owned or being bought/no household income)\n101 101% or more",
+        "description": "Selected monthly owner costs as a percentage of household income during the past 12 months",
         "footnotes": [],
         "name": "OCPIP",
-        "short_description": "Selected monthly owner costs as a percentage of household",
+        "short_description": "Selected monthly owner costs as a percentage of household income during the past 12 months",
         "size": "3"
       },
       {
@@ -2315,11 +2404,19 @@
       {
         "codebook": [
           [
+            "bbbbb",
+            "N/A (GQ/vacant/not owned or being bought)"
+          ],
+          [
+            "00000",
+            "None"
+          ],
+          [
             "00001..99999",
             "$1 - $99999 (Components are rounded)"
           ]
         ],
-        "description": "Selected monthly owner costs\nbbbbbN/A (GQ/vacant/not owned or being bought)\n00000None\nNote: Use ADJHSG to adjust SMOCP to constant dollars.",
+        "description": "Selected monthly owner costs\nNote: Use ADJHSG to adjust SMOCP to constant dollars.",
         "footnotes": [],
         "name": "SMOCP",
         "short_description": "Selected monthly owner costs",
@@ -3207,10 +3304,10 @@
             "Yes"
           ]
         ],
-        "description": "Yearly food stamp/Supplemental Nutrition Assistance Program\nrecipiency allocation flag",
+        "description": "Yearly food stamp/Supplemental Nutrition Assistance Program recipiency allocation flag",
         "footnotes": [],
         "name": "FFSP",
-        "short_description": "Yearly food stamp/Supplemental Nutrition Assistance Program",
+        "short_description": "Yearly food stamp/Supplemental Nutrition Assistance Program recipiency allocation flag",
         "size": "1"
       },
       {
@@ -3228,10 +3325,10 @@
             "Yes"
           ]
         ],
-        "description": "Fuel cost (yearly cost for fuels other than gas and electricity)\nallocation flag",
+        "description": "Fuel cost (yearly cost for fuels other than gas and electricity) allocation flag",
         "footnotes": [],
         "name": "FFULP",
-        "short_description": "Fuel cost (yearly cost for fuels other than gas and electricity)",
+        "short_description": "Fuel cost (yearly cost for fuels other than gas and electricity) allocation flag",
         "size": "1"
       },
       {
@@ -3480,10 +3577,10 @@
             "Yes"
           ]
         ],
-        "description": "First mortgage payment includes fire, hazard, flood insurance\nallocation flag",
+        "description": "First mortgage payment includes fire, hazard, flood insurance allocation flag",
         "footnotes": [],
         "name": "FMRGIP",
-        "short_description": "First mortgage payment includes fire, hazard, flood insurance",
+        "short_description": "First mortgage payment includes fire, hazard, flood insurance allocation flag",
         "size": "1"
       },
       {
@@ -3837,10 +3934,10 @@
             "Yes"
           ]
         ],
-        "description": "Total payment on second and junior mortgages and home equity loans\n(monthly amount)allocation flag",
+        "description": "Total payment on second and junior mortgages and home equity loans (monthly amount) allocation flag",
         "footnotes": [],
         "name": "FSMP",
-        "short_description": "Total payment on second and junior mortgages and home equity loans",
+        "short_description": "Total payment on second and junior mortgages and home equity loans (monthly amount) allocation flag",
         "size": "1"
       },
       {
@@ -5435,11 +5532,15 @@
       {
         "codebook": [
           [
+            "00",
+            "Under 1 year"
+          ],
+          [
             "01..99",
             "1 to 99 years (Top-coded***)"
           ]
         ],
-        "description": "Age\n00  .Under 1 year",
+        "description": "Age",
         "footnotes": [],
         "name": "AGEP",
         "short_description": "Age",
@@ -6195,10 +6296,10 @@
             "No"
           ]
         ],
-        "description": "Medicaid, Medical Assistance, or any kind of government-assistance plan\nfor those with low incomes or a disability",
+        "description": "Medicaid, Medical Assistance, or any kind of government-assistance plan for those with low incomes or a disability",
         "footnotes": [],
         "name": "HINS4",
-        "short_description": "Medicaid, Medical Assistance, or any kind of government-assistance plan",
+        "short_description": "Medicaid, Medical Assistance, or any kind of government-assistance plan for those with low incomes or a disability",
         "size": "1"
       },
       {
@@ -6255,8 +6356,16 @@
       {
         "codebook": [
           [
+            "bbbbbb",
+            "N/A (less than 15 years old)"
+          ],
+          [
             "000000",
             "None"
+          ],
+          [
+            "-09999..-00001",
+            "Loss of $1 to $9999 (Rounded and bottom-coded)"
           ],
           [
             "000001",
@@ -6267,7 +6376,7 @@
             "$2 to $999999 (Rounded and top-coded)"
           ]
         ],
-        "description": "Interest, dividends, and net rental income past 12 months (signed)\nBbbbbb.N/A (less than 15 years old)\n-09999..-00001.Loss of $1 to $9999 (Rounded and bottom-coded)\nNote: Use ADJINC to adjust INTP to constant dollars.",
+        "description": "Interest, dividends, and net rental income past 12 months (signed)\nNote: Use ADJINC to adjust INTP to constant dollars.",
         "footnotes": [],
         "name": "INTP",
         "short_description": "Interest, dividends, and net rental income past 12 months (signed)",
@@ -7217,7 +7326,7 @@
         "codebook": [
           [
             "b",
-            "N/A (less than 16 years old/at work/temporarily"
+            "N/A (less than 16 years old/at work/temporarily absent/informed of recall)"
           ],
           [
             "1",
@@ -7232,7 +7341,7 @@
             "Did not report"
           ]
         ],
-        "description": "Looking for work\n  .absent/informed of recall)",
+        "description": "Looking for work",
         "footnotes": [],
         "name": "NWLK",
         "short_description": "Looking for work",
@@ -7293,9 +7402,13 @@
           [
             "00000",
             "None"
+          ],
+          [
+            "00001..99999",
+            "$1 to $99999 (Rounded)"
           ]
         ],
-        "description": "Public assistance income past 12 months\n00001..99999.$1 to $99999 (Rounded)\nNote: Use ADJINC to adjust PAP to constant dollars.",
+        "description": "Public assistance income past 12 months\nNote: Use ADJINC to adjust PAP to constant dollars.",
         "footnotes": [],
         "name": "PAP",
         "short_description": "Public assistance income past 12 months",
@@ -7391,9 +7504,13 @@
           [
             "000000",
             "None"
+          ],
+          [
+            "000001..999999",
+            "$1 to $999999 (Rounded and top-coded)"
           ]
         ],
-        "description": "Retirement income past 12 months\n000001..999999.$1 to $999999 (Rounded and top-coded)\nNote: Use ADJINC to adjust RETP to constant dollars.",
+        "description": "Retirement income past 12 months\nNote: Use ADJINC to adjust RETP to constant dollars.",
         "footnotes": [],
         "name": "RETP",
         "short_description": "Retirement income past 12 months",
@@ -7613,15 +7730,27 @@
       {
         "codebook": [
           [
+            "bbbbbb",
+            "N/A (less than 15 years old)"
+          ],
+          [
+            "000000",
+            "None"
+          ],
+          [
             "-10000..-00001",
             "Loss of $1 to $10000 (Rounded and bottom-coded)"
+          ],
+          [
+            "000001",
+            "$1 or break even"
           ],
           [
             "000002..999999",
             "$2 to $999999 (Rounded and top-coded)"
           ]
         ],
-        "description": "Self-employment income past 12 months (signed)\nbbbbbb  .N/A (less than 15 years old)\n000000  .None\n000001  .$1 or break even\nNote: Use ADJINC to adjust SEMP to constant dollars.",
+        "description": "Self-employment income past 12 months (signed)\nNote: Use ADJINC to adjust SEMP to constant dollars.",
         "footnotes": [],
         "name": "SEMP",
         "short_description": "Self-employment income past 12 months (signed)",
@@ -7647,11 +7776,19 @@
       {
         "codebook": [
           [
+            "bbbbb",
+            "N/A (less than 15 years old)"
+          ],
+          [
+            "00000",
+            "None"
+          ],
+          [
             "00001..99999",
             "$1 to $99999 (Rounded)"
           ]
         ],
-        "description": "Supplementary Security Income past 12 months\nbbbbb  .N/A (less than 15 years old)\n00000  .None\nNote: Use ADJINC to adjust SSIP to constant dollars.",
+        "description": "Supplementary Security Income past 12 months\nNote: Use ADJINC to adjust SSIP to constant dollars.",
         "footnotes": [],
         "name": "SSIP",
         "short_description": "Supplementary Security Income past 12 months",
@@ -7660,11 +7797,19 @@
       {
         "codebook": [
           [
+            "bbbbb",
+            "N/A (less than 15 years old)"
+          ],
+          [
+            "00000",
+            "None"
+          ],
+          [
             "00001..99999",
             "$1 to $99999 (Rounded)"
           ]
         ],
-        "description": "Social Security income past 12 months\nbbbbb  .N/A (less than 15 years old)\n00000  .None\nNote: Use ADJINC to adjust SSP to constant dollars.",
+        "description": "Social Security income past 12 months\nNote: Use ADJINC to adjust SSP to constant dollars.",
         "footnotes": [],
         "name": "SSP",
         "short_description": "Social Security income past 12 months",
@@ -7672,6 +7817,10 @@
       },
       {
         "codebook": [
+          [
+            "bbbbbb",
+            "N/A (less than 15 years old)"
+          ],
           [
             "000000",
             "None"
@@ -7681,7 +7830,7 @@
             "$1 to 999999 (Rounded and top-coded)"
           ]
         ],
-        "description": "Wages or salary income past 12 months\nbbbbbb  .N/A (less than 15 years old)\nNote: Use ADJINC to adjust WAGP to constant dollars.",
+        "description": "Wages or salary income past 12 months\nNote: Use ADJINC to adjust WAGP to constant dollars.",
         "footnotes": [],
         "name": "WAGP",
         "short_description": "Wages or salary income past 12 months",
@@ -7690,11 +7839,19 @@
       {
         "codebook": [
           [
+            "bb",
+            "N/A (less than 16 years old/did not work during the past 12 months)"
+          ],
+          [
             "01..98",
             "1 to 98 usual hours"
+          ],
+          [
+            "99",
+            "99 or more usual hours"
           ]
         ],
-        "description": "Usual hours worked per week past 12 months\nbb  .N/A (less than 16 years old/did not work\n .during the past 12 months)\n99  .99 or more usual hours",
+        "description": "Usual hours worked per week past 12 months",
         "footnotes": [],
         "name": "WKHP",
         "short_description": "Usual hours worked per week past 12 months",
@@ -7729,7 +7886,7 @@
         "codebook": [
           [
             "b",
-            "N/A (less than 16 years old/did not work"
+            "N/A (less than 16 years old/did not work during the past 12 months)"
           ],
           [
             "1",
@@ -7756,7 +7913,7 @@
             "less than 14 weeks worked during past 12 months"
           ]
         ],
-        "description": "Weeks worked during past 12 months\n  .during the past 12 months)",
+        "description": "Weeks worked during past 12 months",
         "footnotes": [],
         "name": "WKW",
         "short_description": "Weeks worked during past 12 months",
@@ -10122,42 +10279,42 @@
         "codebook": [
           [
             "b",
-            "N/A (not own child of householder, and not"
+            "N/A (not own child of householder, and not child in subfamily)"
           ],
           [
             "1",
-            "Both parents in labor force"
+            "Living with two parents, Both parents in labor force"
           ],
           [
             "2",
-            "Father only in labor force"
+            "Living with two parents, Father only in labor force"
           ],
           [
             "3",
-            "Mother only in labor force"
+            "Living with two parents, Mother only in labor force"
           ],
           [
             "4",
-            "Neither parent in labor force"
+            "Living with two parents, Neither parent in labor force"
           ],
           [
             "5",
-            "Father in the labor force"
+            "Living with father, Father in the labor force"
           ],
           [
             "6",
-            "Father not in labor force"
+            "Living with father, Father not in labor force"
           ],
           [
             "7",
-            "Mother in the labor force"
+            "Living with mother, Mother in the labor force"
           ],
           [
             "8",
-            "Mother not in labor force"
+            "Living with mother, Mother not in labor force"
           ]
         ],
-        "description": "Employment status of parents\n  .child in subfamily)\n  .Living with two parents:\n  .Living with one parent:\n  .Living with father:\n  .Living with mother:",
+        "description": "Employment status of parents",
         "footnotes": [],
         "name": "ESP",
         "short_description": "Employment status of parents",
@@ -15037,11 +15194,23 @@
       {
         "codebook": [
           [
+            "bbbbb",
+            "N/A (person less than 1 year old/lived in same house 1 year ago)"
+          ],
+          [
+            "00001",
+            "Did not live in the United States or in Puerto Rico one year ago"
+          ],
+          [
+            "00002",
+            "Lived in Puerto Rico one year ago and current residence is in the U.S."
+          ],
+          [
             "00100..70100",
             "Assigned Migration PUMA. Use with MIGSP."
           ]
         ],
-        "description": "Migration PUMA based on 2010 Census definition\nbbbbb  .N/A (person less than 1 year old/lived in same house 1 year ago)\n00001  .Did not live in the United States or in Puerto Rico one year ago\n00002  .Lived in Puerto Rico one year ago and current residence is in the U.S.",
+        "description": "Migration PUMA based on 2010 Census definition",
         "footnotes": [],
         "name": "MIGPUMA",
         "short_description": "Migration PUMA based on 2010 Census definition",
@@ -15592,6 +15761,10 @@
             "MFG-ANIMAL SLAUGHTERING AND PROCESSING"
           ],
           [
+            "311811",
+            "MFG-RETAIL BAKERIES"
+          ],
+          [
             "3118Z",
             "MFG-BAKERIES AND TORTILLA, EXCEPT RETAIL BAKERIES"
           ],
@@ -15844,6 +16017,14 @@
             "MFG-ELECTRIC LIGHTING, AND ELECTRICAL EQUIPMENT MANUFACTURING, AND OTHER ELECTRICAL COMPONENT MANUFACTURING, N.E.C."
           ],
           [
+            "33641M1",
+            "MFG-AIRCRAFT AND PARTS"
+          ],
+          [
+            "33641M2",
+            "MFG-AEROSPACE PRODUCTS AND PARTS"
+          ],
+          [
             "3365",
             "MFG-RAILROAD ROLLING STOCK"
           ],
@@ -15870,6 +16051,10 @@
           [
             "3399M",
             "MFG-SPORTING AND ATHLETIC GOODS, AND DOLL, TOY, AND GAME MANUFACTURING"
+          ],
+          [
+            "3399ZM",
+            "MFG-MISCELLANEOUS MANUFACTURING, N.E.C."
           ],
           [
             "33MS",
@@ -16198,6 +16383,10 @@
           [
             "51913",
             "INF-INTERNET PUBLISHING AND BROADCASTING AND WEB SEARCH PORTALS"
+          ],
+          [
+            "5191ZM",
+            "INF-OTHER INFORMATION SERVICES, EXCEPT LIBRARIES AND ARCHIVES, AND INTERNET PUBLISHING AND BROADCASTING AND WEB SEARCH PORTALS"
           ],
           [
             "5221M",
@@ -16552,7 +16741,7 @@
             "UNEMPLOYED AND LAST WORKED 5 YEARS AGO OR EARLIER OR NEVER WORKED<FN2>"
           ]
         ],
-        "description": "NAICS Industry recode for 2013 and later based on 2012 NAICS codes\n311811MFG-RETAIL BAKERIES\n33641M1   .MFG-AIRCRAFT AND PARTS\n33641M2   .MFG-AEROSPACE PRODUCTS AND PARTS\n3399ZMMFG-MISCELLANEOUS MANUFACTURING, N.E.C.\n5191ZMINF-OTHER INFORMATION SERVICES, EXCEPT LIBRARIES AND ARCHIVES, AND INTERNET PUBLISHING AND BROADCASTING AND WEB SEARCH PORTALS\nNote: For additional information on NAICS and SOC groupings within major categories visit our website at: http://www.census.gov/people/io/methodology/indexes.html.",
+        "description": "NAICS Industry recode for 2013 and later based on 2012 NAICS codes\nNote: For additional information on NAICS and SOC groupings within major categories visit our website at: http://www.census.gov/people/io/methodology/indexes.html.",
         "footnotes": [
           "FN2"
         ],
@@ -16641,6 +16830,10 @@
       },
       {
         "codebook": [
+          [
+            "bbbb",
+            "N/A (less than 16 years old/NILF who last worked more than 5 years ago or never worked)"
+          ],
           [
             "0010",
             "MGR-CHIEF EXECUTIVES AND LEGISLATORS"
@@ -17079,7 +17272,7 @@
           ],
           [
             "2025",
-            "CMS-MISCELLANEOUS COMMUNITY AND SOCIAL SERVICE  .SPECIALISTS,INCLUDING HEALTH EDUCATORS AND COMMUNITY HEALTH WORKERS"
+            "CMS-MISCELLANEOUS COMMUNITY AND SOCIAL SERVICE SPECIALISTS,INCLUDING HEALTH EDUCATORS AND COMMUNITY HEALTH WORKERS"
           ],
           [
             "2040",
@@ -17787,7 +17980,7 @@
           ],
           [
             "5410",
-            "OFF-RESERVATION AND TRANSPORTATION TICKET AGENTS AND  .TRAVEL CLERKS"
+            "OFF-RESERVATION AND TRANSPORTATION TICKET AGENTS AND TRAVEL CLERKS"
           ],
           [
             "5420",
@@ -17819,7 +18012,7 @@
           ],
           [
             "5560",
-            "OFF-POSTAL SERVICE MAIL SORTERS, PROCESSORS, AND  .PROCESSING MACHINE OPERATORS"
+            "OFF-POSTAL SERVICE MAIL SORTERS, PROCESSORS, AND PROCESSING MACHINE OPERATORS"
           ],
           [
             "5600",
@@ -17931,7 +18124,7 @@
           ],
           [
             "6250",
-            "CON-CEMENT MASONS, CONCRETE FINISHERS, AND TERRAZZO  .WORKERS"
+            "CON-CEMENT MASONS, CONCRETE FINISHERS, AND TERRAZZO WORKERS"
           ],
           [
             "6260",
@@ -17947,7 +18140,7 @@
           ],
           [
             "6330",
-            "CON-DRYWALL INSTALLERS, CEILING TILE INSTALLERS, AND  .TAPERS"
+            "CON-DRYWALL INSTALLERS, CEILING TILE INSTALLERS, AND TAPERS"
           ],
           [
             "6355",
@@ -18399,7 +18592,7 @@
           ],
           [
             "8920",
-            "PRD-MOLDERS, SHAPERS, AND CASTERS, EXCEPT METAL AND  .PLASTIC"
+            "PRD-MOLDERS, SHAPERS, AND CASTERS, EXCEPT METAL AND PLASTIC"
           ],
           [
             "8930",
@@ -18558,7 +18751,7 @@
             "UNEMPLOYED AND LAST WORKED 5 YEARS AGO OR EARLIER OR NEVER WORKED<FN2>"
           ]
         ],
-        "description": "Occupation recode for 2012 and later based on 2010 OCC codes\nbbbb  .N/A (less than 16 years old/NILF who last worked more than 5 years ago or never worked)\nNote: For additional information on NAICS and SOC groupings within major categories visit our website at: http://www.census.gov/people/io/methodology/indexes.html.",
+        "description": "Occupation recode for 2012 and later based on 2010 OCC codes\nNote: For additional information on NAICS and SOC groupings within major categories visit our website at: http://www.census.gov/people/io/methodology/indexes.html.",
         "footnotes": [
           "FN2"
         ],
@@ -19533,11 +19726,19 @@
       {
         "codebook": [
           [
+            "bbb",
+            "N/A"
+          ],
+          [
             "000..500",
             "Below 501 percent"
+          ],
+          [
+            "501",
+            "501 percent or more"
           ]
         ],
-        "description": "Income-to-poverty ratio recode\nbbb N/A\n501501 percent or more",
+        "description": "Income-to-poverty ratio recode",
         "footnotes": [],
         "name": "POVPIP",
         "short_description": "Income-to-poverty ratio recode",
@@ -19546,11 +19747,19 @@
       {
         "codebook": [
           [
+            "bbbbb",
+            "N/A (not a worker--not in the labor force, force, including persons under 16 years; unemployed; civilian employed, with a job not at work; Armed Forces, with a job but not at work)"
+          ],
+          [
+            "00001",
+            "Did not work in the United States or in Puerto Rico"
+          ],
+          [
             "00100..70100",
             "Assigned Place of work PUMA.  Use with POWSP."
           ]
         ],
-        "description": "Place of work PUMA based on 2010 Census definition\nbbbbb  .N/A (not a worker--not in the labor force, force, including persons under 16 years; unemployed; civilian employed, with a job not at work; Armed Forces, with a job but not at work)\n00001  .Did not work in the United States or in Puerto Rico",
+        "description": "Place of work PUMA based on 2010 Census definition",
         "footnotes": [],
         "name": "POWPUMA",
         "short_description": "Place of work PUMA based on 2010 Census definition",
@@ -22854,7 +23063,7 @@
             "Pre-WWII only"
           ]
         ],
-        "description": "Veteran period of service\nWar Times:",
+        "description": "Veteran period of service",
         "footnotes": [],
         "name": "VPS",
         "short_description": "Veteran period of service",
@@ -23343,10 +23552,10 @@
             "Yes"
           ]
         ],
-        "description": "Medicare, for people 65 or older, or people with certain disabilities\nallocation flag",
+        "description": "Medicare, for people 65 or older, or people with certain disabilities allocation flag",
         "footnotes": [],
         "name": "FHINS3P",
-        "short_description": "Medicare, for people 65 or older, or people with certain disabilities",
+        "short_description": "Medicare, for people 65 or older, or people with certain disabilities allocation flag",
         "size": "1"
       },
       {
@@ -23381,10 +23590,10 @@
             "Yes"
           ]
         ],
-        "description": "Medicaid, medical assistance, or any kind of government-assistance plan\nfor people with low incomes or a disability allocation flag",
+        "description": "Medicaid, medical assistance, or any kind of government-assistance plan for people with low incomes or a disability allocation flag",
         "footnotes": [],
         "name": "FHINS4P",
-        "short_description": "Medicaid, medical assistance, or any kind of government-assistance plan",
+        "short_description": "Medicaid, medical assistance, or any kind of government-assistance plan for people with low incomes or a disability allocation flag",
         "size": "1"
       },
       {
@@ -23436,10 +23645,10 @@
             "Yes"
           ]
         ],
-        "description": "VA (including those who have ever used or enrolled for VA health care)\nallocation flag",
+        "description": "VA (including those who have ever used or enrolled for VA health care) allocation flag",
         "footnotes": [],
         "name": "FHINS6P",
-        "short_description": "VA (including those who have ever used or enrolled for VA health care)",
+        "short_description": "VA (including those who have ever used or enrolled for VA health care) allocation flag",
         "size": "1"
       },
       {

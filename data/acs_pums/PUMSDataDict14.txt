@@ -107,14 +107,14 @@ Note: The value of ADJINC inflation-adjusts reported income to 2014 dollars.  AD
 
 WGTP 5
 Housing Weight
-00000  Group Quarters place holder record
+00000 .Group Quarters place holder record
 00001..09999 .Integer weight of housing unit
 
 NP 2
 Number of person records following this housing record
-00.Vacant unit
-01.One person record (one person in household or any person in group quarters)
-02..20  .Number of person records (number of persons in.household)
+00 .Vacant unit
+01 .One person record (one person in household or any person in group quarters)
+02..20 .Number of person records (number of persons in.household)
 
 TYPE 1
 Type of unit
@@ -156,7 +156,7 @@ b .N/A (GQ)
 
 BDSP 2
 Number of bedrooms
-Bb.N/A (GQ)
+bb .N/A (GQ)
 00..99 .0 to 99 bedrooms (Top-coded)
 
 BLD 2
@@ -272,8 +272,8 @@ b .N/A (GQ/vacant)
 
 INSP 5
 Fire/hazard/flood insurance (yearly amount)
-bbbbb  .N/A (GQ/vacant/not owned or being bought)
-00000  .None
+bbbbb .N/A (GQ/vacant/not owned or being bought)
+00000 .None
 00001..10000 .$1 to $10000 (Rounded and top-coded)
 
 Note: Use ADJHSG to adjust INSP to constant dollars.
@@ -286,8 +286,8 @@ b .N/A (GQ)
 
 MHP 5
 Mobile home costs (yearly amount)
-bbbbb  .N/A (GQ/vacant/not owned or being bought/not mobile home)
-00000  .None
+bbbbb .N/A (GQ/vacant/not owned or being bought/not mobile home)
+00000 .None
 00001..99999 .$1 to $99999 (Rounded and top-coded)
 
 Note: Use ADJHSG to adjust MHP to constant dollars.
@@ -306,7 +306,7 @@ b .N/A (GQ/vacant/not owned or being bought/not mortgaged)
 
 MRGP 5
 First mortgage payment (monthly amount)
-bbbbb  .N/A (GQ/vacant/not owned or being bought/not mortgaged)
+bbbbb .N/A (GQ/vacant/not owned or being bought/not mortgaged)
 00001..99999 .$1 to $99999 (Rounded and top-coded)
 
 Note: Use ADJHSG to adjust MRGP to constant dollars.
@@ -349,7 +349,7 @@ b .N/A (GQ/not a rental unit/occupied without rent payment)
 
 RNTP 5
 Monthly rent
-bbbbbN/A (GQ/not a rental unit/occupied without rent payment)
+bbbbb .N/A (GQ/not a rental unit/occupied without rent payment)
 00001..99999 .$1 to $99999 (Rounded and top-coded)
 
 Note: Use ADJHSG to adjust RNTP to constant dollars.
@@ -381,9 +381,8 @@ b .N/A (GQ)
 2 .No
 
 SMP 5
-Total payment on all second and junior mortgages and home equity loans
-(monthly amount)
-bbbbb  .N/A (GQ/vacant/not owned or being bought/no second or junior mortgages or home equity loans)
+Total payment on all second and junior mortgages and home equity loans (monthly amount)
+bbbbb .N/A (GQ/vacant/not owned or being bought/no second or junior mortgages or home equity loans)
 00001..99999 .$1 to $99999 (Rounded and top-coded)
 
 Note: Use ADJHSG to adjust SMP to constant dollars.
@@ -427,7 +426,7 @@ b .N/A (GQ/occupied)
 
 VALP 7
 Property value
-bbbbbbb  N/A (GQ/vacant units, except ”for-sale-only“ and ”sold, not occupied”/not owned or being .bought)
+bbbbbbb .N/A (GQ/vacant units, except ”for-sale-only“ and ”sold, not occupied”/not owned or being .bought)
 0000001..9999999 .$1 to $9999999 (Rounded and top-coded)
 
 VEH 1
@@ -446,7 +445,7 @@ Water (yearly cost)
 bbbb .N/A (GQ/vacant)
 0001 .Included in rent or in condo fee
 0002 .No charge
-0003..9999  .$3 to $9999 (Rounded and top-coded)
+0003..9999 .$3 to $9999 (Rounded and top-coded)
 
 Note: Use ADJHSG to adjust WATP values 3 and over to constant dollars.
 
@@ -505,7 +504,7 @@ b .N/A (GQ/vacant/not a family)
 
 GRNTP 5
 Gross rent (monthly amount)
-bbbbb  .N/A (GQ/vacant/not a rental unit/occupied without rent payment)
+bbbbb .N/A (GQ/vacant/not a rental unit/occupied without rent payment)
 00001..99999 .$1 - $99999 (Components are rounded)
 
 Note: Use ADJHSG to adjust GRNTP to constant dollars.
@@ -615,13 +614,13 @@ b .N/A (GQ/vacant)
 
 NOC 2
 Number of own children in household (unweighted)
-bb  .N/A(GQ/vacant)
-00  .No own children
+bb .N/A(GQ/vacant)
+00 .No own children
 01..19 .Number of own children in household
 
 NPF 2
 Number of persons in family (unweighted)
-bb  .N/A (GQ/vacant/non-family household)
+bb .N/A (GQ/vacant/non-family household)
 02..20 .Number of persons in family
 
 NPP 1
@@ -638,16 +637,15 @@ b .N/A (GQ/vacant)
 
 NRC 2
 Number of related children in household (unweighted)
-bb  .N/A (GQ/vacant)
-00  .No related children
+bb .N/A (GQ/vacant)
+00 .No related children
 01..19 .Number of related children in household
 
 OCPIP 3
-Selected monthly owner costs as a percentage of household
-income during the past 12 months
-bbb N/A (GQ/vacant/not owned or being bought/no household income)
+Selected monthly owner costs as a percentage of household income during the past 12 months
+bbb .N/A (GQ/vacant/not owned or being bought/no household income)
 001..100 .1% to 100%
-101 101% or more
+101 .101% or more
 
 PARTNER 1
 Unmarried partner household
@@ -707,8 +705,8 @@ b .N/A (GQ)
 
 SMOCP 5
 Selected monthly owner costs
-bbbbbN/A (GQ/vacant/not owned or being bought)
-00000None
+bbbbb .N/A (GQ/vacant/not owned or being bought)
+00000 .None
 00001..99999 .$1 - $99999 (Components are rounded)
 
 Note: Use ADJHSG to adjust SMOCP to constant dollars.
@@ -951,14 +949,12 @@ b .N/A (GQ)
 1 .Yes
 
 FFSP 1
-Yearly food stamp/Supplemental Nutrition Assistance Program
-recipiency allocation flag
+Yearly food stamp/Supplemental Nutrition Assistance Program recipiency allocation flag
 0 .No
 1 .Yes
 
 FFULP 1
-Fuel cost (yearly cost for fuels other than gas and electricity)
-allocation flag
+Fuel cost (yearly cost for fuels other than gas and electricity) allocation flag
 b .N/A (GQ)
 0 .No
 1 .Yes
@@ -1030,8 +1026,7 @@ b .N/A (GQ)
 1 .Yes
 
 FMRGIP 1
-First mortgage payment includes fire, hazard, flood insurance
-allocation flag
+First mortgage payment includes fire, hazard, flood insurance allocation flag
 b .N/A (GQ)
 0 .No
 1 .Yes
@@ -1133,8 +1128,7 @@ b .N/A (GQ)
 1 .Yes
 
 FSMP 1
-Total payment on second and junior mortgages and home equity loans
-(monthly amount)allocation flag
+Total payment on second and junior mortgages and home equity loans (monthly amount) allocation flag
 b .N/A (GQ)
 0 .No
 1 .Yes
@@ -1618,7 +1612,7 @@ Person's weight
 
 AGEP 2
 Age
-00  .Under 1 year
+00 .Under 1 year
 01..99 .1 to 99 years (Top-coded***)
 
 CIT 1
@@ -1821,8 +1815,7 @@ Medicare, for people 65 and older, or people with certain disabilities
 2 .No
 
 HINS4 1
-Medicaid, Medical Assistance, or any kind of government-assistance plan
-for those with low incomes or a disability
+Medicaid, Medical Assistance, or any kind of government-assistance plan for those with low incomes or a disability
 1 .Yes
 2 .No
 
@@ -1843,9 +1836,9 @@ Indian Health Service
 
 INTP 6
 Interest, dividends, and net rental income past 12 months (signed)
-Bbbbbb.N/A (less than 15 years old)
+bbbbbb .N/A (less than 15 years old)
 000000 .None
--09999..-00001.Loss of $1 to $9999 (Rounded and bottom-coded)
+-09999..-00001 .Loss of $1 to $9999 (Rounded and bottom-coded)
 000001 .$1 or break even
 000002..999999 .$2 to $999999 (Rounded and top-coded)
 
@@ -2107,8 +2100,7 @@ b .N/A (less than 16 years old/at work)
 
 NWLK 1 (UNEDITED - See “Employment Status Recode” (ESR))
 Looking for work
-b .N/A (less than 16 years old/at work/temporarily
-  .absent/informed of recall)
+b .N/A (less than 16 years old/at work/temporarily absent/informed of recall)
 1 .Yes
 2 .No
 3 .Did not report
@@ -2132,7 +2124,7 @@ PAP 5
 Public assistance income past 12 months
 bbbbb .N/A (less than 15 years old)
 00000 .None
-00001..99999.$1 to $99999 (Rounded)
+00001..99999 .$1 to $99999 (Rounded)
 
 Note: Use ADJINC to adjust PAP to constant dollars.
 
@@ -2161,7 +2153,7 @@ RETP 6
 Retirement income past 12 months
 bbbbbb .N/A (less than 15 years old)
 000000 .None
-000001..999999.$1 to $999999 (Rounded and top-coded)
+000001..999999 .$1 to $999999 (Rounded and top-coded)
 
 Note: Use ADJINC to adjust RETP to constant dollars.
 
@@ -2224,10 +2216,10 @@ bb .N/A (less than 3 years old)
 
 SEMP 6
 Self-employment income past 12 months (signed)
-bbbbbb  .N/A (less than 15 years old)
-000000  .None
+bbbbbb .N/A (less than 15 years old)
+000000 .None
 -10000..-00001 .Loss of $1 to $10000 (Rounded and bottom-coded)
-000001  .$1 or break even
+000001 .$1 or break even
 000002..999999 .$2 to $999999 (Rounded and top-coded)
 
 Note: Use ADJINC to adjust SEMP to constant dollars.
@@ -2239,23 +2231,23 @@ Sex
 
 SSIP 5
 Supplementary Security Income past 12 months
-bbbbb  .N/A (less than 15 years old)
-00000  .None
+bbbbb .N/A (less than 15 years old)
+00000 .None
 00001..99999 .$1 to $99999 (Rounded)
 
 Note: Use ADJINC to adjust SSIP to constant dollars.
 
 SSP 5
 Social Security income past 12 months
-bbbbb  .N/A (less than 15 years old)
-00000  .None
+bbbbb .N/A (less than 15 years old)
+00000 .None
 00001..99999 .$1 to $99999 (Rounded)
 
 Note: Use ADJINC to adjust SSP to constant dollars.
 
 WAGP 6
 Wages or salary income past 12 months
-bbbbbb  .N/A (less than 15 years old)
+bbbbbb .N/A (less than 15 years old)
 000000 .None
 000001..999999 .$1 to 999999 (Rounded and top-coded)
 
@@ -2263,10 +2255,9 @@ Note: Use ADJINC to adjust WAGP to constant dollars.
 
 WKHP 2
 Usual hours worked per week past 12 months
-bb  .N/A (less than 16 years old/did not work
- .during the past 12 months)
+bb .N/A (less than 16 years old/did not work during the past 12 months)
 01..98 .1 to 98 usual hours
-99  .99 or more usual hours
+99 .99 or more usual hours
 
 WKL 1
 When last worked
@@ -2279,8 +2270,7 @@ b .N/A (less than 16 years old)
 
 WKW 1
 Weeks worked during past 12 months
-b .N/A (less than 16 years old/did not work
-  .during the past 12 months)
+b .N/A (less than 16 years old/did not work during the past 12 months)
 1 .50 to 52 weeks worked during past 12 months
 2 .48 to 49 weeks worked during past 12 months
 3 .40 to 47 weeks worked during past 12 months
@@ -2885,20 +2875,15 @@ b .N/A (Nonworker or worker who does not drive to work)
 
 ESP 1
 Employment status of parents
-b .N/A (not own child of householder, and not
-  .child in subfamily)
-  .Living with two parents:
-1 .Both parents in labor force
-2 .Father only in labor force
-3 .Mother only in labor force
-4 .Neither parent in labor force
-  .Living with one parent:
-  .Living with father:
-5 .Father in the labor force
-6 .Father not in labor force
-  .Living with mother:
-7 .Mother in the labor force
-8 .Mother not in labor force
+b .N/A (not own child of householder, and not child in subfamily)
+1 .Living with two parents, Both parents in labor force
+2 .Living with two parents, Father only in labor force
+3 .Living with two parents, Mother only in labor force
+4 .Living with two parents, Neither parent in labor force
+5 .Living with father, Father in the labor force
+6 .Living with father, Father not in labor force
+7 .Living with mother, Mother in the labor force
+8 .Living with mother, Mother not in labor force
 
 ESR 1
 Employment status recode
@@ -4130,9 +4115,9 @@ bbb .N/A (less than 5 years old/speaks only English)
 
 MIGPUMA 5
 Migration PUMA based on 2010 Census definition
-bbbbb  .N/A (person less than 1 year old/lived in same house 1 year ago)
-00001  .Did not live in the United States or in Puerto Rico one year ago
-00002  .Lived in Puerto Rico one year ago and current residence is in the U.S.
+bbbbb .N/A (person less than 1 year old/lived in same house 1 year ago)
+00001 .Did not live in the United States or in Puerto Rico one year ago
+00002 .Lived in Puerto Rico one year ago and current residence is in the U.S.
 00100..70100 .Assigned Migration PUMA. Use with MIGSP.
 
 MIGSP 3
@@ -4274,7 +4259,7 @@ bbbbbbbb .N/A (less than 16 years old/NILF who last worked more than 5 years ago
 3114 .MFG-FRUIT AND VEGETABLE PRESERVING AND SPECIALTY FOODS
 3115 .MFG-DAIRY PRODUCTS
 3116 .MFG-ANIMAL SLAUGHTERING AND PROCESSING
-311811MFG-RETAIL BAKERIES
+311811 .MFG-RETAIL BAKERIES
 3118Z .MFG-BAKERIES AND TORTILLA, EXCEPT RETAIL BAKERIES
 311M1 .MFG-ANIMAL FOOD, GRAIN AND OILSEED MILLING
 311M2 .MFG-SEAFOOD AND OTHER MISCELLANEOUS FOODS, N.E.C.
@@ -4338,8 +4323,8 @@ bbbbbbbb .N/A (less than 16 years old/NILF who last worked more than 5 years ago
 334M2 .MFG-ELECTRONIC COMPONENTS AND PRODUCTS, N.E.C.
 3352 .MFG-HOUSEHOLD APPLIANCES
 335M .MFG-ELECTRIC LIGHTING, AND ELECTRICAL EQUIPMENT MANUFACTURING, AND OTHER ELECTRICAL COMPONENT MANUFACTURING, N.E.C.
-33641M1   .MFG-AIRCRAFT AND PARTS
-33641M2   .MFG-AEROSPACE PRODUCTS AND PARTS
+33641M1 .MFG-AIRCRAFT AND PARTS
+33641M2 .MFG-AEROSPACE PRODUCTS AND PARTS
 3365 .MFG-RAILROAD ROLLING STOCK
 3366 .MFG-SHIP AND BOAT BUILDING
 3369 .MFG-OTHER TRANSPORTATION EQUIPMENT
@@ -4347,7 +4332,7 @@ bbbbbbbb .N/A (less than 16 years old/NILF who last worked more than 5 years ago
 337 .MFG-FURNITURE AND RELATED PRODUCTS
 3391 .MFG-MEDICAL EQUIPMENT AND SUPPLIES
 3399M .MFG-SPORTING AND ATHLETIC GOODS, AND DOLL, TOY, AND GAME MANUFACTURING
-3399ZMMFG-MISCELLANEOUS MANUFACTURING, N.E.C.
+3399ZM .MFG-MISCELLANEOUS MANUFACTURING, N.E.C.
 33MS .MFG-NOT SPECIFIED METAL INDUSTRIES
 3MS .MFG-NOT SPECIFIED INDUSTRIES
 4231 .WHL-MOTOR VEHICLES AND MOTOR VEHICLE PARTS AND SUPPLIES MERCHANT WHOLESALERS
@@ -4430,7 +4415,7 @@ bbbbbbbb .N/A (less than 16 years old/NILF who last worked more than 5 years ago
 5182 .INF-DATA PROCESSING, HOSTING, AND RELATED SERVICES
 51912 .INF-LIBRARIES AND ARCHIVES
 51913 .INF-INTERNET PUBLISHING AND BROADCASTING AND WEB SEARCH PORTALS
-5191ZMINF-OTHER INFORMATION SERVICES, EXCEPT LIBRARIES AND ARCHIVES, AND INTERNET PUBLISHING AND BROADCASTING AND WEB SEARCH PORTALS
+5191ZM .INF-OTHER INFORMATION SERVICES, EXCEPT LIBRARIES AND ARCHIVES, AND INTERNET PUBLISHING AND BROADCASTING AND WEB SEARCH PORTALS
 5221M .FIN-SAVINGS INSTITUTIONS, INCLUDING CREDIT UNIONS
 522M .FIN-NONDEPOSITORY CREDIT AND RELATED ACTIVITIES
 524 .FIN-INSURANCE CARRIERS AND RELATED ACTIVITIES
@@ -4546,7 +4531,7 @@ Own child
 
 OCCP4
 Occupation recode for 2012 and later based on 2010 OCC codes
-bbbb  .N/A (less than 16 years old/NILF who last worked more than 5 years ago or never worked)
+bbbb .N/A (less than 16 years old/NILF who last worked more than 5 years ago or never worked)
 0010 .MGR-CHIEF EXECUTIVES AND LEGISLATORS
 0020 .MGR-GENERAL AND OPERATIONS MANAGERS
 0040 .MGR-ADVERTISING AND PROMOTIONS MANAGERS
@@ -4656,7 +4641,7 @@ bbbb  .N/A (less than 16 years old/NILF who last worked more than 5 years ago or
 2010 .CMS-SOCIAL WORKERS
 2015 .CMS-PROBATION OFFICERS AND CORRECTIONAL TREATMENT SPECIALISTS
 2016 .CMS-SOCIAL AND HUMAN SERVICE ASSISTANTS
-2025 .CMS-MISCELLANEOUS COMMUNITY AND SOCIAL SERVICE  .SPECIALISTS,INCLUDING HEALTH EDUCATORS AND COMMUNITY HEALTH WORKERS
+2025 .CMS-MISCELLANEOUS COMMUNITY AND SOCIAL SERVICE SPECIALISTS,INCLUDING HEALTH EDUCATORS AND COMMUNITY HEALTH WORKERS
 2040 .CMS-CLERGY
 2050 .CMS-DIRECTORS, RELIGIOUS ACTIVITIES AND EDUCATION
 2060 .CMS-RELIGIOUS WORKERS, ALL OTHER
@@ -4833,7 +4818,7 @@ bbbb  .N/A (less than 16 years old/NILF who last worked more than 5 years ago or
 5350 .OFF-CORRESPONDENCE CLERKS AND ORDER CLERKS
 5360 .OFF-HUMAN RESOURCES ASSISTANTS, EXCEPT PAYROLL AND TIMEKEEPING
 5400 .OFF-RECEPTIONISTS AND INFORMATION CLERKS
-5410 .OFF-RESERVATION AND TRANSPORTATION TICKET AGENTS AND  .TRAVEL CLERKS
+5410 .OFF-RESERVATION AND TRANSPORTATION TICKET AGENTS AND TRAVEL CLERKS
 5420 .OFF-INFORMATION AND RECORD CLERKS, ALL OTHER
 5500 .OFF-CARGO AND FREIGHT AGENTS
 5510 .OFF-COURIERS AND MESSENGERS
@@ -4841,7 +4826,7 @@ bbbb  .N/A (less than 16 years old/NILF who last worked more than 5 years ago or
 5530 .OFF-METER READERS, UTILITIES
 5540 .OFF-POSTAL SERVICE CLERKS
 5550 .OFF-POSTAL SERVICE MAIL CARRIERS
-5560 .OFF-POSTAL SERVICE MAIL SORTERS, PROCESSORS, AND  .PROCESSING MACHINE OPERATORS
+5560 .OFF-POSTAL SERVICE MAIL SORTERS, PROCESSORS, AND PROCESSING MACHINE OPERATORS
 5600 .OFF-PRODUCTION, PLANNING, AND EXPEDITING CLERKS
 5610 .OFF-SHIPPING, RECEIVING, AND TRAFFIC CLERKS
 5620 .OFF-STOCK CLERKS AND ORDER FILLERS
@@ -4869,11 +4854,11 @@ bbbb  .N/A (less than 16 years old/NILF who last worked more than 5 years ago or
 6220 .CON-BRICKMASONS, BLOCKMASONS, STONEMASONS, AND REINFORCING IRON AND REBAR WORKERS
 6230 .CON-CARPENTERS
 6240 .CON-CARPET, FLOOR, AND TILE INSTALLERS AND FINISHERS
-6250 .CON-CEMENT MASONS, CONCRETE FINISHERS, AND TERRAZZO  .WORKERS
+6250 .CON-CEMENT MASONS, CONCRETE FINISHERS, AND TERRAZZO WORKERS
 6260 .CON-CONSTRUCTION LABORERS
 6300 .CON-PAVING, SURFACING, AND TAMPING EQUIPMENT OPERATORS
 6320 .CON-CONSTRUCTION EQUIPMENT OPERATORS, EXCEPT PAVING, SURFACING, AND TAMPING EQUIPMENT OPERATORS
-6330 .CON-DRYWALL INSTALLERS, CEILING TILE INSTALLERS, AND  .TAPERS
+6330 .CON-DRYWALL INSTALLERS, CEILING TILE INSTALLERS, AND TAPERS
 6355 .CON-ELECTRICIANS
 6360 .CON-GLAZIERS
 6400 .CON-INSULATION WORKERS
@@ -4986,7 +4971,7 @@ bbbb  .N/A (less than 16 years old/NILF who last worked more than 5 years ago or
 8830 .PRD-PHOTOGRAPHIC PROCESS WORKERS AND PROCESSING MACHINE OPERATORS
 8850 .PRD-ADHESIVE BONDING MACHINE OPERATORS AND TENDERS
 8910 .PRD-ETCHERS AND ENGRAVERS
-8920 .PRD-MOLDERS, SHAPERS, AND CASTERS, EXCEPT METAL AND  .PLASTIC
+8920 .PRD-MOLDERS, SHAPERS, AND CASTERS, EXCEPT METAL AND PLASTIC
 8930 .PRD-PAPER GOODS MACHINE SETTERS, OPERATORS, AND TENDERS
 8940 .PRD-TIRE BUILDERS
 8950 .PRD-HELPERS-PRODUCTION WORKERS
@@ -5279,14 +5264,14 @@ Place of birth (Recode)
 
 POVPIP 3
 Income-to-poverty ratio recode
-bbb N/A
+bbb .N/A
 000..500 .Below 501 percent
-501501 percent or more
+501 .501 percent or more
 
 POWPUMA 5
 Place of work PUMA based on 2010 Census definition
-bbbbb  .N/A (not a worker--not in the labor force, force, including persons under 16 years; unemployed; civilian employed, with a job not at work; Armed Forces, with a job but not at work)
-00001  .Did not work in the United States or in Puerto Rico
+bbbbb .N/A (not a worker--not in the labor force, force, including persons under 16 years; unemployed; civilian employed, with a job not at work; Armed Forces, with a job but not at work)
+00001 .Did not work in the United States or in Puerto Rico
 00100..70100 .Assigned Place of work PUMA.  Use with POWSP.
 
 POWSP 3
@@ -6118,7 +6103,6 @@ Note: For additional information on NAICS and SOC groupings within major categor
 VPS 2
 Veteran period of service
 bb .N/A (less than 17 years old, no active duty)
-War Times:
 01 .Gulf War: 9/2001 or later
 02 .Gulf War: 9/2001 or later and Gulf War: 8/1990 - 8/2001
 03 .Gulf War: 9/2001 or later and Gulf War: 8/1990 - 8/2001 and Vietnam Era
@@ -6273,8 +6257,7 @@ b .Does not have Medicare coverage (HINS3=2)
 1 .Yes
 
 FHINS3P 1
-Medicare, for people 65 or older, or people with certain disabilities
-allocation flag
+Medicare, for people 65 or older, or people with certain disabilities allocation flag
 0 .No
 1 .Yes
 
@@ -6285,8 +6268,7 @@ b .Does not have Medicaid coverage (HINS4=2)
 1 .Yes
 
 FHINS4P 1
-Medicaid, medical assistance, or any kind of government-assistance plan
-for people with low incomes or a disability allocation flag
+Medicaid, medical assistance, or any kind of government-assistance plan for people with low incomes or a disability allocation flag
 0 .No
 1 .Yes
 
@@ -6302,8 +6284,7 @@ TRICARE or other military health care allocation flag
 1 .Yes
 
 FHINS6P 1
-VA (including those who have ever used or enrolled for VA health care)
-allocation flag
+VA (including those who have ever used or enrolled for VA health care) allocation flag
 0 .No
 1 .Yes
 
