@@ -1,0 +1,77 @@
+{% include 'header.html' %}
+		<!-- Banner -->
+			<section id="banner">
+        <img src="static/images/favicon.png">
+        <h2>Energy Report</h2>
+			</section>
+
+		<!-- Main -->
+			<div id="main" class="container">
+
+				<!-- Individual Report -->
+          <h2>Individual Report</h2>
+					<div class="row">
+						<section class="7u 12u$(small)">
+              <h3>Your usage amount</h3>
+              <div>{{ eusage }} kWh</div>
+              <div>
+                {% if calculated %}
+                  <p>Calculated</p>
+                {% else %}
+                  <p>Actual</p>
+                {% endif %}
+              </div>
+						</section>
+
+						<section class="5u$ 12u$(small)">
+							<h3>Your usage grade</h3>
+              <div>{{ grade }}</div>
+              {% if grade == "A+" %}
+                <p>Why you got an A+</p>
+              {% elif grade == "A" %}
+                <p>Why you got an A</p>
+              {% elif grade == "B+" %}
+                <p>Why you got an B+</p>
+              {% elif grade == "B" %}
+                <p>Why you got an B</p>
+              {% elif grade == "B-" %}
+                <p>Why you got an B-</p>
+              {% elif grade == "C+" %}
+                <p>Why you got an C+</p>
+              {% elif grade == "C" %}
+                <p>Why you got an C</p>
+              {% elif grade == "C-" %}
+                <p>Why you got an C-</p>
+              {% else %}
+                <p>Why you got an D</p>
+              {% endif %}
+						</section>
+
+						<section class="6u 12u$(small)">
+              <h3>Your energy usage vs. the energy usage of your community.</h3>
+              <div id="ind_com"></div>
+            </section>
+
+						<section class="6u$ 12u$(small)">
+              <h3>Your energy usage vs. the energy usage of the USA</h3>
+              <div id="ind_usa"></div>
+            </section>
+					</div>
+
+				<hr class="major" />
+
+				<!-- Community Report -->
+          <h2>Community Report</h2>
+					<div class="row">
+          </div>
+
+				<hr class="major" />
+
+				<!-- Predictive Report -->
+          <h2>Predictive Report</h2>
+					<div class="row">
+          </div>
+
+			</div>
+
+{% include 'footer.html' %}

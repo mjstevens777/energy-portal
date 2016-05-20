@@ -1,0 +1,100 @@
+    </div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<div class="row double">
+						<div class="6u 12u$(medium)">
+							<h2>Who are we?</h2>
+							<p>We are a group of four Stanford Computer Science Undergraduates who worked on this project for our CS194 senior project class. </p>
+						</div>
+						<div class="3u 6u(medium) 12u$(small)">
+							<h3>Names</h3>
+							<ul class="alt">
+                <li>Yash Savani</li>
+                <li>Matt Stevens</li>
+                <li>Seokho Hong</li>
+                <li>Brian Wai</li>
+							</ul>
+						</div>
+						<div class="3u$ 6u$(medium) 12u$(small)">
+							<h3>Contact</h3>
+							<ul class="alt">
+                <li>ysavani (at) stanford.edu</li>
+                <li>mslf (at) stanford.edu</li>
+                <li>seokho (at) stanford.edu</li>
+                <li>brianwai (at) stanford.edu</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="copyright">
+					&copy; Energy Portal. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/skel.min.js"></script>
+      <script src="static/assets/js/main.js"></script>
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script> 
+      <script src="http://www.google.com/jsapi?ext.js"></script></script>
+
+      <script src="static/assets/js/parsley.min.js"></script>
+
+      <script>
+        function drawChart() {
+
+          var data = new google.visualization.DataTable();
+          data.addColumn('number', 'X1 Value');
+          data.addColumn('number', 'X2 Value');
+          data.addColumn('number', 'Y Value');
+
+          function NormalDensityZx(x, Mean, StdDev) {
+            var a = x - Mean;
+            return Math.exp(-(a * a) / (2 * StdDev * StdDev)) / (Math.sqrt(2 * Math.PI) * StdDev);
+          }
+
+          var chartData = new Array([]);
+          var index = 0;
+
+          for (var i = -3; i < 3.1; i += 0.1) {
+            chartData[index] = new Array(3);
+            chartData[index][0] = i;
+            chartData[index][1] = NormalDensityZx(i, 0, 1);
+            chartData[index][2] = NormalDensityZx(i, 0.5, 0.5);
+            index++;
+          }
+
+          data.addRows(chartData);
+          options = { legend: 'none' };
+          options.hAxis = {};
+          options.hAxis.minorGridlines = {};
+          options.hAxis.minorGridlines.count = 12;
+
+          var chart1 = new google.visualization.AreaChart(document.getElementById('ind_com'));
+          var chart2 = new google.visualization.AreaChart(document.getElementById('ind_usa'));
+          chart1.draw(data, options);
+          chart2.draw(data, options);
+        }
+
+        google.load('visualization', '1', { packages: ['corechart'], callback: drawChart });
+      </script>
+
+      <script type="text/javascript">
+        $(function () {
+          $('#energy-form').parsley().on('field:validated', function() {
+            console.log($('.parsley-error'));
+            var ok = $('.parsley-error').length === 0;
+            $('.bs-callout-info').toggleClass('hidden', !ok);
+            $('.bs-callout-warning').toggleClass('hidden', ok);
+          })
+          .on('form:submit', function() {
+            console.log("hello");
+            return false; // Don't submit form for this demo
+          });
+        });
+      </script>
+
+	</body>
+</html>
