@@ -1,0 +1,95 @@
+{% include 'header.html' %}
+
+		<!-- Banner -->
+			<section id="banner">
+        <img src="static/images/favicon.png">
+        <h2>Energy Portal</h2>
+        <p>How energy conscious are <strong>you</strong>?</p>
+			</section>
+
+		<!-- Main -->
+			<div id="main" class="container">
+
+				<!-- Intro -->
+					<div class="row">
+						<section class="6u 12u$(medium)">
+							<h2>What is Energy Portal?</h2>
+              <p><strong>Energy Portal</strong> provides an educational service to citizens, policy makers, and organizations who are interested in <em>energy consumption patterns</em> in the <strong>United States</strong>. We designed a model built with robust <strong>machine learning</strong> techniques that will show you how your energy consumption compares to others and how your community fits into the national patterns of energy consumption.</p>
+						</section>
+						<section class="6u$ 12u$(small)">
+							<h3>How to use Energy Portal?</h3>
+							Use Energy Portal in 3 easy steps.
+              <ol>
+                <li>Fill out the <a href="#form">Energy Form</a> below.</li>
+                <li>Click on submit.</li>
+                <li>Review your report page and see how you can improve your energy consumption footprint.</li>
+              </ol>
+						</section>
+					</div>
+
+				<hr class="major" />
+
+				<!-- Form -->
+        <div class="row">
+          <div class="-4u 4u$ 12u(small)">
+            <h2 id="form">Form</h2>
+
+            <div class="bs-callout bs-callout-warning hidden">
+              <h4>Oh snap!</h4>
+              <p>This form seems to be invalid :(</p>
+            </div>
+
+            <div class="bs-callout bs-callout-info hidden">
+              <h4>Yay!</h4>
+              <p>Everything seems to be ok :)</p>
+            </div>
+
+            <form id="energy-form">
+              <div class="uniform row">
+                <div class="12u$">
+                  <input type="text" class="form-control" name="fullname" value="" placeholder="Full Name" required="">
+                </div>
+
+                <div class="12u$">
+                  <input type="email" class="form-control" name="email" value="" data-parseley-trigger="change" placeholder="Email" required="">
+                </div>
+
+                <div class="12u$">
+                  <div class="select-wrapper">
+                    <select name="house-type" id="house-type" required="">
+                      <option value="">- House Type -</option>
+                      <option value="apt">Apartment</option>
+                      <option value="sh">Small House</option>
+                      <option value="lh">Large House</option>
+                      <option value="es">Estate</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="6u">
+                  <input type="radio" id="recycling-low" name="recycling" checked>
+                  <label for="recycling-low" required="">I do not recycle</label>
+                </div>
+                <div class="6u$">
+                  <input type="radio" id="recycling-normal" name="recycling">
+                  <label for="recycling-normal">I recycle a little</label>
+                </div>
+
+                <div class="6u">
+                  <input type="radio" id="recycling-high" name="recycling">
+                  <label for="recycling-high">I recycle a lot</label>
+                </div>
+                <div class="6u$">
+                  <input type="radio" id="recycling-pro" name="recycling">
+                  <label for="recycling-pro">I am a pro at recycling</label>
+                </div>
+
+                <div class="12u$">
+                  <input type="submit" class="btn btn-default" value="Submit">
+                </div>
+              </div>
+          </form>
+        </div>
+      </div>
+
+{% include 'footer.html' %}
