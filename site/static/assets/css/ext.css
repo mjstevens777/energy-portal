@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+.eusage {
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 3px solid #eee;
+  border-color: #273578;
+}
+
+.eusage h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #273578;
+}
+
+.eusage p:last-child {
+  margin-bottom: 0;
+}
+
+.eusage > .calc {
+  border-left: 3px solid #eee;
+  margin-bottom: 10px;
+  padding: 0 10px 0 10px;
+  background-color: #fdf7f7;
+  border-color: #d9534f;
+  color: #d9534f;
+}
+
+.eusage > .active {
+  background-color: #f4f8fa;
+  border-color: #273578;
+  color: #273578;
+}
+
+.ind-grade {
+  width: 126px;
+  height: 126px;
+  text-align: center;
+  padding-top: 15px;
+  margin-right: 20px;
+  font-size: 60px;
+  background-image: url("/static/images/grade-bg.png");
+  background-repeat: no-repeat;
+  font-family: 'Indie Flower', cursive;
+  color: #273578;
+  float: left;
+}
