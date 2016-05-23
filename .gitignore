@@ -2,4 +2,5 @@
 **/.ipynb_checkpoints/*
 **/.idea/*
 **/.ipynb_checkpoints/*
-**/.psd
+**/*.psd
+**/*.pyc

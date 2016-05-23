@@ -35,12 +35,12 @@
 
 		<!-- Scripts -->
 			<script src="static/assets/js/skel.min.js"></script>
-      <script src="static/assets/js/main.js"></script>
 
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script> 
       <script src="http://www.google.com/jsapi?ext.js"></script></script>
-
       <script src="static/assets/js/parsley.min.js"></script>
+      <script src="static/assets/js/ext.js"></script>
+      <script src="static/assets/js/main.js"></script>
 
       <script>
         function drawChart() {
@@ -79,9 +79,7 @@
         }
 
         google.load('visualization', '1', { packages: ['corechart'], callback: drawChart });
-      </script>
 
-      <script type="text/javascript">
         $(function () {
           $('#energy-form').parsley().on('field:validated', function() {
             console.log($('.parsley-error'));
@@ -89,10 +87,6 @@
             $('.bs-callout-info').toggleClass('hidden', !ok);
             $('.bs-callout-warning').toggleClass('hidden', ok);
           })
-          .on('form:submit', function() {
-            console.log("hello");
-            return false; // Don't submit form for this demo
-          });
         });
       </script>
 

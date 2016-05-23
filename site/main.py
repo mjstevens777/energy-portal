@@ -19,6 +19,16 @@ class MainPage(webapp2.RequestHandler):
         template = JINJA_ENV.get_template('index.html')
         self.response.write(template.render({}))
 
+    def post(self):
+        details = {}
+        send_get = {}
+        details["fullname"] = self.request.get("fullname")
+        details["email"] = self.request.get("email")
+        details["house-type"] = self.request.get("house-type")
+
+        send_get = details
+        self.redirect('/report?'+ urllib.urlencode(send_get))
+
 class ReportPage(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENV.get_template('report.html')

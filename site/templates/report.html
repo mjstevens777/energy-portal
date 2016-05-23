@@ -13,19 +13,20 @@
 					<div class="row">
 						<section class="7u 12u$(small)">
               <h3>Your usage amount</h3>
-              <div>{{ eusage }} kWh</div>
-              <div>
-                {% if calculated %}
+              <div class="eusage">
+                <h4>{{ eusage }} kWh</h4>
+                <div class="calc {% if calculated %} active {% endif %}">
                   <p>Calculated</p>
-                {% else %}
+                </div>
+                <div class="calc {% if not calculated %} active {% endif %}">
                   <p>Actual</p>
-                {% endif %}
+                </div>
               </div>
 						</section>
 
 						<section class="5u$ 12u$(small)">
 							<h3>Your usage grade</h3>
-              <div>{{ grade }}</div>
+              <div class="ind-grade">{{ grade }}</div>
               {% if grade == "A+" %}
                 <p>Why you got an A+</p>
               {% elif grade == "A" %}
