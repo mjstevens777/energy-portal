@@ -7,6 +7,8 @@ from sklearn.ensemble.forest import RandomForestClassifier
 from sklearn.feature_extraction import FeatureHasher
 import numpy as np
 
+
+print("pums_geography_model")
 #local file location, change to run
 pums = pd.read_csv("C:/CS194/pums/join_features_normalized.csv", delimiter = ',')
 
@@ -23,7 +25,8 @@ numTrain = 3164116
 clf = GaussianNB()
 clf.fit(raw_features[:numTrain], labels[:numTrain])
 print(clf.classes_)
-exit(0)
+print(clf.classes_.shape)
+
 #this gets us our probability distribution
 prediction = clf.predict_proba([raw_features[0]])
 print(prediction.shape)
@@ -54,4 +57,4 @@ print("Joined")
 
 print(joined.shape)
 
-joined.to_csv("C:/CS194/pums/household_wpuma_prob.csv")
+joined.to_csv("C:/CS194/pums/household_wpuma_prob.csv", index = False)
