@@ -18,9 +18,6 @@ X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_
 clf = RandomForestRegressor(n_estimators = 100)
 clf.fit(X_train, y_train)
 
-import pickle
-with open("elep_model.pkl", "wb") as f:
-    pickle.dump(clf, f)
 '''
 print(y_test[:100])
 print(metrics.mean_squared_error(clf.predict(X_test), y_test))
