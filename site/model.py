@@ -6,9 +6,9 @@ def model(inputs):
         "ind_mean": 11000,
         "comm_mean": 11050,
         "national_mean": 11100,
-        "ind_var": 1,
-        "comm_var": 2,
-        "national_var": 4,
+        "ind_stddev": 1,
+        "comm_stddev": 2,
+        "national_stddev": 4,
     }
     outputs.update(inputs)
 
