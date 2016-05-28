@@ -8,9 +8,8 @@ from sklearn.feature_extraction import FeatureHasher
 import numpy as np
 
 
-print("pums_geography_model")
 #local file location, change to run
-pums = pd.read_csv("C:/CS194/pums/join_features_normalized.csv", delimiter = ',')
+pums = pd.read_csv("../../join/pums_to_household_norm/join_features_normalized.csv", delimiter = ',')
 
 labels = [label[0] for label in pums.as_matrix(columns = ["PUMA"])]
 pums = pums.fillna(0)
@@ -34,7 +33,7 @@ print(prediction)
 
 print("Model Trained")
 
-#use metro/micro to predict with household electricity
+
 household = pd.read_csv("household_normalized_renamed.csv", delimiter = ',')
 household = household.fillna(0)
 predict_features = household.as_matrix()
@@ -57,4 +56,4 @@ print("Joined")
 
 print(joined.shape)
 
-joined.to_csv("C:/CS194/pums/household_wpuma_prob.csv", index = False)
+joined.to_csv("household_wpuma_prob.csv", index = False)
