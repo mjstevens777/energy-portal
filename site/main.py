@@ -1,13 +1,9 @@
 import os
 import urllib
 
-from model import model
-
-from google.appengine.api import users
-from google.appengine.ext import ndb
-
 import jinja2
 import webapp2
+from model import model
 
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 
@@ -15,6 +11,7 @@ JINJA_ENV = jinja2.Environment(
     loader=jinja2.FileSystemLoader(template_dir),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
+
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
@@ -24,18 +21,18 @@ class MainPage(webapp2.RequestHandler):
     def post(self):
         details = {}
         send_get = {}
-        details["fullname"] = self.request.get("fullname")
-        details["email"] = self.request.get("email")
-        details["house-type"] = self.request.get("house-type")
+        details = dict(self.request.POST)
 
         send_get = model(details)
-        self.redirect('/report?'+ urllib.urlencode(send_get))
+        self.redirect('/report?' + urllib.urlencode(send_get))
+
 
 class ReportPage(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENV.get_template('report.html')
-        self.response.write(template.render(\
-            eusage = 11000, grade="B+", calculated = True))
+        output = dict(self.request.GET)
+        self.response.write(template.render(output))
+
 
 class BackupPage(webapp2.RequestHandler):
     def get(self):

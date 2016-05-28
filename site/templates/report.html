@@ -14,7 +14,7 @@
 						<section class="7u 12u$(small)">
               <h3>Your usage amount</h3>
               <div class="eusage">
-                <h4>{{ eusage }} kWh</h4>
+                <h4>{{ ind_mean }} kWh</h4>
                 <div class="calc {% if calculated %} active {% endif %}">
                   <p>Calculated</p>
                 </div>
@@ -26,22 +26,22 @@
 
 						<section class="5u$ 12u$(small)">
 							<h3>Your usage grade</h3>
-              <div class="ind-grade">{{ grade }}</div>
-              {% if grade == "A+" %}
+              <div class="ind-grade">{{ ind_grade }}</div>
+              {% if ind_grade == "A+" %}
                 <p>Why you got an A+</p>
-              {% elif grade == "A" %}
+              {% elif ind_grade == "A" %}
                 <p>Why you got an A</p>
-              {% elif grade == "B+" %}
+              {% elif ind_grade == "B+" %}
                 <p>Why you got an B+</p>
-              {% elif grade == "B" %}
+              {% elif ind_grade == "B" %}
                 <p>Why you got an B</p>
-              {% elif grade == "B-" %}
+              {% elif ind_grade == "B-" %}
                 <p>Why you got an B-</p>
-              {% elif grade == "C+" %}
+              {% elif ind_grade == "C+" %}
                 <p>Why you got an C+</p>
-              {% elif grade == "C" %}
+              {% elif ind_grade == "C" %}
                 <p>Why you got an C</p>
-              {% elif grade == "C-" %}
+              {% elif ind_grade == "C-" %}
                 <p>Why you got an C-</p>
               {% else %}
                 <p>Why you got an D</p>

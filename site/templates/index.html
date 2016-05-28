@@ -55,11 +55,31 @@
                 </div>
 
                 <div class="12u$">
-                  <input type="agep" class="form-control" name="agep" value="" data-parseley-trigger="change" placeholder="age" required="">
+                  <input type="text" class="form-control" name="agep" value="" data-parseley-trigger="change" placeholder="Age" required="">
                 </div>
 
                 <div class="12u$">
-                  <input type="text" class="form-control dollar-input" name="elep" value="" data-parsley-range="[3, 999]" data-parseley-trigger="change" placeholder="Electricy (monthly cost)">
+                  <input type="text" class="form-control dollar-input" name="intp" value="" data-parsley-range="[-9999, 999999]" data-parseley-trigger="change" placeholder="Interest, dividends, and net rental income (last year)">
+                </div>
+
+                <div class="12u$">
+                  <input type="text" class="form-control dollar-input" name="wagp" value="" data-parsley-range="[0, 999999]" data-parseley-trigger="change" placeholder="Wages or salary income (last year)">
+                </div>
+
+                <div class="12u$">
+                  <input type="text" class="form-control dollar-input" name="retp" value="" data-parsley-range="[0, 999999]" data-parseley-trigger="change" placeholder="Retirement income (last year)">
+                </div>
+
+                <div class="12u$">
+                  <input type="text" class="form-control dollar-input" name="ssip" value="" data-parsley-range="[0, 999999]" data-parseley-trigger="change" placeholder="Supplementary Security Income (last year)">
+                </div>
+
+                <div class="12u$">
+                  <input type="text" class="form-control dollar-input" name="elep" value="" data-parsley-range="[3, 999]" data-parseley-trigger="change" placeholder="Electricity (monthly cost)">
+                </div>
+
+                <div class="12u$">
+                  <input type="text" class="form-control dollar-input" name="eler" value="" data-parsley-range="[0, 100]" data-parseley-trigger="change" placeholder="Electricity Rate (cents/kWh)">
                 </div>
 
                 <div class="12u$">
@@ -67,7 +87,7 @@
                 </div>
 
                 <div class="12u$">
-                  <input type="text" class="form-control dollar-input" name="fulp" value="" data-parsley-range="[3, 9999]" data-parseley-trigger="change" placeholder="Fuel cost(yearly cost for other fuels)">
+                  <input type="text" class="form-control dollar-input" name="fulp" value="" data-parsley-range="[3, 9999]" data-parseley-trigger="change" placeholder="Fuel cost (yearly cost for other fuels)">
                 </div>
 
                 <div class="12u$">
@@ -157,18 +177,6 @@
                 </div>
 
                 <div class="12u$">
-                  <div class="select-wrapper">
-                    <select name="house-type" id="house-type" required="">
-                      <option value="">- House Type -</option>
-                      <option value="apt">Apartment</option>
-                      <option value="sh">Small House</option>
-                      <option value="lh">Large House</option>
-                      <option value="es">Estate</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="12u$">
                   <h3>Where do you live?</h3>
                   <div id="map"></div>
                 </div>
@@ -209,26 +217,6 @@
                   <input type="checkbox" id="refr" name="own">
                   <label for="refr">I have a refrigerator</label>
                 </div>
-
-
-                <div class="6u">
-                  <input type="radio" id="recycling-low" name="recycling" checked>
-                  <label for="recycling-low" required="">I do not recycle</label>
-                </div>
-                <div class="6u$">
-                  <input type="radio" id="recycling-normal" name="recycling">
-                  <label for="recycling-normal">I recycle a little</label>
-                </div>
-
-                <div class="6u">
-                  <input type="radio" id="recycling-high" name="recycling">
-                  <label for="recycling-high">I recycle a lot</label>
-                </div>
-                <div class="6u$">
-                  <input type="radio" id="recycling-pro" name="recycling">
-                  <label for="recycling-pro">I am a pro at recycling</label>
-                </div>
-
 
                 <div class="12u$">
                   <input type="submit" class="btn btn-default" value="Submit">
