@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from collections import Counter
 
-pums = pd.read_csv("C:/CS194/pums/join_features.csv", delimiter = ',')
+pums = pd.read_csv("join_features.csv", delimiter = ',')
 del pums[pums.columns.values[0]]
 
 household = pd.read_csv("../../data/household_electricity_usage/recs2009_public.csv", delimiter = ',')
@@ -325,5 +325,5 @@ pums['SSIP'].apply(pums_INTP)
 household[['POVERTY100', 'POVERTY150']].apply(household_POVERTY, axis = 1)
 del household['POVERTY150']
 
-pums.to_csv("C:/CS194/pums/join_features_normalized.csv", index = False)
+pums.to_csv("join_features_normalized.csv", index = False)
 household.to_csv("household_normalized.csv", index = False)
