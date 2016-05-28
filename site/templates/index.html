@@ -31,7 +31,7 @@
 
 				<!-- Form -->
         <div class="row">
-          <div class="-4u 4u$ 12u(small)">
+          <div class="-3u 6u$ 12u(small)">
             <h2 id="form">Form</h2>
 
             <div class="bs-callout bs-callout-warning hidden">
@@ -55,6 +55,108 @@
                 </div>
 
                 <div class="12u$">
+                  <input type="agep" class="form-control" name="agep" value="" data-parseley-trigger="change" placeholder="age" required="">
+                </div>
+
+                <div class="12u$">
+                  <input type="text" class="form-control dollar-input" name="elep" value="" data-parsley-range="[3, 999]" data-parseley-trigger="change" placeholder="Electricy (monthly cost)">
+                </div>
+
+                <div class="12u$">
+                  <input type="text" class="form-control dollar-input" name="gasp" value="" data-parsley-range="[4, 999]" data-parseley-trigger="change" placeholder="Gas (monthly cost)">
+                </div>
+
+                <div class="12u$">
+                  <input type="text" class="form-control dollar-input" name="fulp" value="" data-parsley-range="[3, 9999]" data-parseley-trigger="change" placeholder="Fuel cost(yearly cost for other fuels)">
+                </div>
+
+                <div class="12u$">
+                  <input type="text" class="form-control" name="np" value="" data-parsley-range="[0, 20]" data-parseley-trigger="change" placeholder="Number of people living in your house.">
+                </div>
+
+                <div class="12u$">
+                  <input type="text" class="form-control" name="bdsp" value="" data-parsley-range="[0, 99]" data-parseley-trigger="change" placeholder="Number of bedrooms in house">
+                </div>
+
+                <div class="12u$">
+                  <input type="text" class="form-control" name="rmsp" value="" data-parsley-range="[0, 99]" data-parseley-trigger="change" placeholder="Number of rooms in house">
+                </div>
+
+                <div class="12u$">
+                  <div class="select-wrapper">
+                    <select name="ybl" id="ylb">
+                      <option value="bb">- When was your house built -</option>
+                      <option value="01">1939 or earlier</option>
+                      <option value="02">1940 to 1949</option>
+                      <option value="03">1950 to 1959</option>
+                      <option value="04">1960 to 1969</option>
+                      <option value="05">1970 to 1979</option>
+                      <option value="06">1980 to 1989</option>
+                      <option value="07">1990 to 1999</option>
+                      <option value="08">2000 to 2004</option>
+                      <option value="09">2005</option>
+                      <option value="10">2006</option>
+                      <option value="11">2007</option>
+                      <option value="12">2008</option>
+                      <option value="13">2009</option>
+                      <option value="14">2010</option>
+                      <option value="15">2011</option>
+                      <option value="16">2012</option>
+                      <option value="17">2013</option>
+                      <option value="18">2014 or after</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="12u$">
+                  <div class="select-wrapper">
+                    <select name="mv" id="mv">
+                      <option value="b">- When you moved into your house -</option>
+                      <option value="1">12 months or less</option>
+                      <option value="2">13 to 23 months</option>
+                      <option value="3">2 to 4 years</option>
+                      <option value="4">5 to 9 years</option>
+                      <option value="5">10 to 19 years</option>
+                      <option value="6">20 to 29 years</option>
+                      <option value="7">30 years or more</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="12u$">
+                  <div class="select-wrapper">
+                    <select name="rac1p" id="rac1p" required="">
+                      <option value="">- Race -</option>
+                      <option value="1">White alone</option>
+                      <option value="2">Black or African American alone</option>
+                      <option value="3">American Indian alone</option>
+                      <option value="4">Alaska Native alone</option>
+                      <option value="5">American Indian and Alaska Native</option>
+                      <option value="6">Asian alone</option>
+                      <option value="7">Native Hawaiian and Other Pacific Islander alone</option>
+                      <option value="8">Some other race alone</option>
+                      <option value="9">Two or more Races</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="12u$">
+                  <div class="select-wrapper">
+                    <select name="fes" id="fes">
+                      <option value="b">- Family type and employment status -</option>
+                      <option value="1">Married-couple family: Husband and wife in labor force</option>
+                      <option value="2">Married-couple family: Husband in labor force, wife not in labor force</option>
+                      <option value="3">Married-couple family: Husband not in labor force, wife in labor force</option>
+                      <option value="4">Married-couple family: Neither husband nor wife in labor force</option>
+                      <option value="5">Other family: Male householder, no wife present, in labor force</option>
+                      <option value="6">Other family: Male householder, no wife present, not in labor force</option>
+                      <option value="7">Other family: Female householder, no husband present, in labor force</option>
+                      <option value="8">Other family: Female householder, no husband present, not in labor force</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="12u$">
                   <div class="select-wrapper">
                     <select name="house-type" id="house-type" required="">
                       <option value="">- House Type -</option>
@@ -65,6 +167,49 @@
                     </select>
                   </div>
                 </div>
+
+                <div class="12u$">
+                  <h3>Where do you live?</h3>
+                  <div id="map"></div>
+                </div>
+
+                <div class="12u$">
+                  <h3>Tick the following that are relevant to you.</h3>
+                </div>
+
+                <div class="12u$">
+                  <input type="checkbox" id="dialup" name="own">
+                  <label for="dialup">I have dial-up service</label>
+                </div>
+                <div class="12u$">
+                  <input type="checkbox" id="fiberop" name="own">
+                  <label for="fiberop">I have fiber-optic internet service</label>
+                </div>
+                <div class="12u$">
+                  <input type="checkbox" id="satellite" name="own">
+                  <label for="satellite">I have satellite internet service</label>
+                </div>
+                <div class="12u$">
+                  <input type="checkbox" id="modem" name="own">
+                  <label for="modem">I have cable internet service</label>
+                </div>
+                <div class="12u$">
+                  <input type="checkbox" id="access" name="own">
+                  <label for="access">I have access to the internet</label>
+                </div>
+                <div class="12u$">
+                  <input type="checkbox" id="fs" name="own">
+                  <label for="fs">I am a yearly food stamp recipient</label>
+                </div>
+                <div class="12u$">
+                  <input type="checkbox" id="laptop" name="own">
+                  <label for="laptop">I have a Laptop, desktop, or notebook computer</label>
+                </div>
+                <div class="12u$">
+                  <input type="checkbox" id="refr" name="own">
+                  <label for="refr">I have a refrigerator</label>
+                </div>
+
 
                 <div class="6u">
                   <input type="radio" id="recycling-low" name="recycling" checked>
@@ -84,8 +229,10 @@
                   <label for="recycling-pro">I am a pro at recycling</label>
                 </div>
 
+
                 <div class="12u$">
                   <input type="submit" class="btn btn-default" value="Submit">
+                  <div id="map"></div>
                 </div>
               </div>
           </form>

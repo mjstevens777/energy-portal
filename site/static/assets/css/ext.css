@@ -45,3 +45,19 @@
   color: #273578;
   float: left;
 }
+
+.dollar {
+  position: relative; 
+}
+
+.dollar input {
+  padding-left:1.7em;
+}
+
+.dollar:before {
+    position: absolute;
+    top: 0.5em;
+    content:"$";
+    left: 1em;
+    z-index: 1;
+}
