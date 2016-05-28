@@ -16,7 +16,7 @@ household = pd.read_csv("../pums_geography_model/household_wpuma_prob.csv", deli
 X = household.as_matrix()
 
 with open("kwh_model_features.json", "w") as f:
-    json.dump(list(household.columns), f, indent = '\t')
+    json.dump(list(household.columns), f, indent = True)
 
 print(y)
 
