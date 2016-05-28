@@ -1,6 +1,8 @@
 import os
 import urllib
 
+from model import model
+
 from google.appengine.api import users
 from google.appengine.ext import ndb
 
@@ -26,7 +28,7 @@ class MainPage(webapp2.RequestHandler):
         details["email"] = self.request.get("email")
         details["house-type"] = self.request.get("house-type")
 
-        send_get = details
+        send_get = model(details)
         self.redirect('/report?'+ urllib.urlencode(send_get))
 
 class ReportPage(webapp2.RequestHandler):
