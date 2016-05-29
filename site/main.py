@@ -39,8 +39,33 @@ class BackupPage(webapp2.RequestHandler):
         template = JINJA_ENV.get_template('index_bak.html')
         self.response.write(template.render({}))
 
+import mimetypes
+
+class StaticFileHandler(webapp2.RequestHandler):
+    def get(self, path):
+        abs_path = os.path.abspath(os.path.join('static', path))
+        if os.path.isdir(abs_path) or abs_path.find(os.getcwd()) != 0:
+            self.response.set_status(403)
+            return
+        try:
+            f = open(abs_path, 'rb')
+            self.response.content_type = mimetypes.guess_type(abs_path)[0]
+            self.response.out.write(f.read())
+            f.close()
+        except Exception as e:
+            print(e)
+            self.response.set_status(404)
+
 app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/report', ReportPage),
     ('/backup', BackupPage),
+    ('/static/(.+)', StaticFileHandler)
 ], debug=True)
+
+def main():
+    from paste import httpserver
+    httpserver.serve(app, host='127.0.0.1', port='8080')
+
+if __name__ == '__main__':
+    main()
