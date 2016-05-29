@@ -5,6 +5,7 @@ from sklearn.ensemble.forest import RandomForestRegressor
 from sklearn import cross_validation
 from sklearn import metrics
 import numpy as np
+import json
 
 kwh_table = pd.read_csv("../../data/household_electricity_usage/recs2009_public.csv", delimiter = ',')
 y = kwh_table.as_matrix(columns = ["KWH"])
@@ -20,9 +21,40 @@ clf.fit(X_train, y_train)
 
 kwhOutput = []
 pums = pd.read_csv("../../join/pums_to_household_norm/join_features_normalized.csv", delimiter = ',')
+pums_puma_vector = pums.as_matrix(columns = ['PUMA'])
+del pums['PUMA']
+del pums['WGTP']
+del pums['SERIALNO']
 
-for row in pums.iterrows():
+with open("../vectorized_puma_regions/puma_list.json") as f:
+    puma_mapping = json.load(f)
 
+reverse_puma_map = {}
+for key, value in puma_mapping.items():
+    reverse_puma_map[int(value)] = int(key)
+
+numPumas = 2378
+cache = []
+for index, row in pums.iterrows():
+    probs = np.zeros((2378))
+    probs[reverse_puma_map[int(pums_puma_vector[index])]] = 1
+    other_features = row.as_matrix()
+    other_features = np.nan_to_num(other_features)
+    X_one_row = np.concatenate((other_features, probs))
+    cache.append(X_one_row)
+    if len(cache) > 10000:
+        kwhOutput.extend(clf.predict(cache))
+        cache = []
+    if index % 1000 == 0:
+        print(index)
+
+print(kwhOutput)
+
+kwhColumn = pd.DataFrame(kwhOutput, columns = ['KWH_MODELED'])
+
+final_table = pd.concat((pums, kwhColumn), axis = 1)
+
+final_table.to_csv("pums_kwh.csv", index = False)
 
 '''
 print(y_test[:100])
