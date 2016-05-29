@@ -22,6 +22,7 @@ clf.fit(X_train, y_train)
 kwhOutput = []
 pums = pd.read_csv("../../join/pums_to_household_norm/join_features_normalized.csv", delimiter = ',')
 pums_puma_vector = pums.as_matrix(columns = ['PUMA'])
+left_matrix = pums[['PUMA', 'WGTP', 'SERIALNO']]
 del pums['PUMA']
 del pums['WGTP']
 del pums['SERIALNO']
@@ -52,7 +53,7 @@ print(kwhOutput)
 
 kwhColumn = pd.DataFrame(kwhOutput, columns = ['KWH_MODELED'])
 
-final_table = pd.concat((pums, kwhColumn), axis = 1)
+final_table = pd.concat((left_matrix, pums, kwhColumn), axis = 1)
 
 final_table.to_csv("pums_kwh.csv", index = False)
 
