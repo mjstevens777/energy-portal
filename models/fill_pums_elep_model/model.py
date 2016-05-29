@@ -6,17 +6,23 @@ from sklearn import cross_validation
 from sklearn import metrics
 import numpy as np
 
-household = pd.read_csv("../../join/pums_to_household_norm/household_normalized_renamed.csv", delimiter = ',')
-X_columns = [column for column in household.columns if column != "ELEP"]
-X = household.as_matrix(columns = X_columns)
-y = [label[0] for label in household.as_matrix(columns = ["ELEP"])]
+kwh_table = pd.read_csv("../../data/household_electricity_usage/recs2009_public.csv", delimiter = ',')
+y = kwh_table.as_matrix(columns = ["KWH"])
+y = np.reshape(y, (len(y)))
 
-print(y)
+household = pd.read_csv("../pums_geography_model/household_wpuma_prob.csv", delimiter = ',')
+X = household.as_matrix()
 
 X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_size = 0.25)
 
-clf = RandomForestRegressor(n_estimators = 100)
+clf = RandomForestRegressor(n_estimators = 10, n_jobs = 8)
 clf.fit(X_train, y_train)
+
+kwhOutput = []
+pums = pd.read_csv("../../join/pums_to_household_norm/join_features_normalized.csv", delimiter = ',')
+
+for row in pums.iterrows():
+
 
 '''
 print(y_test[:100])
