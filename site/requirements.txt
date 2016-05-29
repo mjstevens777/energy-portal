@@ -1,0 +1,7 @@
+jinja2
+webapp2
+webob
+paste
+numpy
+scipy
+scikit-learn
