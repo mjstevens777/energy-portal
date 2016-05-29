@@ -19,19 +19,17 @@ class MainPage(webapp2.RequestHandler):
         self.response.write(template.render({}))
 
     def post(self):
-        details = {}
-        send_get = {}
-        details = dict(self.request.POST)
-
-        send_get = model(details)
-        self.redirect('/report?' + urllib.urlencode(send_get))
+        inputs = {}
+        inputs = dict(self.request.POST)
+        self.redirect('/report?' + urllib.urlencode(inputs))
 
 
 class ReportPage(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENV.get_template('report.html')
-        output = dict(self.request.GET)
-        self.response.write(template.render(output))
+        inputs = dict(self.request.GET)
+        outputs = model(inputs)
+        self.response.write(template.render(outputs))
 
 
 class BackupPage(webapp2.RequestHandler):

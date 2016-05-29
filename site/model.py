@@ -11,12 +11,15 @@ def model(inputs):
     feature_vector = []
     for feature in features:
         key = feature.lower()
-        if key in inputs:
-            feature_vector.append(inputs[key])
+        if key in inputs and inputs[key] is not None and inputs[key] != '':
+            print("Found %s" % key)
+            print(inputs[key])
+            feature_vector.append(float(inputs[key]))
         else:
             feature_vector.append(0.)
 
-    kwh = kwh_model.predict([feature_vector])
+    kwh = kwh_model.predict([feature_vector])[0]
+    print(kwh)
 
     outputs = {
         "ind_grade": "A+",
