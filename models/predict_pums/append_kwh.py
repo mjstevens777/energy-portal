@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.ensemble.forest import RandomForestRegressor
 from sklearn import cross_validation
 from sklearn import metrics
-import numpy as np-
+import numpy as np
 import json
 
 kwh_table = pd.read_csv("../../data/household_electricity_usage/recs2009_public.csv", delimiter = ',')
@@ -20,7 +20,7 @@ clf = RandomForestRegressor(n_estimators = 10, n_jobs = 8)
 clf.fit(X_train, y_train)
 
 kwhOutput = []
-pums = pd.read_csv("../../join/pums_to_household_norm/join_features_normalized.csv", delimiter = ',')
+pums = pd.read_csv("../pums_ELEP_predicted.csv", delimiter = ',')
 pums_puma_vector = pums.as_matrix(columns = ['PUMA'])
 left_matrix = pums[['PUMA', 'WGTP', 'SERIALNO']]
 del pums['PUMA']
@@ -48,6 +48,7 @@ for index, row in pums.iterrows():
         cache = []
     if index % 1000 == 0:
         print(index)
+kwhOutput.extend(clf.predict(cache))
 
 print(kwhOutput)
 
