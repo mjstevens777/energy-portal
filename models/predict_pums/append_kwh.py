@@ -20,8 +20,9 @@ clf = RandomForestRegressor(n_estimators = 10, n_jobs = 8)
 clf.fit(X_train, y_train)
 
 kwhOutput = []
-pums = pd.read_csv("../../join/pums_to_household_norm/join_features_normalized.csv", delimiter = ',')
+pums = pd.read_csv("../pums_ELEP_predicted.csv", delimiter = ',')
 pums_puma_vector = pums.as_matrix(columns = ['PUMA'])
+left_matrix = pums[['PUMA', 'WGTP', 'SERIALNO']]
 del pums['PUMA']
 del pums['WGTP']
 del pums['SERIALNO']
@@ -47,12 +48,13 @@ for index, row in pums.iterrows():
         cache = []
     if index % 1000 == 0:
         print(index)
+kwhOutput.extend(clf.predict(cache))
 
 print(kwhOutput)
 
 kwhColumn = pd.DataFrame(kwhOutput, columns = ['KWH_MODELED'])
 
-final_table = pd.concat((pums, kwhColumn), axis = 1)
+final_table = pd.concat((left_matrix, pums, kwhColumn), axis = 1)
 
 final_table.to_csv("pums_kwh.csv", index = False)
 

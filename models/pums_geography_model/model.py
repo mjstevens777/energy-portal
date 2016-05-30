@@ -12,6 +12,7 @@ import numpy as np
 pums = pd.read_csv("../../join/pums_to_household_norm/join_features_normalized.csv", delimiter = ',')
 
 labels = [label[0] for label in pums.as_matrix(columns = ["PUMA"])]
+weights = np.array([weight[0] for weight in pums.as_matrix(columns = ["WGTP"])])
 pums = pums.fillna(0)
 raw_features = pums.as_matrix(columns = [column for column in pums.columns if column not in ['PUMA', 'WGTP', 'SERIALNO']])
 print(raw_features.shape)
@@ -22,7 +23,7 @@ numTrain = 3164116
 #clf = RandomForestClassifier(n_estimators = 20)
 #clf.fit(raw_features[:1000], labels[:1000])
 clf = GaussianNB()
-clf.fit(raw_features[:numTrain], labels[:numTrain])
+clf.fit(raw_features[:numTrain], labels[:numTrain], weights[:numTrain])
 print(clf.classes_)
 print(clf.classes_.shape)
 
