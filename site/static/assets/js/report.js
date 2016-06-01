@@ -41,7 +41,7 @@ function setStyle() {
 }
 
 function initMap() {
-  map = new google.maps.Map(document.getElementById('community-map'), {
+    map = new google.maps.Map(document.getElementById('community-map'), {
     zoom: 4,
     center: {lat: 40, lng: -98}
   });
