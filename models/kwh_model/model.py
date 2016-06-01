@@ -12,7 +12,7 @@ kwh_table = pd.read_csv("../../data/household_electricity_usage/recs2009_public.
 y = kwh_table.as_matrix(columns = ["KWH"])
 y = np.reshape(y, (len(y)))
 
-household = pd.read_csv("../pums_geography_model/household_wpuma_prob.csv", delimiter = ',')
+household = pd.read_csv("../final_household.csv", delimiter = ',')
 X = household.as_matrix()
 
 with open("kwh_model_features.json", "w") as f:
