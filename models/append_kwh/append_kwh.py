@@ -20,6 +20,7 @@ del household['ELEP']
 #    del household['CDD']
 #    del household['HDD']
 X = household.as_matrix()
+X = np.nan_to_num(X)
 
 X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_size = 0.25)
 
@@ -36,8 +37,6 @@ for i in range(50):
 features = sorted(zip(household.columns, clf.feature_importances_), key = lambda x : x[1], reverse = True)
 print("Features", features)
 
-kwhOutput = clf.predict(X)
-
 pums = pd.read_csv("../pums_ELEP_predicted.csv", delimiter = ',')
 pums_puma_vector = pums.as_matrix(columns = ['PUMA'])
 left_matrix = pums[['PUMA', 'WGTP', 'SERIALNO']]
@@ -46,9 +45,44 @@ del pums['WGTP']
 del pums['SERIALNO']
 del pums['ELEP']
 
-kwhColumn = pd.DataFrame(kwhOutput, columns = ['KWH_MODELED'])
+
+with open("../vectorized_puma_regions/puma_list.json") as f:
+    puma_mapping = json.load(f)
+
+reverse_puma_map = {}
+for key, value in puma_mapping.items():
+    reverse_puma_map[int(value)] = int(key)
+
+kwh_output = []
+numPumas = 2378
+cache = []
+for index, row in pums.iterrows():
+    probs = np.zeros((2378))
+    probs[reverse_puma_map[int(pums_puma_vector[index])]] = 1
+    other_features = row.as_matrix()
+    other_features = np.nan_to_num(other_features)
+    X_one_row = np.concatenate((other_features, probs))
+    cache.append(X_one_row)
+    if len(cache) > 10000:
+        kwh_output.extend(clf.predict(cache))
+        cache = []
+    if index % 1000 == 0:
+        print(index)
+kwh_output.extend(clf.predict(cache))
+
+kwhColumn = pd.DataFrame(kwh_output, columns = ['KWH_MODELED'])
+
+print(left_matrix.shape)
+print(pums.shape)
+print(kwhColumn.shape)
 
 final_table = pd.concat((left_matrix, pums, kwhColumn), axis = 1)
+
+num_nans = 0
+for index, val in enumerate(final_table['KWH_MODELED'].as_matrix()):
+    if np.isnan(val):
+        num_nans += 1
+print('in final', num_nans)
 
 print(final_table.shape)
 

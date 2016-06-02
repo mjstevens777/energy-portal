@@ -8,6 +8,9 @@ import numpy as np
 import json
 
 household = pd.read_csv("../household_work_file.csv")
+if 'KWH' in household.columns:
+    del household['KWH']
+
 X_columns = [column for column in household.columns if column != "ELEP"]
 X = household.as_matrix(columns = X_columns)
 y = [label[0] for label in household.as_matrix(columns = ["ELEP"])]
@@ -60,5 +63,9 @@ elep_output.extend(clf.predict(cache))
 for index, row in normalized_pums.iterrows():
     if row['ELEP'] == 2:
         row['ELEP'] = elep_output[index]
+
+for index, val in enumerate(normalized_pums.as_matrix(columns = ['PUMA'])):
+    if np.isnan(val):
+        print(index, val)
 
 normalized_pums.to_csv("../pums_ELEP_predicted.csv", index = False)

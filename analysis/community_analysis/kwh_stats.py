@@ -23,13 +23,21 @@ class KWHStats:
 
     def df_to_matrix(self, df):
         matrix = df.as_matrix()
-        return np.nan_to_num(matrix)
+        matrix = np.nan_to_num(matrix)
+        return self.filter_for_individual_households(matrix)
+
+    def filter_for_individual_households(self, array):
+        filtered = []
+        for val in array:
+            if val < 2000 * 12: #kwh/year
+                filtered.append(val)
+        return filtered
 
     def select_by(self, select_params):
-        selection = self.table[self.kwh_column]
+        selection = self.table
         for column, value in select_params.items():
-            selection = self.table.loc[self.table[column] == value]
-        return selection
+            selection = selection.loc[self.table[column] == value]
+        return selection[self.kwh_column]
 
     def custom_histogram(self, select_params, bins = 10):
         selection = self.select_by(select_params)
@@ -41,9 +49,13 @@ class KWHStats:
 
     def fit_normal_dist(self, select_params):
         return norm.fit(self.df_to_matrix(self.select_by(select_params)))
+
 if __name__ == "__main__":
-    #kwh_stats = KWHStats("../../models/append_kwh/pums_kwh.csv", kwh_column = "KWH_MODELED")
-    kwh_stats = KWHStats("../../models/household_work_file.csv", kwh_column = "KWH")
-    print(kwh_stats.custom_histogram({}))
-    #print(kwh_stats.custom_histogram({'ST' : 13}, bins = 30))
-    #print(kwh_stats.fit_normal_dist({'ST' : 13}))
+    #histograms are skewed to filter for only < 12000kwh/year to filter out any non-households
+    #unzip the .7z here
+    kwh_stats = KWHStats("../../models/append_kwh/pums_kwh.csv", kwh_column = "KWH_MODELED")
+    #kwh_stats = KWHStats("../../models/household_work_file.csv", kwh_column = "KWH")
+    #print(kwh_stats.custom_histogram({}))
+    print(kwh_stats.custom_histogram({'ST' : 13}, bins = 30))
+    print(kwh_stats.fit_normal_dist({'ST' : 13}))
+    print(kwh_stats.custom_histogram({'MV' : 3}, bins = 15))
