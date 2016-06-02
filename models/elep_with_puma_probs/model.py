@@ -7,12 +7,12 @@ from sklearn import metrics
 import numpy as np
 import json
 
-household = pd.read_csv("../pums_geography_model/household_wpuma_prob.csv", delimiter = ',')
+household = pd.read_csv("../household_work_file.csv")
 X_columns = [column for column in household.columns if column != "ELEP"]
 X = household.as_matrix(columns = X_columns)
 y = [label[0] for label in household.as_matrix(columns = ["ELEP"])]
 
-print(y)
+#print(y)
 
 X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_size = 0.25)
 
@@ -27,7 +27,8 @@ features = sorted(zip(X_columns, clf.feature_importances_), key = lambda x : x[1
 print("Features", features)
 
 #fill spaces in ELEP
-normalized_pums = pd.read_csv("../join_features_normalized.csv", delimiter = ',')
+normalized_pums = pd.read_csv("../hdd_cdd_interpolation/joined_weather.csv", delimiter = ',')
+print('pums shape', normalized_pums.shape)
 
 with open("../vectorized_puma_regions/puma_list.json") as f:
     puma_mapping = json.load(f)

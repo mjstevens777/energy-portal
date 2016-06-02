@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 
 #divides elep (electricity bill used) by the amount of electricity used
-pums = pd.read_csv("../predict_pums/pums_kwh.csv", delimiter = ',')
+pums = pd.read_csv("../append_kwh/pums_kwh.csv", delimiter = ',')
 
 print(pums['ELEP'])
 print(pums['KWH_MODELED'])

@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import json
 
-household = pd.read_csv("../pums_geography_model/household_wpuma_prob.csv", delimiter = ',')
+household = pd.read_csv("../household_work_file.csv", delimiter = ',')
 cdd_hdd_table = pd.read_csv("cdd_hdd.csv")
 
 cdd_list = [0] * household.shape[0]
@@ -23,4 +23,4 @@ for index, row in household.iterrows():
 
 concat = pd.concat((household, pd.DataFrame(cdd_list, columns = ["CDD"]), pd.DataFrame(hdd_list, columns = ['HDD'])), axis = 1)
 
-concat.to_csv("household_cdd_hdd.csv", index = False)
+concat.to_csv("../household_work_file.csv", index = False)

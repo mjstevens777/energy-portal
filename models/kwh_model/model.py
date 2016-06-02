@@ -8,11 +8,11 @@ import numpy as np
 import pickle
 import json
 
-kwh_table = pd.read_csv("../../data/household_electricity_usage/recs2009_public.csv", delimiter = ',')
-y = kwh_table.as_matrix(columns = ["KWH"])
+household = pd.read_csv("../household_work_file.csv", delimiter = ',')
+y = household.as_matrix(columns = ['KWH'])
 y = np.reshape(y, (len(y)))
-
-household = pd.read_csv("../final_household.csv", delimiter = ',')
+del household['KWH']
+del household['ELEP']
 X = household.as_matrix()
 
 with open("kwh_model_features.json", "w") as f:
