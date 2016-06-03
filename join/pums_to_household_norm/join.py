@@ -4,10 +4,10 @@ import pandas as pd
 import numpy as np
 from collections import Counter
 
-pums = pd.read_csv("join_features.csv", delimiter = ',')
+pums = pd.read_csv("join_features.csv")
 del pums[pums.columns.values[0]]
 
-household = pd.read_csv("../../data/household_electricity_usage/recs2009_public.csv", delimiter = ',')
+household = pd.read_csv("../../data/household_electricity_usage/recs2009_public.csv")
 variables = pd.read_csv("variables.tsv", delimiter = '\t')
 
 household_variables = variables['household']
@@ -265,17 +265,16 @@ def household_FULP(input):
 #pums differing dollar metric might be problematic however, but I don't have ADJHSG values
 
 #same for GASP
-
 #FULP~=DOLLARLP
-household[['DOLLARKER', 'DOLLARFO', 'DOLLARLP']].apply(household_FULP, axis = 1)
+household[['DOLLARKER', 'DOLLARFO', 'DOLLARLP']] = household[['DOLLARKER', 'DOLLARFO', 'DOLLARLP']].apply(household_FULP, axis = 1, broadcast = True)
 del household['DOLLARKER']
 del household['DOLLARFO']
 
-pums['YBL'].apply(pums_YBL)
-pums['MV'].apply(pums_MV)
-household['OCCUPYYRANGE'].apply(household_OCCUPYRANGE)
-household['MONEYPY'].apply(household_MONEYPY)
-pums['TEN'].apply(pums_TEN)
+pums['YBL'] = pums['YBL'].apply(pums_YBL)
+pums['MV'] = pums['MV'].apply(pums_MV)
+household['OCCUPYYRANGE'] = household['OCCUPYYRANGE'].apply(household_OCCUPYRANGE)
+household['MONEYPY'] = household['MONEYPY'].apply(household_MONEYPY)
+pums['TEN'] = pums['TEN'].apply(pums_TEN)
 
 #not modifying NP/NHSLDMEM
 
@@ -283,46 +282,46 @@ pums['TEN'].apply(pums_TEN)
 del pums['CONP']
 del household['CONDCOOP']
 
-pums['BLD'].apply(pums_BLD)
+pums['BLD'] = pums['BLD'].apply(pums_BLD)
 #merge away NUMAPTS so BLD ~= NUMAPTS
-household[['NUMAPTS', 'TYPEHUQ']].apply(household_NUMAPTS_TYPEHUQ, axis = 1)
+household[['NUMAPTS', 'TYPEHUQ']] = household[['NUMAPTS', 'TYPEHUQ']].apply(household_NUMAPTS_TYPEHUQ, axis = 1)
 del household['NUMAPTS']
 
 #not changing bdsp, RMSP
 
-pums['FS'].apply(pums_FS)
-pums['ACCESS'].apply(pums_ACCESS)
-pums['MODEM'].apply(pums_flag)
-pums['SATELLITE'].apply(pums_flag)
-pums['DIALUP'].apply(pums_flag)
+pums['FS'] = pums['FS'].apply(pums_FS)
+pums['ACCESS'] = pums['ACCESS'].apply(pums_ACCESS)
+pums['MODEM'] = pums['MODEM'].apply(pums_flag)
+pums['SATELLITE'] = pums['SATELLITE'].apply(pums_flag)
+pums['DIALUP'] = pums['DIALUP'].apply(pums_flag)
 
 #merge fiberop into dsl, dsl~= INDSL
-pums[['DSL', 'FIBEROP']].apply(pums_DSL_FIBEROP, axis = 1)
+pums[['DSL', 'FIBEROP']] = pums[['DSL', 'FIBEROP']].apply(pums_DSL_FIBEROP, axis = 1, broadcast = True)
 del pums['FIBEROP']
 
-household['FUELHEAT'].apply(household_FUELHEAT)
-household['NUMPC'].apply(household_NUMPC)
-household['STOVEN'].apply(household_NUMPC) #applies here too
+household['FUELHEAT'] = household['FUELHEAT'].apply(household_FUELHEAT)
+household['NUMPC'] = household['NUMPC'].apply(household_NUMPC)
+household['STOVEN'] = household['STOVEN'].apply(household_NUMPC) #applies here too
 
-household[['EMPLOYHH', 'SPOUSE']].apply(household_EMPLOYHH_SPOUSE, axis = 1)
+household[['EMPLOYHH', 'SPOUSE']] = household[['EMPLOYHH', 'SPOUSE']].apply(household_EMPLOYHH_SPOUSE, axis = 1, broadcast = True)
 del household['SPOUSE']
-pums['FES'].apply(pums_FES)
+pums['FES'] = pums['FES'].apply(pums_FES)
 
-pums['HISP'].apply(pums_HISP)
+pums['HISP'] = pums['HISP'].apply(pums_HISP)
 
-pums['RAC1P'].apply(pums_RAC1P)
+pums['RAC1P'] = pums['RAC1P'].apply(pums_RAC1P)
 
 #AGEP left alone
-pums['SCHL'].apply(pums_SCHL)
+pums['SCHL'] = pums['SCHL'].apply(pums_SCHL)
 
-pums['INTP'].apply(pums_INTP)
-pums['WAGP'].apply(pums_INTP)
-pums['RETP'].apply(pums_INTP)
-pums['SSIP'].apply(pums_INTP)
+pums['INTP'] = pums['INTP'].apply(pums_INTP)
+pums['WAGP'] = pums['WAGP'].apply(pums_INTP)
+pums['RETP'] = pums['RETP'].apply(pums_INTP)
+pums['SSIP'] = pums['SSIP'].apply(pums_INTP)
 
 #might be better to combine the other way...
 #dropping POVERTY150, so POVPIP~=POVERTY100
-household[['POVERTY100', 'POVERTY150']].apply(household_POVERTY, axis = 1)
+household[['POVERTY100', 'POVERTY150']] = household[['POVERTY100', 'POVERTY150']].apply(household_POVERTY, axis = 1, broadcast = True)
 del household['POVERTY150']
 
 pums.to_csv("join_features_normalized.csv", index = False)

@@ -78,12 +78,6 @@ print(kwhColumn.shape)
 
 final_table = pd.concat((left_matrix, pums, kwhColumn), axis = 1)
 
-num_nans = 0
-for index, val in enumerate(final_table['KWH_MODELED'].as_matrix()):
-    if np.isnan(val):
-        num_nans += 1
-print('in final', num_nans)
-
 print(final_table.shape)
 
 final_table.to_csv("pums_kwh.csv", index = False)

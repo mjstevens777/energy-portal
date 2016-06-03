@@ -23,4 +23,4 @@ join = pd.concat((pums, pd.DataFrame(cdd, columns = ["CDD"]), pd.DataFrame(hdd, 
 print(join.columns)
 print(join.columns.shape)
 
-join.to_csv("joined_weather.csv", index = False)
+join.to_csv("../joined_weather.csv", index = False)
