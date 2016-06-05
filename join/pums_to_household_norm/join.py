@@ -284,7 +284,7 @@ del household['CONDCOOP']
 
 pums['BLD'] = pums['BLD'].apply(pums_BLD)
 #merge away NUMAPTS so BLD ~= NUMAPTS
-household[['NUMAPTS', 'TYPEHUQ']] = household[['NUMAPTS', 'TYPEHUQ']].apply(household_NUMAPTS_TYPEHUQ, axis = 1)
+household[['TYPEHUQ']] = household[['NUMAPTS', 'TYPEHUQ']].apply(household_NUMAPTS_TYPEHUQ, axis = 1)
 del household['NUMAPTS']
 
 #not changing bdsp, RMSP
