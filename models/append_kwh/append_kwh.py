@@ -15,11 +15,11 @@ household = pd.read_csv("../household_complete_one_hot.csv", delimiter = ',')
 y = household.as_matrix(columns = ['KWH'])
 y = np.reshape(y, (len(y)))
 del household['KWH']
-del household['ELEP']
+household['ELEP']
 
 del household['ST']
 del household['DIVISION']
-del household['GASP']
+household['GASP']
 
 #if 'CDD' in household.columns:
 #    del household['CDD']
@@ -49,11 +49,11 @@ left_matrix = pums[['PUMA', 'WGTP', 'SERIALNO']]
 del pums['PUMA']
 del pums['WGTP']
 del pums['SERIALNO']
-del pums['ELEP']
+pums['ELEP']
 
 del pums['ST']
 del pums['DIVISION']
-del pums['GASP']
+pums['GASP']
 
 with open("../vectorized_puma_regions/puma_list.json") as f:
     puma_mapping = json.load(f)

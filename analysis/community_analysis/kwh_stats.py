@@ -13,16 +13,16 @@ class KWHStats:
             self.table[self.kwh_column] = np.log(self.table[self.kwh_column])
 
     def national_histogram(self, bins = 10):
-        return self.custom_histogram(select_params = {}, bins = bins)
+        return self.histogram(select_params = {}, bins = bins)
 
     def puma_histogram(self, puma, bins = 10):
-        return self.custom_histogram(select_params = {'PUMA' : puma}, bins = bins)
+        return self.histogram(select_params = {'PUMA' : puma}, bins = bins)
 
     def national_percentile(self, kwh):
-        return self.custom_percentile(select_params = {}, kwh = kwh)
+        return self.percentile(select_params = {}, kwh = kwh)
 
     def puma_percentile(self, puma, kwh):
-        return self.custom_percentile(select_params = {'PUMA' : puma}, kwh = kwh)
+        return self.percentile(select_params = {'PUMA' : puma}, kwh = kwh)
 
     def df_to_matrix(self, df):
         matrix = df.as_matrix()
