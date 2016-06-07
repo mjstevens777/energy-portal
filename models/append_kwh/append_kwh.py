@@ -15,6 +15,8 @@ household = pd.read_csv("../household_complete_one_hot.csv", delimiter = ',')
 y = household.as_matrix(columns = ['KWH'])
 y = np.reshape(y, (len(y)))
 del household['KWH']
+del household['ST']
+del household['DIVISION']
 
 #if 'CDD' in household.columns:
 #    del household['CDD']
@@ -31,19 +33,19 @@ print(metrics.mean_squared_error(y_test, clf.predict(X_test)))
 print(metrics.r2_score(y_test, clf.predict(X_test)))
 
 predictions = clf.predict(X_test)[:50]
-
-print(np.sqrt(metrics.mean_squared_error(y_test, clf.predict(X_test))))
-print(metrics.r2_score(y_test, clf.predict(X_test)))
-
+'''
 features = sorted(zip(household.columns, clf.feature_importances_), key = lambda x : x[1], reverse = True)
 print("Features", features)
-
+'''
 pums = pd.read_csv("../joined_weather.csv", delimiter = ',')
 pums_puma_vector = pums.as_matrix(columns = ['PUMA'])
 left_matrix = pums[['PUMA', 'WGTP', 'SERIALNO']]
 del pums['PUMA']
 del pums['WGTP']
 del pums['SERIALNO']
+
+del pums['ST']
+del pums['DIVISION']
 
 with open("../vectorized_puma_regions/puma_list.json") as f:
     puma_mapping = json.load(f)
@@ -79,7 +81,7 @@ final_table = pd.concat((left_matrix, pums, kwhColumn), axis = 1)
 
 print(final_table.shape)
 
-final_table.to_csv("pums_kwh.csv", index = False)
+#final_table.to_csv("pums_kwh.csv", index = False)
 
 '''
 print(y_test[:100])
