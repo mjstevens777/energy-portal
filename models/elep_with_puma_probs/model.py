@@ -25,6 +25,7 @@ clf.fit(X_train, y_train)
 
 print(y_test[:100])
 print(metrics.mean_squared_error(clf.predict(X_test), y_test))
+print(metrics.r2_score(y_test, clf.predict(X_test)))
 
 features = sorted(zip(X_columns, clf.feature_importances_), key = lambda x : x[1], reverse = True)
 print("Features", features)
@@ -68,4 +69,4 @@ for index, val in enumerate(normalized_pums.as_matrix(columns = ['PUMA'])):
     if np.isnan(val):
         print(index, val)
 
-normalized_pums.to_csv("../pums_ELEP_predicted.csv", index = False)
+#normalized_pums.to_csv("../pums_ELEP_predicted.csv", index = False)
