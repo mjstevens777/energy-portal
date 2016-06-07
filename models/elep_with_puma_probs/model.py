@@ -61,12 +61,15 @@ for index, row in selected_pums.iterrows():
         print(index)
 elep_output.extend(clf.predict(cache))
 
-for index, row in normalized_pums.iterrows():
-    if row['ELEP'] == 2:
-        row['ELEP'] = elep_output[index]
+elep_matrix = normalized_pums['ELEP'].as_matrix()
 
-for index, val in enumerate(normalized_pums.as_matrix(columns = ['PUMA'])):
-    if np.isnan(val):
-        print(index, val)
+for index, value in enumerate(elep_matrix):
+    if not np.isnan(value) and value > 2:
+        elep_matrix[index] = value * 12
+    else:
+        elep_matrix[index] = elep_output[index]
+
+del normalized_pums['ELEP']
+normalized_pums['ELEP'] = pd.DataFrame(elep_matrix, columns = ['ELEP'])
 
 normalized_pums.to_csv("../pums_ELEP_predicted.csv", index = False)
