@@ -16,7 +16,7 @@ class MissingEntryWrapper:
     def fill(self, predict_data):
         missing_columns = []
         for index, entry in enumerate(predict_data):
-            if np.isnan(entry):
+            if np.isnan(predict_data[entry].as_matrix()).any():
                 missing_columns.append(self.full_table.columns[index])
         filled_data = self.fill_columns(predict_data, missing_columns)
         return filled_data
@@ -51,14 +51,14 @@ class MissingEntryWrapper:
             labels = self.full_table.as_matrix(columns = [column])
             labels = np.reshape(labels, (len(labels))) #unnest the arrays
             clf = RandomForestRegressor(n_estimators = 100)
-            clf.fit(available_features, labels)
+            clf.fit(available_features, labels, available_table['WGTP'])
             clfs[column] = clf
 
         return clfs
 
 
 if __name__ == "__main__":
-    table_file = "pums_real_elep.csv"
+    table_file = "../household_work_file.csv"
     table = pd.read_csv(table_file)
     example = table[0:4].copy(deep = True)
     print("Ex", example)
