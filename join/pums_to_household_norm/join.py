@@ -302,7 +302,7 @@ def pums_SCHL(input):
         return 2
     if input == 18 or input == 19:
         return 3
-    return input + 16
+    return input - 16
 
 def pums_INTP(input):
     if input > 0:
