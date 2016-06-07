@@ -85,6 +85,7 @@ for i, row in enumerate(probabilities):
     for j, val in enumerate(row):
         if val < 1:
             probabilities[i, j] = 0
+
 probabilityFrame = pd.DataFrame(probabilities, columns = ["puma_prob"+str(x) for x in range(probabilities.shape[1])])
 print("Tabled")
 joined = pd.concat((household, probabilityFrame), axis = 1)

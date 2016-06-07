@@ -272,7 +272,7 @@ def household_EMPLOYHH_SPOUSE(input):
     return (0, 0)
 
 def pums_HISP(input):
-    if input == 0:
+    if input == 1:
         return 0
     return 1
 
@@ -289,6 +289,7 @@ def pums_RAC1P(input):
         return 6
     if input == 9:
         return 7
+    return input
 
 def pums_SCHL(input):
     if input == 1:
@@ -308,6 +309,9 @@ def pums_INTP(input):
         return 1
     return 0
 
+def pums_FULP(input):
+    return input * 12
+
 def household_POVERTY(input):
     poverty100, poverty150 = input
     if poverty100 == 1:
@@ -320,6 +324,11 @@ def household_FULP(input):
     dollarker, dollarel, dollarp = input
     return (0, 0, dollarker + dollarel + dollarp)
 
+def pums_ELEP(input):
+    if input < 3:
+        return input
+    return input * 12
+
 #No changes to DIVISON
 #No changes to ST
 pums['ST'] = pums['ST'].apply(pums_ST)
@@ -330,6 +339,8 @@ household['DIVISION'] = household['DIVISION'].apply(household_DIVISION)
 
 #same for GASP
 #FULP~=DOLLARLP
+pums['FULP'] = pums['FULP'].apply(pums_FULP)
+pums['ELEP'] = pums['ELEP'].apply(pums_ELEP)
 household[['DOLLARKER', 'DOLLARFO', 'DOLLARLP']] = household[['DOLLARKER', 'DOLLARFO', 'DOLLARLP']].apply(household_FULP, axis = 1, broadcast = True)
 del household['DOLLARKER']
 del household['DOLLARFO']

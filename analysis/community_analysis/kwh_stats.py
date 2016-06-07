@@ -59,12 +59,13 @@ if __name__ == "__main__":
     #histograms are skewed to filter for only < 12000kwh/year to filter out any non-households
     #unzip the .7z here
     kwh_stats = KWHStats("../../models/append_kwh/pums_kwh.csv", kwh_column = "KWH_MODELED", log = True)
-    #kwh_stats = KWHStats("../../models/household_complete_one_hot.csv", kwh_column = "KWH", log = True)
-    #print(kwh_stats.custom_histogram({}))
+    household_stats = KWHStats("../../models/household_complete_distribution.csv", kwh_column = "KWH", log = True)
+    print(kwh_stats.histogram())
+    print(household_stats.histogram())
     #print(kwh_stats.custom_histogram({'ST' : 13}, bins = 30))
     #print(kwh_stats.fit_normal_dist({'ST' : 13}))
     #print(kwh_stats.custom_histogram({'MV' : 3}, bins = 15))
-
+    '''
     import json
     with open("../../models/vectorized_puma_regions/puma_list.json") as f:
         puma_mapping = json.load(f)
@@ -73,3 +74,4 @@ if __name__ == "__main__":
     for puma in range(2378):
         stats.append(list(kwh_stats.fit_normal_dist({'PUMA': int(puma_mapping[str(puma)])})))
     pd.DataFrame(stats, columns = ['MEAN', 'STD']).to_csv("community_distributions.csv")
+    '''
