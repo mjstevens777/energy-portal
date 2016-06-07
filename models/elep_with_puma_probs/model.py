@@ -7,7 +7,7 @@ from sklearn import metrics
 import numpy as np
 import json
 
-household = pd.read_csv("../household_complete_one_hot.csv")
+household = pd.read_csv("../household_complete_distribution.csv")
 if 'KWH' in household.columns:
     del household['KWH']
 
@@ -31,7 +31,7 @@ features = sorted(zip(X_columns, clf.feature_importances_), key = lambda x : x[1
 print("Features", features)
 
 #fill spaces in ELEP
-normalized_pums = pd.read_csv("../hdd_cdd_interpolation/joined_weather.csv", delimiter = ',')
+normalized_pums = pd.read_csv("../joined_weather.csv", delimiter = ',')
 print('pums shape', normalized_pums.shape)
 
 with open("../vectorized_puma_regions/puma_list.json") as f:
@@ -69,4 +69,4 @@ for index, val in enumerate(normalized_pums.as_matrix(columns = ['PUMA'])):
     if np.isnan(val):
         print(index, val)
 
-#normalized_pums.to_csv("../pums_ELEP_predicted.csv", index = False)
+normalized_pums.to_csv("../pums_ELEP_predicted.csv", index = False)

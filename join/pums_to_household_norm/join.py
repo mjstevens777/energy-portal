@@ -16,6 +16,68 @@ for column in list(household.columns):
     if column not in household_variables.values:
         del household[column]
 
+def household_DIVISION(input):
+    if input == 8 or input == 9:
+        return 8
+    if input == 10:
+        return 9
+    return input
+
+def pums_ST(input):
+    mapping = {1: 18,
+     2: 27,
+     4: 24,
+     5: 20,
+     6: 26,
+     8: 22,
+     9: 1,
+     10: 14,
+     11: 14,
+     12: 17,
+     13: 15,
+     15: 27,
+     16: 23,
+     17: 6,
+     18: 7,
+     19: 10,
+     20: 11,
+     21: 18,
+     22: 20,
+     23: 1,
+     24: 14,
+     25: 2,
+     26: 8,
+     27: 10,
+     28: 18,
+     29: 12,
+     30: 23,
+     31: 11,
+     32: 25,
+     33: 1,
+     34: 4,
+     35: 25,
+     36: 3,
+     37: 16,
+     38: 10,
+     39: 7,
+     40: 20,
+     41: 27,
+     42: 5,
+     44: 1,
+     45: 16,
+     46: 10,
+     47: 19,
+     48: 21,
+     49: 23,
+     50: 1,
+     51: 13,
+     53: 27,
+     54: 14,
+     55: 9,
+     56: 23,
+     72 : 1}
+    return mapping[input]
+
 def pums_YBL(input):
     if input == 1:
         return 1939
@@ -259,7 +321,9 @@ def household_FULP(input):
     return (0, 0, dollarker + dollarel + dollarp)
 
 #No changes to DIVISON
-#No changes to ST/Reportable Domain
+#No changes to ST
+pums['ST'] = pums['ST'].apply(pums_ST)
+household['DIVISION'] = household['DIVISION'].apply(household_DIVISION)
 
 #Not changing ELEP/DOLLAREL - the codes will have very little overlap since who pays $1-2? They should retain their significance and mostly pass unharmed
 #pums differing dollar metric might be problematic however, but I don't have ADJHSG values
@@ -284,7 +348,7 @@ del household['CONDCOOP']
 
 pums['BLD'] = pums['BLD'].apply(pums_BLD)
 #merge away NUMAPTS so BLD ~= NUMAPTS
-household[['TYPEHUQ']] = household[['NUMAPTS', 'TYPEHUQ']].apply(household_NUMAPTS_TYPEHUQ, axis = 1)
+household[['NUMAPTS', 'TYPEHUQ']] = household[['NUMAPTS', 'TYPEHUQ']].apply(household_NUMAPTS_TYPEHUQ, axis = 1, broadcast = True)
 del household['NUMAPTS']
 
 #not changing bdsp, RMSP

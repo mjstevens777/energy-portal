@@ -11,7 +11,7 @@ kwh_table = pd.read_csv("../../data/household_electricity_usage/recs2009_public.
 y = kwh_table.as_matrix(columns = ["KWH"])
 y = np.reshape(y, (len(y)))
 '''
-household = pd.read_csv("../household_complete_one_hot.csv", delimiter = ',')
+household = pd.read_csv("../household_complete_distribution.csv", delimiter = ',')
 y = household.as_matrix(columns = ['KWH'])
 y = np.reshape(y, (len(y)))
 del household['KWH']
