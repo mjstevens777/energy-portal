@@ -1,12 +1,17 @@
 import pickle
 import json
 from geo import geo_features
+import os
 
-with open("static/assets/models/kwh_model.pkl", 'rb') as f:
+model_dir = "../models/kwh_model"
+
+with open(os.path.join(model_dir, "kwh_model.pkl"), 'rb') as f:
     kwh_model = pickle.load(f)
 
-with open("static/assets/models/kwh_model_features.json") as f:
+with open(os.path.join(model_dir, "kwh_model_features.json")) as f:
     features = json.load(f)
+    for i in range(2378):
+        features.append("puma_prob%d" % i)
 
 def model(inputs):
     feature_vector = []
@@ -35,11 +40,9 @@ def model(inputs):
         "user_mean": user_usage,
         "ind_grade": "A+",
         "comm_grade": "B+",
-        "ind_mean": 8000,
+        "ind_mean": kwh,
         "ind_stddev": 0.46,
-        "comm_mean": 9082,
         "national_mean": 9082,
-        "comm_stddev": 0.7,
         "national_stddev": 0.700,
     }
     outputs.update(inputs)

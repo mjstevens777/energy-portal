@@ -1,5 +1,6 @@
 import psycopg2
 import json
+import math
 
 connection = psycopg2.connect(
     database='energy_portal',
@@ -9,9 +10,10 @@ connection = psycopg2.connect(
 cursor = connection.cursor()
 
 puma_intersect_query = """
-    select puma_id, puma_name, cdd, hdd
+    select puma_id, puma_name, cdd, hdd, elec_mean, elec_std
     from puma_poly
     natural join puma_cdd_hdd
+    natural join  kwh_by_puma
     where ST_Intersects(
         geom,
         ST_SetSRID(ST_MakePoint(%s, %s), 4269)
@@ -19,9 +21,10 @@ puma_intersect_query = """
 """
 
 puma_nearest_query = """
-    select puma_id, puma_name, cdd, hdd
+    select puma_id, puma_name, cdd, hdd, elec_mean, elec_std
     from puma_poly
     natural join puma_cdd_hdd
+    natural join  kwh_by_puma
     order by geom <-> ST_SetSRID(ST_MakePoint(%s, %s), 4269)
     limit 1;
 """
@@ -70,6 +73,8 @@ def geo_features(lat, lng):
     features['puma_prob' + puma_number] = 1.0
     features['CDD'] = puma_row[2]
     features['HDD'] = puma_row[3]
+    features['comm_mean'] = math.exp(puma_row[4])
+    features['comm_stddev'] = puma_row[5]
 
     cursor.execute(county_intersect_query % (lng, lat))
     county_row = cursor.fetchone()

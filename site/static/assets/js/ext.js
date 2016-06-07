@@ -61,6 +61,31 @@ function drawIndCommChart() {
   chart.draw(data, options);
 }
 
+function drawCommNatChart() {
+  var data = new google.visualization.DataTable();
+  data.addColumn('number', 'Electricity Usage');
+  data.addColumn('number', 'Community');
+  data.addColumn('number', 'National');
+
+  data.addRows(GenerateChartData(
+    comm_mean, comm_stddev, LogNormalDensityZx,
+    national_mean, national_stddev, LogNormalDensityZx
+  ));
+
+  options = { legend: 'bottom' };
+  options.hAxis = {};
+  options.hAxis.logScale = true;
+  options.hAxis.ticks = [1000, 2000, 4000, 6000, 10000, 20000, 40000]
+  // options.hAxis.majorGridlines = {};
+  // options.hAxis.majorGridlines.count = 4;
+  // options.hAxis.minorGridlines = {};
+  // options.hAxis.minorGridlines.count = 12;
+
+  var chart = new google.visualization.AreaChart(document.getElementById('comm_national'));
+
+  chart.draw(data, options);
+}
+
 function drawIndNatChart() {
   var data = new google.visualization.DataTable();
   data.addColumn('number', 'Electricity Usage');
@@ -89,6 +114,9 @@ function drawIndNatChart() {
 google.load('visualization', '1', { packages: ['corechart'], callback: drawIndCommChart });
 
 google.load('visualization', '1', { packages: ['corechart'], callback: drawIndNatChart });
+
+google.load('visualization', '1', { packages: ['corechart'], callback: drawCommNatChart });
+
 
 $(function () {
   $('#energy-form').parsley().on('field:validated', function() {
