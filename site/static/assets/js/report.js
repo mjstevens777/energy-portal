@@ -13,17 +13,17 @@ function scaleBetween(x, mn, mx) {
 
 function setStyle() {
   map.data.setStyle(function(feature) {
-  	var el = feature.getProperty('electricity_cost');
+  	var el = feature.getProperty('elec_mean');
 
-  	el = normalize(el, 30, 200);
+  	el = normalize(el, 7.6, 8.0);
 
     var color;
     var opacity;
     var zIndex;
 
-	var hue = scaleBetween(el, 0.0, 0.0);
-	var lightness = scaleBetween(el, 0.0, 50.0);
-	var saturation = scaleBetween(el, 0.0, 100.0);
+	var hue = scaleBetween(el, 240.0, 0.0);
+	var lightness = scaleBetween(el, 50.0, 50.0);
+	var saturation = scaleBetween(el, 100.0, 100.0);
 
 	var opacity = 0.8;
 	var fillOpacityFactor = 0.3;
@@ -47,7 +47,7 @@ function initMap() {
   });
 
   // NOTE: This uses cross-domain XHR, and may not work on older browsers.
-  map.data.loadGeoJson('static/assets/json/energy.geojson');
+  map.data.loadGeoJson('static/assets/json/electricity.geojson');
 
   var infowindow = new google.maps.InfoWindow({
     content: ""
@@ -55,8 +55,11 @@ function initMap() {
 
   map.data.addListener('click', function(event) {
     var feature = event.feature;
-    var el = feature.getProperty('electricity_cost');
-    html = '' + el;
+    var el = feature.getProperty('elec_mean');
+    var std = feature.getProperty('elec_std');
+    var usage = Math.exp(el).toFixed(0);
+    var pct_var = (1 - Math.exp(- std )) * 100;
+    html = '' + usage + ' kWh<br>&plusmn;' + pct_var.toFixed(0) + '%';
 
     infowindow.setContent(html);
     infowindow.setPosition(event.latLng);

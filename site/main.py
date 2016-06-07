@@ -21,6 +21,11 @@ class MainPage(webapp2.RequestHandler):
     def post(self):
         inputs = {}
         inputs = dict(self.request.POST)
+        for key, value in inputs.items():
+            if value == 'on':
+                inputs[key] = '1'
+            if value == 'off':
+                inputs[key] = '0'
         self.redirect('/report?' + urllib.urlencode(inputs))
 
 

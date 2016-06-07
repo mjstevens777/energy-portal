@@ -32,7 +32,11 @@
 				<!-- Form -->
         <div class="row">
           <div class="-3u 6u$ 12u(small)">
-            <h2 id="form">Form</h2>
+            <h2 id="form">Interpret Your Energy Usage</h2>
+
+            <div class="12u$">
+              Please tell us as much as you can about yourself. You may leave fields blank, but the more information you give, the more accurate our estimates will be.
+            </div>
 
             <div class="bs-callout bs-callout-warning hidden">
               <h4>Oh snap!</h4>
@@ -46,6 +50,7 @@
 
             <form id="energy-form" method="post">
               <div class="uniform row">
+                <!--
                 <div class="12u$">
                   <input type="text" class="form-control" name="fullname" value="" placeholder="Full Name" required="">
                 </div>
@@ -53,45 +58,33 @@
                 <div class="12u$">
                   <input type="email" class="form-control" name="email" value="" data-parseley-trigger="change" placeholder="Email" required="">
                 </div>
+                -->
 
                 <div class="12u$">
-                  <input type="text" class="form-control" name="agep" value="" data-parseley-trigger="change" placeholder="Age" required="">
+                  <input type="text" class="form-control dollar-input" name="elep" value="" data-parsley-range="[3, 999]" data-parseley-trigger="change" placeholder="Electricity (monthly cost)" required>
                 </div>
 
                 <div class="12u$">
-                  <input type="text" class="form-control dollar-input" name="intp" value="" data-parsley-range="[-9999, 999999]" data-parseley-trigger="change" placeholder="Interest, dividends, and net rental income (last year)">
+                  <input type="text" class="form-control dollar-input" name="eler" value="" data-parsley-range="[0, 1]" data-parseley-trigger="change" placeholder="Electricity Rate (dollars/kWh)" required>
                 </div>
 
                 <div class="12u$">
-                  <input type="text" class="form-control dollar-input" name="wagp" value="" data-parsley-range="[0, 999999]" data-parseley-trigger="change" placeholder="Wages or salary income (last year)">
+                  <h3>Where do you live?</h3>
+                  <div id="map"></div>
+                  <p>Click on the map to set a location.</p>
+                  <p><nobr>
+                  Latitude: <input type="text" name="lat" value="" id="lat_val" class="latlong" readonly required></nobr><nobr>
+                  Longitude: <input type="text" name="lng" value="" id="lng_val" class="latlong" readonly required></nobr></p>
                 </div>
 
-                <div class="12u$">
-                  <input type="text" class="form-control dollar-input" name="retp" value="" data-parsley-range="[0, 999999]" data-parseley-trigger="change" placeholder="Retirement income (last year)">
-                </div>
-
-                <div class="12u$">
-                  <input type="text" class="form-control dollar-input" name="ssip" value="" data-parsley-range="[0, 999999]" data-parseley-trigger="change" placeholder="Supplementary Security Income (last year)">
-                </div>
-
-                <div class="12u$">
-                  <input type="text" class="form-control dollar-input" name="elep" value="" data-parsley-range="[3, 999]" data-parseley-trigger="change" placeholder="Electricity (monthly cost)">
-                </div>
-
-                <div class="12u$">
-                  <input type="text" class="form-control dollar-input" name="eler" value="" data-parsley-range="[0, 1]" data-parseley-trigger="change" placeholder="Electricity Rate (dollars/kWh)">
-                </div>
-
+                <!--
                 <div class="12u$">
                   <input type="text" class="form-control dollar-input" name="gasp" value="" data-parsley-range="[4, 999]" data-parseley-trigger="change" placeholder="Gas (monthly cost)">
                 </div>
+                -->
 
                 <div class="12u$">
-                  <input type="text" class="form-control dollar-input" name="fulp" value="" data-parsley-range="[3, 9999]" data-parseley-trigger="change" placeholder="Fuel cost (yearly cost for other fuels)">
-                </div>
-
-                <div class="12u$">
-                  <input type="text" class="form-control" name="np" value="" data-parsley-range="[0, 20]" data-parseley-trigger="change" placeholder="Number of people living in your house.">
+                  <h3>Tell us about your house</h3>
                 </div>
 
                 <div class="12u$">
@@ -100,6 +93,38 @@
 
                 <div class="12u$">
                   <input type="text" class="form-control" name="rmsp" value="" data-parsley-range="[0, 99]" data-parseley-trigger="change" placeholder="Number of rooms in house">
+                </div>
+
+                <div class="12u$">
+                  <input type="text" class="form-control" name="np" value="" data-parsley-range="[0, 20]" data-parseley-trigger="change" placeholder="Number of people living in your house.">
+                </div>
+
+                <div class="12u$">
+                  <div class="select-wrapper">
+                    <select name="fes" id="fes">
+                      <option value="">- Building Type -</option>
+                      <option value="2">Single-Family Detached</option>
+                      <option value="3">Single-Family Attached</option>
+                      <option value="4">Apartment Building with 2-4 Units</option>
+                      <option value="6">Apartment Building with with 5-9 Units</option>
+                      <option value="7">Apartment Building with with 10-19 Units</option>
+                      <option value="8">Apartment Building with with 20-49 Units</option>
+                      <option value="9">Apartment Building with with 50+ Units</option>
+                      <option value="1">Mobile Home</option>
+                      <option value="10">Boat, RV, Van, etc.</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="12u$">
+                  <div class="select-wrapper">
+                    <select name="ten" id="ten">
+                      <option value="">- Own/Rent -</option>
+                      <option value="1">Owned</option>
+                      <option value="2">Rented</option>
+                      <option value="3">Occupied without payment of rent</option>
+                    </select>
+                  </div>
                 </div>
 
                 <div class="12u$">
@@ -143,6 +168,15 @@
                   </div>
                 </div>
 
+
+                <div class="12u$">
+                  <h3>Tell us about your yourself</h3>
+                </div>
+
+                <div class="12u$">
+                  <input type="text" class="form-control" name="agep" value="" data-parseley-trigger="change" placeholder="Age" required="">
+                </div>
+
                 <div class="12u$">
                   <div class="select-wrapper">
                     <select name="rac1p" id="rac1p" required="">
@@ -161,6 +195,49 @@
                 </div>
 
                 <div class="12u$">
+                  <input type="text" class="form-control dollar-input" name="hincp" value="" data-parsley-range="[3, 9999]" data-parseley-trigger="change" placeholder="Household Income">
+                </div>
+
+                <div class="12u$">
+                  <div class="select-wrapper">
+                    <select name="schl" id="schl">
+                      <option value="">- Educational Attainment -</option>
+                      <option value="0">No schooling completed</option>
+                      <option value="1">Kindergarten to grade 12</option>
+                      <option value="2">High school diploma or GED</option>
+                      <option value="3">Some college, no degree</option>
+                      <option value="4">Associate's degree</option>
+                      <option value="5">Bachelor's degree</option>
+                      <option value="6">Master's degree</option>
+                      <option value="7">Professional degree</option>
+                      <option value="8">Doctorate degree</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="12u$">
+                  <input type="checkbox" id="wagp" name="wagp" checked>
+                  <label for="wagp">Received wages or salary income in the last year</label>
+                </div>
+
+                <div class="12u$">
+                  <input type="checkbox" id="intp" name="intp">
+                  <label for="intp">Received interest, dividends, and net rental income in the last year</label>
+                </div>
+
+                <div class="12u$">
+                  <input type="checkbox" id="retp" name="retp">
+                  <label for="retp">Received retirement income in the last year</label>
+                </div>
+
+                <div class="12u$">
+                  <input type="checkbox" id="ssip" name="ssip">
+                  <label for="ssip">Received supplementary income in the last year</label>
+                </div>
+
+                <!-- HISP -->
+
+                <div class="12u$">
                   <div class="select-wrapper">
                     <select name="fes" id="fes">
                       <option value="">- Family type and employment status -</option>
@@ -177,48 +254,65 @@
                 </div>
 
                 <div class="12u$">
-                  <h3>Where do you live?</h3>
-                  <div id="map"></div>
-                  <p>Latitude: <span id="lat_span"></span><input type="hidden" name="lat" value="" id="lat_val" readonly></br>
-                  Longitude: <span id="lng_span"></span><input type="hidden" name="lng" value="" id="lng_val" readonly></p>
-                </div>
-
-                <div class="12u$">
-                  <h3>Tick the following that are relevant to you.</h3>
-                </div>
-
-                <div class="12u$">
-                  <input type="checkbox" id="dialup" name="own">
-                  <label for="dialup">I have dial-up service</label>
-                </div>
-                <div class="12u$">
-                  <input type="checkbox" id="fiberop" name="own">
-                  <label for="fiberop">I have fiber-optic internet service</label>
-                </div>
-                <div class="12u$">
-                  <input type="checkbox" id="satellite" name="own">
-                  <label for="satellite">I have satellite internet service</label>
-                </div>
-                <div class="12u$">
-                  <input type="checkbox" id="modem" name="own">
-                  <label for="modem">I have cable internet service</label>
-                </div>
-                <div class="12u$">
-                  <input type="checkbox" id="access" name="own">
-                  <label for="access">I have access to the internet</label>
-                </div>
-                <div class="12u$">
                   <input type="checkbox" id="fs" name="own">
                   <label for="fs">I am a yearly food stamp recipient</label>
                 </div>
+
                 <div class="12u$">
-                  <input type="checkbox" id="laptop" name="own">
-                  <label for="laptop">I have a Laptop, desktop, or notebook computer</label>
+                  <h3>Tell us about your appliances</h3>
                 </div>
+
+                <!-- HFL -->
+
+                <!--
                 <div class="12u$">
-                  <input type="checkbox" id="refr" name="own">
+                  <input type="text" class="form-control dollar-input" name="fulp" value="" data-parsley-range="[3, 9999]" data-parseley-trigger="change" placeholder="Fuel cost (yearly cost for other fuels)">
+                </div>
+                -->
+
+                <div class="12u$">
+                  <input type="checkbox" id="refr" name="refr" checked>
                   <label for="refr">I have a refrigerator</label>
                 </div>
+
+                <div class="12u$">
+                  <input type="checkbox" id="stov" name="stov" checked>
+                  <label for="stov">I have a stove</label>
+                </div>
+
+                <div class="12u$">
+                  <input type="checkbox" id="access" name="access" checked value="1">
+                  <label for="access">I have access to the internet</label>
+                </div>
+
+                <div class="12u$">
+                  <input type="radio" id="dialup" name="internet_type" value="dialup">
+                  <label for="dialup">I have dial-up service</label>
+                </div>
+                <div class="12u$">
+                  <input type="radio" id="fiberop" name="internet_type" value="dialup">
+                  <label for="fiberop">I have fiber-optic internet service</label>
+                </div>
+                <div class="12u$">
+                  <input type="radio" id="satellite" name="internet_type" value="dialup">
+                  <label for="satellite">I have satellite internet service</label>
+                </div>
+                <div class="12u$">
+                  <input type="radio" id="modem" name="internet_type" value="dialup">
+                  <label for="modem">I have cable internet service</label>
+                </div>
+
+
+                <div class="12u$">
+                  <input type="checkbox" id="laptop" name="laptop" checked value="1">
+                  <label for="laptop">I have a Laptop, desktop, or notebook computer</label>
+                </div>
+
+                <!-- <div class="12u$">
+                  <h3>Tick the following that are relevant to you.</h3>
+                </div> -->
+
+                <!-- POVPIP -->
 
                 <div class="12u$">
                   <input type="submit" class="btn btn-default" value="Submit">

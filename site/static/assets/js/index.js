@@ -12,7 +12,6 @@ function initMap() {
     placeMarker(event.latLng);
     var latitude = event.latLng.lat();
     var longitude = event.latLng.lng();
-    console.log( latitude + ', ' + longitude );
   });
 
   function setMapOnAll(map) {
@@ -22,11 +21,11 @@ function initMap() {
   }
 
   function placeMarker(location) {
-    document.getElementById("lat_span").innerHTML = location.lat();
-    document.getElementById("lng_span").innerHTML = location.lng();
+    // document.getElementById("lat_span").innerHTML = location.lat();
+    // document.getElementById("lng_span").innerHTML = location.lng();
 
-    document.getElementById("lat_val").value = location.lat();
-    document.getElementById("lng_val").value = location.lng();
+    document.getElementById("lat_val").value = location.lat().toFixed(5);
+    document.getElementById("lng_val").value = location.lng().toFixed(5);
     setMapOnAll(null);
     var marker = new google.maps.Marker({
       position: location,

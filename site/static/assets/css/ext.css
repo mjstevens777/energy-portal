@@ -71,3 +71,8 @@
   width: 100%;
   height: 500px;
 }
+
+.latlong {
+  display: inline !important;
+  width: 120px !important;
+}
