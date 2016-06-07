@@ -16,6 +16,11 @@ y = household.as_matrix(columns = ['KWH'])
 y = np.reshape(y, (len(y)))
 del household['KWH']
 del household['ELEP']
+
+del household['ST']
+del household['DIVISION']
+del household['GASP']
+
 #if 'CDD' in household.columns:
 #    del household['CDD']
 #    del household['HDD']
@@ -31,8 +36,9 @@ print(metrics.mean_squared_error(y_test, clf.predict(X_test)))
 print(metrics.r2_score(y_test, clf.predict(X_test)))
 
 predictions = clf.predict(X_test)[:50]
-for i in range(50):
-    print(y_test[i], predictions[i])
+
+print(np.sqrt(metrics.mean_squared_error(y_test, clf.predict(X_test))))
+print(metrics.r2_score(y_test, clf.predict(X_test)))
 
 features = sorted(zip(household.columns, clf.feature_importances_), key = lambda x : x[1], reverse = True)
 print("Features", features)
@@ -45,6 +51,9 @@ del pums['WGTP']
 del pums['SERIALNO']
 del pums['ELEP']
 
+del pums['ST']
+del pums['DIVISION']
+del pums['GASP']
 
 with open("../vectorized_puma_regions/puma_list.json") as f:
     puma_mapping = json.load(f)
@@ -66,7 +75,7 @@ for index, row in pums.iterrows():
     if len(cache) > 10000:
         kwh_output.extend(clf.predict(cache))
         cache = []
-    if index % 1000 == 0:
+    if index % 100000 == 0:
         print(index)
 kwh_output.extend(clf.predict(cache))
 
