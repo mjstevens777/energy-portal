@@ -15,7 +15,7 @@ function setStyle() {
   map.data.setStyle(function(feature) {
   	var el = feature.getProperty('elec_mean');
 
-  	el = normalize(el, 8.0, 10.0);
+  	el = normalize(el, 8.7, 9.5);
 
     var color;
     var opacity;

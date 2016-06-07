@@ -9,7 +9,8 @@ function NormalDensityZx(x, Mean, StdDev) {
 
 function LogNormalDensityZx(x, Mean, StdDev) {
   var a = Math.log(x) - Math.log(Mean);
-  return Math.exp(-(a * a) / (2 * StdDev * StdDev)) / (x * Math.sqrt(2 * Math.PI) * StdDev);
+  //a = a - StdDev * StdDev; // This is a hack to get the mode of the distribution to show up at
+  return Math.exp(-(a * a) / (2 * StdDev * StdDev)) / (Math.sqrt(2 * Math.PI) * StdDev);
 }
 
 function GenerateChartData(mean_0, stddev_0, density_0, mean_1, stddev_1, density_1) {
