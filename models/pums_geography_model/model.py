@@ -56,7 +56,7 @@ numTrain = 3164116
 clf = GaussianNB()
 clf.fit(X_train, y_train, W_train)
 
-print(metrics.log_loss(y_test, clf.predict_proba(X_test)))
+print("LogLoss", metrics.log_loss(y_test, clf.predict_proba(X_test)))
 
 print("Model Trained")
 
@@ -73,11 +73,18 @@ print(predict_features.shape)
 probabilities = clf.predict_proba(predict_features)
 
 print("Predicted", probabilities.shape)
+'''
 for i, row in enumerate(probabilities):
     for j, val in enumerate(row):
         if val < 1E-5:
             probabilities[i, j] = 0
-
+'''
+#one hot vector instead
+for i, row in enumerate(probabilities):
+    probabilities[i, np.argmax(row)] = 1
+    for j, val in enumerate(row):
+        if val < 1:
+            probabilities[i, j] = 0
 probabilityFrame = pd.DataFrame(probabilities, columns = ["puma_prob"+str(x) for x in range(probabilities.shape[1])])
 print("Tabled")
 joined = pd.concat((household, probabilityFrame), axis = 1)
@@ -85,4 +92,4 @@ print("Joined")
 
 print(joined.shape)
 
-joined.to_csv("../household_wpuma_prob.csv", index = False)
+joined.to_csv("../household_wsingle.csv", index = False)

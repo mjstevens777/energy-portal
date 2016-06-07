@@ -10,9 +10,10 @@ import numpy as np
 import pickle
 import json
 
-household = pd.read_csv("../household_work_file.csv", delimiter = ',')
+household = pd.read_csv("../household_complete_one_hot.csv", delimiter = ',')
 y = household.as_matrix(columns = ['KWH'])
 y = np.reshape(y, (-1))
+y = np.log(y)
 del household['KWH']
 del household['ELEP']
 
@@ -20,9 +21,10 @@ del household['ELEP']
 def select_column(column):
     if 'puma_prob' in column:
         return False
-    return column in ['BDSP', 'RMSP', 'HFL', 'BLD', 'AGEP', 'NP', 'YBL', 'HINCP', 'HDD', 'CDD']
+    return True
+    #return column in ['BDSP', 'RMSP', 'HFL', 'BLD', 'AGEP', 'NP', 'YBL', 'HINCP', 'HDD', 'CDD']
 
-#household = household[[column for column in household.columns if select_column(column)]]
+household = household[[column for column in household.columns if select_column(column)]]
 X = household.as_matrix()
 print(household.columns)
 #X = household.as_matrix()
@@ -38,7 +40,7 @@ clf = RandomForestRegressor(n_estimators = 50, n_jobs = 8)
 clf.fit(X_train, y_train)
 
 print(y_test[:100])
-print(metrics.mean_squared_error(y_test, clf.predict(X_test)))
+print(np.sqrt(metrics.mean_squared_error(y_test, clf.predict(X_test))))
 print(metrics.r2_score(y_test, clf.predict(X_test)))
 
 
