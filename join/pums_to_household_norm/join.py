@@ -79,6 +79,8 @@ def pums_ST(input):
     return mapping[input]
 
 def pums_YBL(input):
+    if np.isnan(input):
+        return 1990
     if input == 1:
         return 1939
     if input == 2:
@@ -204,6 +206,8 @@ def household_NUMAPTS_TYPEHUQ(input):
 def pums_BLD(input):
     if input == 5:
         return 4
+    if input == 0 or input == 10:
+        return 1
     return input
 
 def pums_FS(input):
@@ -266,9 +270,9 @@ def pums_FES(input):
 def household_EMPLOYHH_SPOUSE(input):
     employhh, spouse = input
     if (employhh == 1 or employhh == 2) and spouse == 0:
-        return (0, 1)
+        return (1, 0)
     if (employhh == 1 or employhh == 2) and spouse == 1:
-        return (0, 2)
+        return (2, 0)
     return (0, 0)
 
 def pums_HISP(input):
@@ -292,6 +296,8 @@ def pums_RAC1P(input):
     return input
 
 def pums_SCHL(input):
+    if input < 1:
+        return 0
     if input == 1:
         return 0
     if input >= 2 and input <= 15:
@@ -329,6 +335,11 @@ def pums_ELEP(input):
         return input
     return input * 12
 
+def pums_BDSP(input):
+    if input < 0:
+        return 0
+    return input
+
 #No changes to DIVISON
 #No changes to ST
 pums['ST'] = pums['ST'].apply(pums_ST)
@@ -339,7 +350,7 @@ household['DIVISION'] = household['DIVISION'].apply(household_DIVISION)
 
 #same for GASP
 #FULP~=DOLLARLP
-pums['FULP'] = pums['FULP'].apply(pums_FULP)
+pums['GASP'] = pums['GASP'].apply(pums_FULP)
 pums['ELEP'] = pums['ELEP'].apply(pums_ELEP)
 household[['DOLLARKER', 'DOLLARFO', 'DOLLARLP']] = household[['DOLLARKER', 'DOLLARFO', 'DOLLARLP']].apply(household_FULP, axis = 1, broadcast = True)
 del household['DOLLARKER']
@@ -362,7 +373,9 @@ pums['BLD'] = pums['BLD'].apply(pums_BLD)
 household[['NUMAPTS', 'TYPEHUQ']] = household[['NUMAPTS', 'TYPEHUQ']].apply(household_NUMAPTS_TYPEHUQ, axis = 1, broadcast = True)
 del household['NUMAPTS']
 
-#not changing bdsp, RMSP
+#not changing RMSP
+
+pums['BDSP'] = pums['BDSP'].apply(pums_BDSP)
 
 pums['FS'] = pums['FS'].apply(pums_FS)
 pums['ACCESS'] = pums['ACCESS'].apply(pums_ACCESS)

@@ -7,7 +7,7 @@ from sklearn import metrics
 import numpy as np
 import json
 
-household = pd.read_csv("../household_complete_distribution.csv")
+household = pd.read_csv("../household_complete_one_hot.csv")
 if 'KWH' in household.columns:
     del household['KWH']
 

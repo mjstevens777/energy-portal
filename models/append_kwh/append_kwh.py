@@ -38,7 +38,7 @@ print(metrics.r2_score(y_test, clf.predict(X_test)))
 features = sorted(zip(household.columns, clf.feature_importances_), key = lambda x : x[1], reverse = True)
 print("Features", features)
 
-pums = pd.read_csv("../pums_ELEP_predicted.csv", delimiter = ',')
+pums = pd.read_csv("../joined_weather.csv", delimiter = ',')
 pums_puma_vector = pums.as_matrix(columns = ['PUMA'])
 left_matrix = pums[['PUMA', 'WGTP', 'SERIALNO']]
 del pums['PUMA']
