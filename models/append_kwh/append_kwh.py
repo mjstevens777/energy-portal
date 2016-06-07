@@ -15,8 +15,9 @@ household = pd.read_csv("../household_complete_one_hot.csv", delimiter = ',')
 y = household.as_matrix(columns = ['KWH'])
 y = np.reshape(y, (len(y)))
 del household['KWH']
-del household['ST']
-del household['DIVISION']
+#del household['ST']
+#del household['DIVISION']
+#del household['ELEP']
 
 #if 'CDD' in household.columns:
 #    del household['CDD']
@@ -37,15 +38,17 @@ predictions = clf.predict(X_test)[:50]
 features = sorted(zip(household.columns, clf.feature_importances_), key = lambda x : x[1], reverse = True)
 print("Features", features)
 '''
-pums = pd.read_csv("../joined_weather.csv", delimiter = ',')
+pums = pd.read_csv("../joined_weather.csv")
+pums = pums.sample(1000)
 pums_puma_vector = pums.as_matrix(columns = ['PUMA'])
 left_matrix = pums[['PUMA', 'WGTP', 'SERIALNO']]
 del pums['PUMA']
 del pums['WGTP']
 del pums['SERIALNO']
 
-del pums['ST']
-del pums['DIVISION']
+#del pums['ST']
+#del pums['DIVISION']
+#del pums['ELEP']
 
 with open("../vectorized_puma_regions/puma_list.json") as f:
     puma_mapping = json.load(f)
@@ -57,7 +60,8 @@ for key, value in puma_mapping.items():
 kwh_output = []
 numPumas = 2378
 cache = []
-for index, row in pums.iterrows():
+index = 0
+for _, row in pums.iterrows():
     probs = np.zeros((2378))
     probs[reverse_puma_map[int(pums_puma_vector[index])]] = 1
     other_features = row.as_matrix()
@@ -69,6 +73,7 @@ for index, row in pums.iterrows():
         cache = []
     if index % 100000 == 0:
         print(index)
+    index += 1
 kwh_output.extend(clf.predict(cache))
 
 kwhColumn = pd.DataFrame(kwh_output, columns = ['KWH_MODELED'])
@@ -77,11 +82,18 @@ print(left_matrix.shape)
 print(pums.shape)
 print(kwhColumn.shape)
 
-final_table = pd.concat((left_matrix, pums, kwhColumn), axis = 1)
+for column in left_matrix.columns:
+    pums[column] = left_matrix[column]
 
-print(final_table.shape)
+print(np.histogram(kwhColumn.as_matrix()))
 
-final_table.to_csv("pums_kwh.csv", index = False)
+pums['KWH_MODELED'] = kwhColumn
+print(np.histogram(pums['KWH_MODELED'].as_matrix()))
+
+print(pums.shape)
+
+
+pums.to_csv("pums_kwh.csv", index = False)
 
 '''
 print(y_test[:100])
