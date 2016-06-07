@@ -81,7 +81,7 @@ final_table = pd.concat((left_matrix, pums, kwhColumn), axis = 1)
 
 print(final_table.shape)
 
-#final_table.to_csv("pums_kwh.csv", index = False)
+final_table.to_csv("pums_kwh.csv", index = False)
 
 '''
 print(y_test[:100])
