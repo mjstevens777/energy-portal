@@ -2,6 +2,8 @@ import pickle
 import json
 from geo import geo_features
 import os
+import scipy.stats as st
+import numpy as np
 
 model_dir = "../models/kwh_model"
 
@@ -36,15 +38,36 @@ def model(inputs):
 
     user_usage = float(inputs['elep']) / float(inputs['eler']) * 12.0
 
+    ind_grade = "A+"
+    comm_grade = "B+"
+
     outputs = {
         "user_mean": user_usage,
-        "ind_grade": "A+",
-        "comm_grade": "B+",
+
+        "ind_grade": ind_grade,
+        "comm_grade": comm_grade,
+
         "ind_mean": kwh,
         "ind_stddev": 0.46,
+
         "national_mean": 9082,
         "national_stddev": 0.700,
     }
+
+    z_score = (np.log(outputs['user_mean']) - np.log(outputs['national_mean']))
+    z_score /= outputs['national_stddev']
+    percentile = 1 - st.norm.cdf(z_score)
+    def grade(percentile):
+        if percentile > 0.8:
+            return "A"
+        elif percentile > 0.5:
+            return "B"
+        elif percentile > 0.2:
+            return "C"
+        else:
+            return "D"
+    outputs['ind_grade'] = grade(percentile)
+
     outputs.update(inputs)
 
     return outputs

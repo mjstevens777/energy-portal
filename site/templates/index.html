@@ -50,15 +50,6 @@
 
             <form id="energy-form" method="post">
               <div class="uniform row">
-                <!--
-                <div class="12u$">
-                  <input type="text" class="form-control" name="fullname" value="" placeholder="Full Name" required="">
-                </div>
-
-                <div class="12u$">
-                  <input type="email" class="form-control" name="email" value="" data-parseley-trigger="change" placeholder="Email" required="">
-                </div>
-                -->
 
                 <div class="12u$">
                   <input type="text" class="form-control dollar-input" name="elep" value="" data-parsley-range="[3, 999]" data-parseley-trigger="change" placeholder="Electricity (monthly cost)" required>
@@ -76,12 +67,6 @@
                   Latitude: <input type="text" name="lat" value="" id="lat_val" class="latlong" readonly required></nobr><nobr>
                   Longitude: <input type="text" name="lng" value="" id="lng_val" class="latlong" readonly required></nobr></p>
                 </div>
-
-                <!--
-                <div class="12u$">
-                  <input type="text" class="form-control dollar-input" name="gasp" value="" data-parsley-range="[4, 999]" data-parseley-trigger="change" placeholder="Gas (monthly cost)">
-                </div>
-                -->
 
                 <div class="12u$">
                   <h3>Tell us about your house</h3>
@@ -195,7 +180,7 @@
                 </div>
 
                 <div class="12u$">
-                  <input type="text" class="form-control dollar-input" name="hincp" value="" data-parsley-range="[3, 9999]" data-parseley-trigger="change" placeholder="Household Income">
+                  <input type="text" class="form-control dollar-input" name="hincp" value="" data-parsley-range="[3, 9999999]" data-parseley-trigger="change" placeholder="Household Income">
                 </div>
 
                 <div class="12u$">
@@ -264,12 +249,6 @@
 
                 <!-- HFL -->
 
-                <!--
-                <div class="12u$">
-                  <input type="text" class="form-control dollar-input" name="fulp" value="" data-parsley-range="[3, 9999]" data-parseley-trigger="change" placeholder="Fuel cost (yearly cost for other fuels)">
-                </div>
-                -->
-
                 <div class="12u$">
                   <input type="checkbox" id="refr" name="refr" checked>
                   <label for="refr">I have a refrigerator</label>
@@ -308,15 +287,10 @@
                   <label for="laptop">I have a Laptop, desktop, or notebook computer</label>
                 </div>
 
-                <!-- <div class="12u$">
-                  <h3>Tick the following that are relevant to you.</h3>
-                </div> -->
-
                 <!-- POVPIP -->
 
                 <div class="12u$">
                   <input type="submit" class="btn btn-default" value="Submit">
-                  <div id="map"></div>
                 </div>
               </div>
           </form>

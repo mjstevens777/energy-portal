@@ -6,6 +6,7 @@ connection = psycopg2.connect(
     database='energy_portal',
     user='energy_portal',
     host='stantron2.stanford.edu',
+    password="energy",
 )
 cursor = connection.cursor()
 

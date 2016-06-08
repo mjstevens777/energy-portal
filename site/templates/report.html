@@ -14,32 +14,26 @@
 						<section class="7u 12u$(small)">
               <h3>Your usage amount</h3>
               <div class="eusage">
-                <h4>{{ ind_mean }} kWh</h4>
-                <h4>{{ user_mean }} kWh</h4>
+                <h4>{{ ind_mean }} kWh (Your predicted usage)</h4>
+                <h4>{{ user_mean }} kWh (Your actual usage)</h4>
               </div>
 						</section>
 
 						<section class="5u$ 12u$(small)">
 							<h3>Your usage grade</h3>
               <div class="ind-grade">{{ ind_grade }}</div>
-              {% if ind_grade == "A+" %}
-                <p>Why you got an A+</p>
-              {% elif ind_grade == "A" %}
-                <p>Why you got an A</p>
-              {% elif ind_grade == "B+" %}
-                <p>Why you got an B+</p>
+              {% if ind_grade == "A" %}
+                <h4>Why you got an A</h4>
+                <p>You were in the top 20% percentile.</p>
               {% elif ind_grade == "B" %}
-                <p>Why you got an B</p>
-              {% elif ind_grade == "B-" %}
-                <p>Why you got an B-</p>
-              {% elif ind_grade == "C+" %}
-                <p>Why you got an C+</p>
+                <h4>Why you got a B</h4>
+                <p>You were in the top 50% percentile.</p>
               {% elif ind_grade == "C" %}
-                <p>Why you got an C</p>
-              {% elif ind_grade == "C-" %}
-                <p>Why you got an C-</p>
+                <h4>Why you got a C</h4>
+                <p>You were in the top 80% percentile.</p>
               {% else %}
-                <p>Why you got an D</p>
+                <h4>Why you got an D</h4>
+                <p>You were in the bottom 20% percentile.</p>
               {% endif %}
 						</section>
 
